@@ -2,7 +2,7 @@
 // Times are in LOCAL track time with timezone offset
 const races = [
     {
-        name: "Hungarian Grand Prix",
+        name: "F1 Hungarian Grand Prix 2025",
         location: "Budapest, Hungary",
         timezone: "Europe/Budapest",
         sessions: {
@@ -14,7 +14,7 @@ const races = [
         }
     },
     {
-        name: "Dutch Grand Prix",
+        name: "F1 Dutch Grand Prix 2025",
         location: "Zandvoort, Netherlands",
         timezone: "Europe/Amsterdam",
         sessions: {
@@ -26,7 +26,7 @@ const races = [
         }
     },
     {
-        name: "Italian Grand Prix",
+        name: "F1 Italian Grand Prix 2025",
         location: "Monza, Italy",
         timezone: "Europe/Rome",
         sessions: {
@@ -38,7 +38,7 @@ const races = [
         }
     },
     {
-        name: "Azerbaijan Grand Prix",
+        name: "F1 Azerbaijan Grand Prix 2025",
         location: "Baku, Azerbaijan",
         timezone: "Asia/Baku",
         sessions: {
@@ -50,7 +50,7 @@ const races = [
         }
     },
     {
-        name: "Singapore Grand Prix",
+        name: "F1 Singapore Grand Prix 2025",
         location: "Marina Bay, Singapore",
         timezone: "Asia/Singapore",
         sessions: {
@@ -62,7 +62,7 @@ const races = [
         }
     },
     {
-        name: "United States Grand Prix",
+        name: "F1 United States Grand Prix 2025",
         location: "Austin, Texas",
         timezone: "America/Chicago",
         sessions: {
@@ -74,7 +74,7 @@ const races = [
         }
     },
     {
-        name: "Mexico City Grand Prix",
+        name: "F1 Mexico City Grand Prix 2025",
         location: "Mexico City, Mexico",
         timezone: "America/Mexico_City",
         sessions: {
@@ -86,7 +86,7 @@ const races = [
         }
     },
     {
-        name: "Brazilian Grand Prix",
+        name: "F1 Brazilian Grand Prix 2025",
         location: "São Paulo, Brazil",
         timezone: "America/Sao_Paulo",
         sessions: {
@@ -98,7 +98,7 @@ const races = [
         }
     },
     {
-        name: "Las Vegas Grand Prix",
+        name: "F1 Las Vegas Grand Prix 2025",
         location: "Las Vegas, Nevada",
         timezone: "America/Los_Angeles",
         sessions: {
@@ -110,7 +110,7 @@ const races = [
         }
     },
     {
-        name: "Qatar Grand Prix",
+        name: "F1 Qatar Grand Prix 2025",
         location: "Lusail, Qatar",
         timezone: "Asia/Qatar",
         sessions: {
@@ -122,7 +122,7 @@ const races = [
         }
     },
     {
-        name: "Abu Dhabi Grand Prix",
+        name: "F1 Abu Dhabi Grand Prix 2025",
         location: "Abu Dhabi, UAE",
         timezone: "Asia/Dubai",
         sessions: {
