@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 Timezone - F1 Race Times in US Time Zones</title>
+    <meta name="description" content="Never miss an F1 race! Get Formula 1 race times automatically converted to EST, CST, MST, and PST time zones.">
     
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7CQYP0VK8"></script>
@@ -14,9 +15,70 @@
 
   gtag('config', 'G-T7CQYP0VK8');
 </script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>F1 Timezone</h1>
-    <p>Coming soon: All F1 race times in your US timezone!</p>
+    <div class="container">
+        <header>
+            <h1>🏁 F1 Timezone</h1>
+            <p class="tagline">Never miss a race! All F1 times in US time zones.</p>
+            
+            <div class="timezone-selector">
+                <button class="tz-btn active" data-tz="America/New_York">EST/EDT</button>
+                <button class="tz-btn" data-tz="America/Chicago">CST/CDT</button>
+                <button class="tz-btn" data-tz="America/Denver">MST/MDT</button>
+                <button class="tz-btn" data-tz="America/Los_Angeles">PST/PDT</button>
+            </div>
+        </header>
+        
+        <div class="next-race">
+            <h2>Next Race</h2>
+            <div class="race-info" id="next-race-name">Loading...</div>
+            <div class="countdown" id="countdown">--:--:--</div>
+            <div class="race-info" id="next-session">Next Session: Loading...</div>
+        </div>
+        
+        <div class="schedule">
+            <h2>Remaining 2025 Season</h2>
+            <div id="race-list">
+                <!-- Races will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="products">
+            <h2>🏎️ Gear Up for Race Weekend</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>F1 24 Game</h3>
+                    <p>The official F1 video game</p>
+                    <a href="https://www.amazon.com/dp/B0D3J9XWFW?tag=f1timezone92-20" class="product-link" target="_blank">View on Amazon</a>
+                </div>
+                <div class="product-card">
+                    <h3>Red Bull Racing Gear</h3>
+                    <p>Official team merchandise</p>
+                    <a href="https://www.amazon.com/s?k=red+bull+racing+f1&tag=f1timezone92-20" class="product-link" target="_blank">Shop Team Gear</a>
+                </div>
+                <div class="product-card">
+                    <h3>Thrustmaster T300</h3>
+                    <p>Professional racing wheel</p>
+                    <a href="https://www.amazon.com/dp/B01M1L2NRL?tag=f1timezone92-20" class="product-link" target="_blank">Check Price</a>
+                </div>
+                <div class="product-card">
+                    <h3>F1 Books</h3>
+                    <p>Driver biographies & more</p>
+                    <a href="https://www.amazon.com/s?k=formula+1+books&tag=f1timezone92-20" class="product-link" target="_blank">Browse Books</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
+            <p>As an Amazon Associate I earn from qualifying purchases.</p>
+            <p><a href="/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
