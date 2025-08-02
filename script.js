@@ -1,15 +1,16 @@
-// Race data for remaining 2025 season
+/ Race data for remaining 2025 season
+// Times are in LOCAL track time with timezone offset
 const races = [
     {
         name: "Hungarian Grand Prix",
         location: "Budapest, Hungary",
         timezone: "Europe/Budapest",
         sessions: {
-            fp1: "2025-08-01T13:30:00",
-            fp2: "2025-08-01T17:00:00",
-            fp3: "2025-08-02T12:30:00",
-            qualifying: "2025-08-02T16:00:00",
-            race: "2025-08-03T15:00:00"
+            fp1: "2025-08-01T13:30:00+02:00",
+            fp2: "2025-08-01T17:00:00+02:00",
+            fp3: "2025-08-02T12:30:00+02:00",
+            qualifying: "2025-08-02T16:00:00+02:00",
+            race: "2025-08-03T15:00:00+02:00"
         }
     },
     {
@@ -17,11 +18,11 @@ const races = [
         location: "Zandvoort, Netherlands",
         timezone: "Europe/Amsterdam",
         sessions: {
-            fp1: "2025-08-29T12:30:00",
-            fp2: "2025-08-29T16:00:00",
-            fp3: "2025-08-30T11:30:00",
-            qualifying: "2025-08-30T15:00:00",
-            race: "2025-08-31T15:00:00"
+            fp1: "2025-08-29T12:30:00+02:00",
+            fp2: "2025-08-29T16:00:00+02:00",
+            fp3: "2025-08-30T11:30:00+02:00",
+            qualifying: "2025-08-30T15:00:00+02:00",
+            race: "2025-08-31T15:00:00+02:00"
         }
     },
     {
@@ -29,11 +30,11 @@ const races = [
         location: "Monza, Italy",
         timezone: "Europe/Rome",
         sessions: {
-            fp1: "2025-09-05T13:30:00",
-            fp2: "2025-09-05T17:00:00",
-            fp3: "2025-09-06T12:30:00",
-            qualifying: "2025-09-06T16:00:00",
-            race: "2025-09-07T15:00:00"
+            fp1: "2025-09-05T13:30:00+02:00",
+            fp2: "2025-09-05T17:00:00+02:00",
+            fp3: "2025-09-06T12:30:00+02:00",
+            qualifying: "2025-09-06T16:00:00+02:00",
+            race: "2025-09-07T15:00:00+02:00"
         }
     },
     {
@@ -41,11 +42,11 @@ const races = [
         location: "Baku, Azerbaijan",
         timezone: "Asia/Baku",
         sessions: {
-            fp1: "2025-09-19T13:30:00",
-            fp2: "2025-09-19T17:00:00",
-            fp3: "2025-09-20T12:30:00",
-            qualifying: "2025-09-20T16:00:00",
-            race: "2025-09-21T15:00:00"
+            fp1: "2025-09-19T13:30:00+04:00",
+            fp2: "2025-09-19T17:00:00+04:00",
+            fp3: "2025-09-20T12:30:00+04:00",
+            qualifying: "2025-09-20T16:00:00+04:00",
+            race: "2025-09-21T15:00:00+04:00"
         }
     },
     {
@@ -53,11 +54,11 @@ const races = [
         location: "Marina Bay, Singapore",
         timezone: "Asia/Singapore",
         sessions: {
-            fp1: "2025-10-03T17:30:00",
-            fp2: "2025-10-03T21:00:00",
-            fp3: "2025-10-04T17:30:00",
-            qualifying: "2025-10-04T21:00:00",
-            race: "2025-10-05T20:00:00"
+            fp1: "2025-10-03T17:30:00+08:00",
+            fp2: "2025-10-03T21:00:00+08:00",
+            fp3: "2025-10-04T17:30:00+08:00",
+            qualifying: "2025-10-04T21:00:00+08:00",
+            race: "2025-10-05T20:00:00+08:00"
         }
     },
     {
@@ -65,11 +66,11 @@ const races = [
         location: "Austin, Texas",
         timezone: "America/Chicago",
         sessions: {
-            fp1: "2025-10-17T13:30:00",
-            sprint_qualifying: "2025-10-17T17:30:00",
-            sprint: "2025-10-18T14:00:00",
-            qualifying: "2025-10-18T18:00:00",
-            race: "2025-10-19T14:00:00"
+            fp1: "2025-10-17T13:30:00-05:00",
+            sprint_qualifying: "2025-10-17T17:30:00-05:00",
+            sprint: "2025-10-18T14:00:00-05:00",
+            qualifying: "2025-10-18T18:00:00-05:00",
+            race: "2025-10-19T14:00:00-05:00"
         }
     },
     {
@@ -77,11 +78,11 @@ const races = [
         location: "Mexico City, Mexico",
         timezone: "America/Mexico_City",
         sessions: {
-            fp1: "2025-10-24T13:30:00",
-            fp2: "2025-10-24T17:00:00",
-            fp3: "2025-10-25T12:30:00",
-            qualifying: "2025-10-25T16:00:00",
-            race: "2025-10-26T14:00:00"
+            fp1: "2025-10-24T13:30:00-06:00",
+            fp2: "2025-10-24T17:00:00-06:00",
+            fp3: "2025-10-25T12:30:00-06:00",
+            qualifying: "2025-10-25T16:00:00-06:00",
+            race: "2025-10-26T14:00:00-06:00"
         }
     },
     {
@@ -89,11 +90,11 @@ const races = [
         location: "São Paulo, Brazil",
         timezone: "America/Sao_Paulo",
         sessions: {
-            fp1: "2025-11-07T11:30:00",
-            sprint_qualifying: "2025-11-07T15:30:00",
-            sprint: "2025-11-08T11:00:00",
-            qualifying: "2025-11-08T15:00:00",
-            race: "2025-11-09T14:00:00"
+            fp1: "2025-11-07T11:30:00-03:00",
+            sprint_qualifying: "2025-11-07T15:30:00-03:00",
+            sprint: "2025-11-08T11:00:00-03:00",
+            qualifying: "2025-11-08T15:00:00-03:00",
+            race: "2025-11-09T14:00:00-03:00"
         }
     },
     {
@@ -101,11 +102,11 @@ const races = [
         location: "Las Vegas, Nevada",
         timezone: "America/Los_Angeles",
         sessions: {
-            fp1: "2025-11-20T18:30:00",
-            fp2: "2025-11-21T03:00:00",
-            fp3: "2025-11-21T18:30:00",
-            qualifying: "2025-11-22T00:00:00",
-            race: "2025-11-22T22:00:00"
+            fp1: "2025-11-20T18:30:00-08:00",
+            fp2: "2025-11-21T03:00:00-08:00",
+            fp3: "2025-11-21T18:30:00-08:00",
+            qualifying: "2025-11-22T00:00:00-08:00",
+            race: "2025-11-22T22:00:00-08:00"
         }
     },
     {
@@ -113,11 +114,11 @@ const races = [
         location: "Lusail, Qatar",
         timezone: "Asia/Qatar",
         sessions: {
-            fp1: "2025-11-28T16:30:00",
-            sprint_qualifying: "2025-11-28T20:30:00",
-            sprint: "2025-11-29T17:00:00",
-            qualifying: "2025-11-29T21:00:00",
-            race: "2025-11-30T19:00:00"
+            fp1: "2025-11-28T16:30:00+03:00",
+            sprint_qualifying: "2025-11-28T20:30:00+03:00",
+            sprint: "2025-11-29T17:00:00+03:00",
+            qualifying: "2025-11-29T21:00:00+03:00",
+            race: "2025-11-30T19:00:00+03:00"
         }
     },
     {
@@ -125,11 +126,11 @@ const races = [
         location: "Abu Dhabi, UAE",
         timezone: "Asia/Dubai",
         sessions: {
-            fp1: "2025-12-05T13:30:00",
-            fp2: "2025-12-05T17:00:00",
-            fp3: "2025-12-06T14:30:00",
-            qualifying: "2025-12-06T18:00:00",
-            race: "2025-12-07T17:00:00"
+            fp1: "2025-12-05T13:30:00+04:00",
+            fp2: "2025-12-05T17:00:00+04:00",
+            fp3: "2025-12-06T14:30:00+04:00",
+            qualifying: "2025-12-06T18:00:00+04:00",
+            race: "2025-12-07T17:00:00+04:00"
         }
     }
 ];
