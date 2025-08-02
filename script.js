@@ -1,4 +1,4 @@
-/ Race data for remaining 2025 season
+// Race data for remaining 2025 season
 // Times are in LOCAL track time with timezone offset
 const races = [
     {
