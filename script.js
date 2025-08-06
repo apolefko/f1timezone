@@ -233,7 +233,15 @@ function updateCountdown() {
     
     document.getElementById('countdown').textContent = countdownText;
     document.getElementById('next-race-name').textContent = nextSession.raceName;
-    document.getElementById('next-session').textContent = `Next: ${nextSession.name}`;
+    const sessionTimeFormatted = convertToUserTimezone(
+        nextSession.race.sessions[Object.keys(nextSession.race.sessions).find(k => 
+            k.replace('_', ' ').toUpperCase() === nextSession.name
+        )],
+        nextSession.race.timezone
+    );
+    
+    document.getElementById('next-session').innerHTML = 
+        `Next: ${nextSession.name}<br><strong>${sessionTimeFormatted}</strong>`;
 }
 
 // Display race schedule
