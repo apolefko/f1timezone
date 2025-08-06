@@ -216,3 +216,51 @@ footer a {
         align-items: flex-start;
     }
 }
+
+/* Circuit visualization */
+.circuit-container {
+    position: relative;
+    margin: 30px auto;
+    max-width: 400px;
+    opacity: 0.9;
+}
+
+.circuit-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(225, 6, 0, 0.3));
+}
+
+.circuit-path {
+    fill: none;
+    stroke: #333;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke 0.3s ease;
+}
+
+.circuit-container:hover .circuit-path {
+    stroke: #e10600;
+    filter: drop-shadow(0 0 10px rgba(225, 6, 0, 0.8));
+}
+
+.racing-dot {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 0, 0.8));
+}
+
+.circuit-label {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .circuit-container {
+        max-width: 300px;
+    }
+}
