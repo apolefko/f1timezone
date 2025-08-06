@@ -51,6 +51,78 @@
             <div class="countdown" id="countdown">--:--:--</div>
             <div class="race-info" id="next-session">Next Session: Loading...</div>
         </div>
+
+        <!-- Add this between next-race and schedule divs -->
+<div class="race-prep-banner">
+    <div class="banner-content">
+        <span class="banner-text">🏎️ Watching from home?</span>
+        <div class="banner-links">
+            <a href="https://amzn.to/3UaMWJK" target="_blank" class="banner-link">
+                Racing Wheel Setup
+            </a>
+            <a href="https://www.amazon.com/Formula-Rogues-Geniuses-Reengineered-Fastest-Growing/dp/0063318628?linkCode=ll1&tag=f1timezone92-20&linkId=8bf53c41e16d3b60764db2d41931a74f&language=en_US&ref_=as_li_ss_tl" target="_blank" class="banner-link">
+                The Formula Book
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.race-prep-banner {
+    background: linear-gradient(135deg, #e10600, #ff1744);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.banner-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.banner-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.banner-link {
+    background: white;
+    color: #e10600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.banner-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banner-links {
+        justify-content: center;
+    }
+}
+</style>
         
         <div class="schedule">
             <h2>Remaining 2025 F1 Race Schedule</h2>
