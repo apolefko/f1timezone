@@ -49,6 +49,32 @@
             <h2>Next Race F1 2025</h2>
             <div class="race-info" id="next-race-name">Loading...</div>
             <div class="countdown" id="countdown">--:--:--</div>
+            <div class="circuit-container">
+    <svg class="circuit-svg" viewBox="0 0 400 300" width="400" height="300">
+        <!-- Hungaroring Circuit Path -->
+        <path class="circuit-path" d="
+            M 100 150
+            Q 120 100, 180 90
+            T 250 100
+            Q 280 110, 290 140
+            T 280 180
+            Q 270 200, 240 210
+            T 180 220
+            L 140 220
+            Q 100 220, 80 190
+            T 70 140
+            Q 75 110, 100 150
+            Z
+        " />
+        <!-- Racing dot -->
+        <circle class="racing-dot" r="4" fill="#00ff00">
+            <animateMotion dur="5s" repeatCount="indefinite">
+                <mpath href=".circuit-path" />
+            </animateMotion>
+        </circle>
+    </svg>
+    <div class="circuit-label">Hungaroring</div>
+</div>
             <div class="race-info" id="next-session">Next Session: Loading...</div>
         </div>
 
@@ -165,5 +191,6 @@
     </div>
     
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </body>
 </html>
