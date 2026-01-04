@@ -206,13 +206,64 @@ footer a {
     h1 {
         font-size: 2rem;
     }
-    
+
     .countdown {
         font-size: 2rem;
     }
-    
+
     .race-header {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+/* MonetAG Ad Container Styling */
+.ad-container {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.ad-primary {
+    margin-top: 30px;
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ad-secondary {
+    margin: 40px auto;
+    max-width: 300px;
+}
+
+.ad-native {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+
+/* Responsive ad adjustments */
+@media (max-width: 768px) {
+    .ad-primary {
+        max-width: 300px;
+    }
+
+    .ad-container {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Prevent layout shift from ads */
+.ad-container > div {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.product-grid .ad-native {
+    grid-column: span 1;
 }

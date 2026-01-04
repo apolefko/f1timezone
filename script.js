@@ -1,136 +1,292 @@
-// Race data for remaining 2025 season
+// Race data for 2026 F1 season
 // Times are in LOCAL track time with timezone offset
 const races = [
     {
-        name: "F1 Hungarian Grand Prix 2025",
+        name: "F1 Australian Grand Prix 2026",
+        location: "Melbourne, Australia",
+        timezone: "Australia/Melbourne",
+        sessions: {
+            fp1: "2026-03-06T13:30:00+11:00",
+            fp2: "2026-03-06T17:00:00+11:00",
+            fp3: "2026-03-07T12:30:00+11:00",
+            qualifying: "2026-03-07T16:00:00+11:00",
+            race: "2026-03-08T15:00:00+11:00"
+        }
+    },
+    {
+        name: "F1 Chinese Grand Prix 2026",
+        location: "Shanghai, China",
+        timezone: "Asia/Shanghai",
+        sessions: {
+            fp1: "2026-03-13T13:30:00+08:00",
+            fp2: "2026-03-13T17:00:00+08:00",
+            fp3: "2026-03-14T12:30:00+08:00",
+            qualifying: "2026-03-14T16:00:00+08:00",
+            race: "2026-03-15T15:00:00+08:00"
+        }
+    },
+    {
+        name: "F1 Japanese Grand Prix 2026",
+        location: "Suzuka, Japan",
+        timezone: "Asia/Tokyo",
+        sessions: {
+            fp1: "2026-03-27T13:30:00+09:00",
+            fp2: "2026-03-27T17:00:00+09:00",
+            fp3: "2026-03-28T12:30:00+09:00",
+            qualifying: "2026-03-28T16:00:00+09:00",
+            race: "2026-03-29T15:00:00+09:00"
+        }
+    },
+    {
+        name: "F1 Bahrain Grand Prix 2026",
+        location: "Sakhir, Bahrain",
+        timezone: "Asia/Bahrain",
+        sessions: {
+            fp1: "2026-04-10T15:30:00+03:00",
+            fp2: "2026-04-10T19:00:00+03:00",
+            fp3: "2026-04-11T16:00:00+03:00",
+            qualifying: "2026-04-11T19:00:00+03:00",
+            race: "2026-04-12T18:00:00+03:00"
+        }
+    },
+    {
+        name: "F1 Saudi Arabian Grand Prix 2026",
+        location: "Jeddah, Saudi Arabia",
+        timezone: "Asia/Riyadh",
+        sessions: {
+            fp1: "2026-04-17T15:30:00+03:00",
+            fp2: "2026-04-17T19:00:00+03:00",
+            fp3: "2026-04-18T16:00:00+03:00",
+            qualifying: "2026-04-18T19:00:00+03:00",
+            race: "2026-04-19T18:00:00+03:00"
+        }
+    },
+    {
+        name: "F1 Miami Grand Prix 2026",
+        location: "Miami, Florida",
+        timezone: "America/New_York",
+        sessions: {
+            fp1: "2026-05-01T13:30:00-04:00",
+            fp2: "2026-05-01T17:00:00-04:00",
+            fp3: "2026-05-02T12:30:00-04:00",
+            qualifying: "2026-05-02T16:00:00-04:00",
+            race: "2026-05-03T15:00:00-04:00"
+        }
+    },
+    {
+        name: "F1 Canadian Grand Prix 2026",
+        location: "Montreal, Canada",
+        timezone: "America/Toronto",
+        sessions: {
+            fp1: "2026-05-22T13:30:00-04:00",
+            fp2: "2026-05-22T17:00:00-04:00",
+            fp3: "2026-05-23T12:30:00-04:00",
+            qualifying: "2026-05-23T16:00:00-04:00",
+            race: "2026-05-24T14:00:00-04:00"
+        }
+    },
+    {
+        name: "F1 Monaco Grand Prix 2026",
+        location: "Monte Carlo, Monaco",
+        timezone: "Europe/Monaco",
+        sessions: {
+            fp1: "2026-06-05T13:30:00+02:00",
+            fp2: "2026-06-05T17:00:00+02:00",
+            fp3: "2026-06-06T12:30:00+02:00",
+            qualifying: "2026-06-06T16:00:00+02:00",
+            race: "2026-06-07T15:00:00+02:00"
+        }
+    },
+    {
+        name: "F1 Spanish Grand Prix 2026",
+        location: "Barcelona, Spain",
+        timezone: "Europe/Madrid",
+        sessions: {
+            fp1: "2026-06-12T13:30:00+02:00",
+            fp2: "2026-06-12T17:00:00+02:00",
+            fp3: "2026-06-13T12:30:00+02:00",
+            qualifying: "2026-06-13T16:00:00+02:00",
+            race: "2026-06-14T15:00:00+02:00"
+        }
+    },
+    {
+        name: "F1 Austrian Grand Prix 2026",
+        location: "Spielberg, Austria",
+        timezone: "Europe/Vienna",
+        sessions: {
+            fp1: "2026-06-26T13:30:00+02:00",
+            fp2: "2026-06-26T17:00:00+02:00",
+            fp3: "2026-06-27T12:30:00+02:00",
+            qualifying: "2026-06-27T16:00:00+02:00",
+            race: "2026-06-28T15:00:00+02:00"
+        }
+    },
+    {
+        name: "F1 British Grand Prix 2026",
+        location: "Silverstone, United Kingdom",
+        timezone: "Europe/London",
+        sessions: {
+            fp1: "2026-07-03T13:30:00+01:00",
+            fp2: "2026-07-03T17:00:00+01:00",
+            fp3: "2026-07-04T12:30:00+01:00",
+            qualifying: "2026-07-04T16:00:00+01:00",
+            race: "2026-07-05T15:00:00+01:00"
+        }
+    },
+    {
+        name: "F1 Belgian Grand Prix 2026",
+        location: "Spa-Francorchamps, Belgium",
+        timezone: "Europe/Brussels",
+        sessions: {
+            fp1: "2026-07-17T13:30:00+02:00",
+            fp2: "2026-07-17T17:00:00+02:00",
+            fp3: "2026-07-18T12:30:00+02:00",
+            qualifying: "2026-07-18T16:00:00+02:00",
+            race: "2026-07-19T15:00:00+02:00"
+        }
+    },
+    {
+        name: "F1 Hungarian Grand Prix 2026",
         location: "Budapest, Hungary",
         timezone: "Europe/Budapest",
         sessions: {
-            fp1: "2025-08-01T13:30:00+02:00",
-            fp2: "2025-08-01T17:00:00+02:00",
-            fp3: "2025-08-02T12:30:00+02:00",
-            qualifying: "2025-08-02T16:00:00+02:00",
-            race: "2025-08-03T15:00:00+02:00"
+            fp1: "2026-07-24T13:30:00+02:00",
+            fp2: "2026-07-24T17:00:00+02:00",
+            fp3: "2026-07-25T12:30:00+02:00",
+            qualifying: "2026-07-25T16:00:00+02:00",
+            race: "2026-07-26T15:00:00+02:00"
         }
     },
     {
-        name: "F1 Dutch Grand Prix 2025",
+        name: "F1 Dutch Grand Prix 2026",
         location: "Zandvoort, Netherlands",
         timezone: "Europe/Amsterdam",
         sessions: {
-            fp1: "2025-08-29T12:30:00+02:00",
-            fp2: "2025-08-29T16:00:00+02:00",
-            fp3: "2025-08-30T11:30:00+02:00",
-            qualifying: "2025-08-30T15:00:00+02:00",
-            race: "2025-08-31T15:00:00+02:00"
+            fp1: "2026-08-21T13:30:00+02:00",
+            fp2: "2026-08-21T17:00:00+02:00",
+            fp3: "2026-08-22T12:30:00+02:00",
+            qualifying: "2026-08-22T16:00:00+02:00",
+            race: "2026-08-23T15:00:00+02:00"
         }
     },
     {
-        name: "F1 Italian Grand Prix 2025",
+        name: "F1 Italian Grand Prix 2026",
         location: "Monza, Italy",
         timezone: "Europe/Rome",
         sessions: {
-            fp1: "2025-09-05T13:30:00+02:00",
-            fp2: "2025-09-05T17:00:00+02:00",
-            fp3: "2025-09-06T12:30:00+02:00",
-            qualifying: "2025-09-06T16:00:00+02:00",
-            race: "2025-09-07T15:00:00+02:00"
+            fp1: "2026-09-04T13:30:00+02:00",
+            fp2: "2026-09-04T17:00:00+02:00",
+            fp3: "2026-09-05T12:30:00+02:00",
+            qualifying: "2026-09-05T16:00:00+02:00",
+            race: "2026-09-06T15:00:00+02:00"
         }
     },
     {
-        name: "F1 Azerbaijan Grand Prix 2025",
+        name: "F1 Madrid Grand Prix 2026",
+        location: "Madrid, Spain",
+        timezone: "Europe/Madrid",
+        sessions: {
+            fp1: "2026-09-11T13:30:00+02:00",
+            fp2: "2026-09-11T17:00:00+02:00",
+            fp3: "2026-09-12T12:30:00+02:00",
+            qualifying: "2026-09-12T16:00:00+02:00",
+            race: "2026-09-13T15:00:00+02:00"
+        }
+    },
+    {
+        name: "F1 Azerbaijan Grand Prix 2026",
         location: "Baku, Azerbaijan",
         timezone: "Asia/Baku",
         sessions: {
-            fp1: "2025-09-19T13:30:00+04:00",
-            fp2: "2025-09-19T17:00:00+04:00",
-            fp3: "2025-09-20T12:30:00+04:00",
-            qualifying: "2025-09-20T16:00:00+04:00",
-            race: "2025-09-21T15:00:00+04:00"
+            fp1: "2026-09-24T15:30:00+04:00",
+            fp2: "2026-09-24T19:00:00+04:00",
+            fp3: "2026-09-25T14:30:00+04:00",
+            qualifying: "2026-09-25T18:00:00+04:00",
+            race: "2026-09-26T17:00:00+04:00"
         }
     },
     {
-        name: "F1 Singapore Grand Prix 2025",
+        name: "F1 Singapore Grand Prix 2026",
         location: "Marina Bay, Singapore",
         timezone: "Asia/Singapore",
         sessions: {
-            fp1: "2025-10-03T17:30:00+08:00",
-            fp2: "2025-10-03T21:00:00+08:00",
-            fp3: "2025-10-04T17:30:00+08:00",
-            qualifying: "2025-10-04T21:00:00+08:00",
-            race: "2025-10-05T20:00:00+08:00"
+            fp1: "2026-10-09T17:30:00+08:00",
+            fp2: "2026-10-09T21:00:00+08:00",
+            fp3: "2026-10-10T17:30:00+08:00",
+            qualifying: "2026-10-10T21:00:00+08:00",
+            race: "2026-10-11T20:00:00+08:00"
         }
     },
     {
-        name: "F1 United States Grand Prix 2025",
+        name: "F1 United States Grand Prix 2026",
         location: "Austin, Texas",
         timezone: "America/Chicago",
         sessions: {
-            fp1: "2025-10-17T13:30:00-05:00",
-            sprint_qualifying: "2025-10-17T17:30:00-05:00",
-            sprint: "2025-10-18T14:00:00-05:00",
-            qualifying: "2025-10-18T18:00:00-05:00",
-            race: "2025-10-19T14:00:00-05:00"
+            fp1: "2026-10-23T13:30:00-05:00",
+            sprint_qualifying: "2026-10-23T17:30:00-05:00",
+            sprint: "2026-10-24T14:00:00-05:00",
+            qualifying: "2026-10-24T18:00:00-05:00",
+            race: "2026-10-25T14:00:00-05:00"
         }
     },
     {
-        name: "F1 Mexico City Grand Prix 2025",
+        name: "F1 Mexico City Grand Prix 2026",
         location: "Mexico City, Mexico",
         timezone: "America/Mexico_City",
         sessions: {
-            fp1: "2025-10-24T13:30:00-06:00",
-            fp2: "2025-10-24T17:00:00-06:00",
-            fp3: "2025-10-25T12:30:00-06:00",
-            qualifying: "2025-10-25T16:00:00-06:00",
-            race: "2025-10-26T14:00:00-06:00"
+            fp1: "2026-10-30T13:30:00-06:00",
+            fp2: "2026-10-30T17:00:00-06:00",
+            fp3: "2026-10-31T12:30:00-06:00",
+            qualifying: "2026-10-31T16:00:00-06:00",
+            race: "2026-11-01T14:00:00-06:00"
         }
     },
     {
-        name: "F1 Brazilian Grand Prix 2025",
+        name: "F1 Brazilian Grand Prix 2026",
         location: "São Paulo, Brazil",
         timezone: "America/Sao_Paulo",
         sessions: {
-            fp1: "2025-11-07T11:30:00-03:00",
-            sprint_qualifying: "2025-11-07T15:30:00-03:00",
-            sprint: "2025-11-08T11:00:00-03:00",
-            qualifying: "2025-11-08T15:00:00-03:00",
-            race: "2025-11-09T14:00:00-03:00"
+            fp1: "2026-11-06T11:30:00-03:00",
+            sprint_qualifying: "2026-11-06T15:30:00-03:00",
+            sprint: "2026-11-07T11:00:00-03:00",
+            qualifying: "2026-11-07T15:00:00-03:00",
+            race: "2026-11-08T14:00:00-03:00"
         }
     },
     {
-        name: "F1 Las Vegas Grand Prix 2025",
+        name: "F1 Las Vegas Grand Prix 2026",
         location: "Las Vegas, Nevada",
         timezone: "America/Los_Angeles",
         sessions: {
-            fp1: "2025-11-20T18:30:00-08:00",
-            fp2: "2025-11-21T03:00:00-08:00",
-            fp3: "2025-11-21T18:30:00-08:00",
-            qualifying: "2025-11-22T00:00:00-08:00",
-            race: "2025-11-22T22:00:00-08:00"
+            fp1: "2026-11-19T18:30:00-08:00",
+            fp2: "2026-11-20T03:00:00-08:00",
+            fp3: "2026-11-20T18:30:00-08:00",
+            qualifying: "2026-11-21T00:00:00-08:00",
+            race: "2026-11-21T22:00:00-08:00"
         }
     },
     {
-        name: "F1 Qatar Grand Prix 2025",
+        name: "F1 Qatar Grand Prix 2026",
         location: "Lusail, Qatar",
         timezone: "Asia/Qatar",
         sessions: {
-            fp1: "2025-11-28T16:30:00+03:00",
-            sprint_qualifying: "2025-11-28T20:30:00+03:00",
-            sprint: "2025-11-29T17:00:00+03:00",
-            qualifying: "2025-11-29T21:00:00+03:00",
-            race: "2025-11-30T19:00:00+03:00"
+            fp1: "2026-11-27T16:30:00+03:00",
+            sprint_qualifying: "2026-11-27T20:30:00+03:00",
+            sprint: "2026-11-28T17:00:00+03:00",
+            qualifying: "2026-11-28T21:00:00+03:00",
+            race: "2026-11-29T19:00:00+03:00"
         }
     },
     {
-        name: "F1 Abu Dhabi Grand Prix 2025",
+        name: "F1 Abu Dhabi Grand Prix 2026",
         location: "Abu Dhabi, UAE",
         timezone: "Asia/Dubai",
         sessions: {
-            fp1: "2025-12-05T13:30:00+04:00",
-            fp2: "2025-12-05T17:00:00+04:00",
-            fp3: "2025-12-06T14:30:00+04:00",
-            qualifying: "2025-12-06T18:00:00+04:00",
-            race: "2025-12-07T17:00:00+04:00"
+            fp1: "2026-12-04T13:30:00+04:00",
+            fp2: "2026-12-04T17:00:00+04:00",
+            fp3: "2026-12-05T14:30:00+04:00",
+            qualifying: "2026-12-05T18:00:00+04:00",
+            race: "2026-12-06T17:00:00+04:00"
         }
     }
 ];
