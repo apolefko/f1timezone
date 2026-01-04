@@ -297,17 +297,27 @@ let userTimezone = localStorage.getItem('selectedTimezone') || 'America/New_York
 // Initialize timezone buttons
 document.querySelectorAll('.tz-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        document.querySelector('.tz-btn.active').classList.remove('active');
+        const activeBtn = document.querySelector('.tz-btn.active');
+        activeBtn.classList.remove('active');
+        activeBtn.setAttribute('aria-pressed', 'false');
+
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
         userTimezone = btn.dataset.tz;
         localStorage.setItem('selectedTimezone', userTimezone);
         updateDisplay();
     });
-    
+
     // Set active button on load
     if (btn.dataset.tz === userTimezone) {
-        document.querySelector('.tz-btn.active').classList.remove('active');
+        const currentActive = document.querySelector('.tz-btn.active');
+        if (currentActive) {
+            currentActive.classList.remove('active');
+            currentActive.setAttribute('aria-pressed', 'false');
+        }
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
     }
 });
 
