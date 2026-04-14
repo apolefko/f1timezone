@@ -40,9 +40,9 @@ h1 {
 
 .timezone-selector {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     margin: 20px 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .tz-btn {
@@ -54,6 +54,9 @@ h1 {
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.3s;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
 }
 
 .tz-btn:hover {
@@ -214,6 +217,15 @@ footer a {
     .race-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .tz-btn {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+
+    .timezone-selector {
+        gap: 6px;
     }
 }
 
