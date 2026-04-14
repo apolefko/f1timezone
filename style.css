@@ -31,25 +31,36 @@ h1 {
     color: #e10600;
     font-size: 1.6rem;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .timezone-selector {
     display: flex;
-    gap: 8px;
     margin: 12px 0 0;
-    flex-wrap: nowrap;
 }
 
 .tz-btn {
-    padding: 8px 16px;
+    flex: 1;
+    padding: 9px 0;
     background: white;
     border: 2px solid #e10600;
-    border-radius: 5px;
+    border-left: none;
+    border-radius: 0;
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: bold;
     transition: all 0.3s;
     white-space: nowrap;
+    text-align: center;
+}
+
+.tz-btn:first-child {
+    border-left: 2px solid #e10600;
+    border-radius: 5px 0 0 5px;
+}
+
+.tz-btn:last-child {
+    border-radius: 0 5px 5px 0;
 }
 
 .tz-btn:hover {
@@ -199,10 +210,6 @@ footer a {
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
     .countdown {
         font-size: 2rem;
     }
@@ -213,12 +220,7 @@ footer a {
     }
 
     .tz-btn {
-        padding: 7px 8px;
-        font-size: 0.8rem;
-    }
-
-    .timezone-selector {
-        gap: 5px;
+        font-size: 0.85rem;
     }
 }
 
