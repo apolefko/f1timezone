@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Australian Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:australia-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260306T023000Z
+DTEND:20260306T033000Z
+SUMMARY:F1: Australian Grand Prix — Practice 1
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 1 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260306T060000Z
+DTEND:20260306T070000Z
+SUMMARY:F1: Australian Grand Prix — Practice 2
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 2 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260307T013000Z
+DTEND:20260307T023000Z
+SUMMARY:F1: Australian Grand Prix — Practice 3
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 3 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260307T050000Z
+DTEND:20260307T060000Z
+SUMMARY:F1: Australian Grand Prix — Qualifying
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Qualifying at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260308T040000Z
+DTEND:20260308T060000Z
+SUMMARY:F1: Australian Grand Prix — Race
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Race at Albert Park Circuit. Full 
+ schedule & US times: https://f1timezone.com/races/australia-2026.html
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

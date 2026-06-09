@@ -1,0 +1,1852 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026 Season
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:australia-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260306T023000Z
+DTEND:20260306T033000Z
+SUMMARY:F1: Australian Grand Prix — Practice 1
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 1 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260306T060000Z
+DTEND:20260306T070000Z
+SUMMARY:F1: Australian Grand Prix — Practice 2
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 2 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260307T013000Z
+DTEND:20260307T023000Z
+SUMMARY:F1: Australian Grand Prix — Practice 3
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Practice 3 at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260307T050000Z
+DTEND:20260307T060000Z
+SUMMARY:F1: Australian Grand Prix — Qualifying
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Qualifying at Albert Park Circuit.
+  Full schedule & US times: https://f1timezone.com/races/australia-2026.h
+ tml
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260308T040000Z
+DTEND:20260308T060000Z
+SUMMARY:F1: Australian Grand Prix — Race
+LOCATION:Albert Park Circuit\, Melbourne\, Australia
+DESCRIPTION:Australian Grand Prix 2026 Race at Albert Park Circuit. Full 
+ schedule & US times: https://f1timezone.com/races/australia-2026.html
+URL:https://f1timezone.com/races/australia-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Australian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260313T033000Z
+DTEND:20260313T043000Z
+SUMMARY:F1: Chinese Grand Prix — Practice 1
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Practice 1 at Shanghai International 
+ Circuit. Full schedule & US times: https://f1timezone.com/races/china-20
+ 26.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260313T073000Z
+DTEND:20260313T083000Z
+SUMMARY:F1: Chinese Grand Prix — Sprint Qualifying
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Sprint Qualifying at Shanghai Interna
+ tional Circuit. Full schedule & US times: https://f1timezone.com/races/c
+ hina-2026.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Sprint Qualifying starts in 30 min
+ utes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260314T030000Z
+DTEND:20260314T040000Z
+SUMMARY:F1: Chinese Grand Prix — Sprint Race
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Sprint Race at Shanghai International
+  Circuit. Full schedule & US times: https://f1timezone.com/races/china-2
+ 026.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260314T070000Z
+DTEND:20260314T080000Z
+SUMMARY:F1: Chinese Grand Prix — Qualifying
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Qualifying at Shanghai International 
+ Circuit. Full schedule & US times: https://f1timezone.com/races/china-20
+ 26.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260315T070000Z
+DTEND:20260315T090000Z
+SUMMARY:F1: Chinese Grand Prix — Race
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Race at Shanghai International Circui
+ t. Full schedule & US times: https://f1timezone.com/races/china-2026.htm
+ l
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:japan-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260327T043000Z
+DTEND:20260327T053000Z
+SUMMARY:F1: Japanese Grand Prix — Practice 1
+LOCATION:Suzuka Circuit\, Suzuka\, Japan
+DESCRIPTION:Japanese Grand Prix 2026 Practice 1 at Suzuka Circuit. Full s
+ chedule & US times: https://f1timezone.com/races/japan-2026.html
+URL:https://f1timezone.com/races/japan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Japanese Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:japan-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260327T080000Z
+DTEND:20260327T090000Z
+SUMMARY:F1: Japanese Grand Prix — Practice 2
+LOCATION:Suzuka Circuit\, Suzuka\, Japan
+DESCRIPTION:Japanese Grand Prix 2026 Practice 2 at Suzuka Circuit. Full s
+ chedule & US times: https://f1timezone.com/races/japan-2026.html
+URL:https://f1timezone.com/races/japan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Japanese Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:japan-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260328T033000Z
+DTEND:20260328T043000Z
+SUMMARY:F1: Japanese Grand Prix — Practice 3
+LOCATION:Suzuka Circuit\, Suzuka\, Japan
+DESCRIPTION:Japanese Grand Prix 2026 Practice 3 at Suzuka Circuit. Full s
+ chedule & US times: https://f1timezone.com/races/japan-2026.html
+URL:https://f1timezone.com/races/japan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Japanese Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:japan-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260328T070000Z
+DTEND:20260328T080000Z
+SUMMARY:F1: Japanese Grand Prix — Qualifying
+LOCATION:Suzuka Circuit\, Suzuka\, Japan
+DESCRIPTION:Japanese Grand Prix 2026 Qualifying at Suzuka Circuit. Full s
+ chedule & US times: https://f1timezone.com/races/japan-2026.html
+URL:https://f1timezone.com/races/japan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Japanese Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:japan-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260329T050000Z
+DTEND:20260329T070000Z
+SUMMARY:F1: Japanese Grand Prix — Race
+LOCATION:Suzuka Circuit\, Suzuka\, Japan
+DESCRIPTION:Japanese Grand Prix 2026 Race at Suzuka Circuit. Full schedul
+ e & US times: https://f1timezone.com/races/japan-2026.html
+URL:https://f1timezone.com/races/japan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Japanese Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260501T173000Z
+DTEND:20260501T183000Z
+SUMMARY:F1: Miami Grand Prix — Practice 1
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Practice 1 at Miami International Autod
+ rome. Full schedule & US times: https://f1timezone.com/races/miami-2026.
+ html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260501T213000Z
+DTEND:20260501T223000Z
+SUMMARY:F1: Miami Grand Prix — Sprint Qualifying
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Sprint Qualifying at Miami Internationa
+ l Autodrome. Full schedule & US times: https://f1timezone.com/races/miam
+ i-2026.html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Sprint Qualifying starts in 30 minut
+ es
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260502T160000Z
+DTEND:20260502T170000Z
+SUMMARY:F1: Miami Grand Prix — Sprint Race
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Sprint Race at Miami International Auto
+ drome. Full schedule & US times: https://f1timezone.com/races/miami-2026
+ .html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260502T200000Z
+DTEND:20260502T210000Z
+SUMMARY:F1: Miami Grand Prix — Qualifying
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Qualifying at Miami International Autod
+ rome. Full schedule & US times: https://f1timezone.com/races/miami-2026.
+ html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260503T200000Z
+DTEND:20260503T220000Z
+SUMMARY:F1: Miami Grand Prix — Race
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Race at Miami International Autodrome. 
+ Full schedule & US times: https://f1timezone.com/races/miami-2026.html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260522T173000Z
+DTEND:20260522T183000Z
+SUMMARY:F1: Canadian Grand Prix — Practice 1
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Practice 1 at Circuit Gilles Villene
+ uve. Full schedule & US times: https://f1timezone.com/races/canada-2026.
+ html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260522T213000Z
+DTEND:20260522T223000Z
+SUMMARY:F1: Canadian Grand Prix — Sprint Qualifying
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Sprint Qualifying at Circuit Gilles 
+ Villeneuve. Full schedule & US times: https://f1timezone.com/races/canad
+ a-2026.html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Sprint Qualifying starts in 30 mi
+ nutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260523T160000Z
+DTEND:20260523T170000Z
+SUMMARY:F1: Canadian Grand Prix — Sprint Race
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Sprint Race at Circuit Gilles Villen
+ euve. Full schedule & US times: https://f1timezone.com/races/canada-2026
+ .html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260523T200000Z
+DTEND:20260523T210000Z
+SUMMARY:F1: Canadian Grand Prix — Qualifying
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Qualifying at Circuit Gilles Villene
+ uve. Full schedule & US times: https://f1timezone.com/races/canada-2026.
+ html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260524T200000Z
+DTEND:20260524T220000Z
+SUMMARY:F1: Canadian Grand Prix — Race
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Race at Circuit Gilles Villeneuve. F
+ ull schedule & US times: https://f1timezone.com/races/canada-2026.html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:monaco-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260605T113000Z
+DTEND:20260605T123000Z
+SUMMARY:F1: Monaco Grand Prix — Practice 1
+LOCATION:Circuit de Monaco\, Monte Carlo\, Monaco
+DESCRIPTION:Monaco Grand Prix 2026 Practice 1 at Circuit de Monaco. Full 
+ schedule & US times: https://f1timezone.com/races/monaco-2026.html
+URL:https://f1timezone.com/races/monaco-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Monaco Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:monaco-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260605T150000Z
+DTEND:20260605T160000Z
+SUMMARY:F1: Monaco Grand Prix — Practice 2
+LOCATION:Circuit de Monaco\, Monte Carlo\, Monaco
+DESCRIPTION:Monaco Grand Prix 2026 Practice 2 at Circuit de Monaco. Full 
+ schedule & US times: https://f1timezone.com/races/monaco-2026.html
+URL:https://f1timezone.com/races/monaco-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Monaco Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:monaco-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260606T103000Z
+DTEND:20260606T113000Z
+SUMMARY:F1: Monaco Grand Prix — Practice 3
+LOCATION:Circuit de Monaco\, Monte Carlo\, Monaco
+DESCRIPTION:Monaco Grand Prix 2026 Practice 3 at Circuit de Monaco. Full 
+ schedule & US times: https://f1timezone.com/races/monaco-2026.html
+URL:https://f1timezone.com/races/monaco-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Monaco Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:monaco-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260606T140000Z
+DTEND:20260606T150000Z
+SUMMARY:F1: Monaco Grand Prix — Qualifying
+LOCATION:Circuit de Monaco\, Monte Carlo\, Monaco
+DESCRIPTION:Monaco Grand Prix 2026 Qualifying at Circuit de Monaco. Full 
+ schedule & US times: https://f1timezone.com/races/monaco-2026.html
+URL:https://f1timezone.com/races/monaco-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Monaco Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:monaco-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260607T130000Z
+DTEND:20260607T150000Z
+SUMMARY:F1: Monaco Grand Prix — Race
+LOCATION:Circuit de Monaco\, Monte Carlo\, Monaco
+DESCRIPTION:Monaco Grand Prix 2026 Race at Circuit de Monaco. Full schedu
+ le & US times: https://f1timezone.com/races/monaco-2026.html
+URL:https://f1timezone.com/races/monaco-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Monaco Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spain-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260612T113000Z
+DTEND:20260612T123000Z
+SUMMARY:F1: Spanish Grand Prix — Practice 1
+LOCATION:Circuit de Barcelona-Catalunya\, Barcelona\, Spain
+DESCRIPTION:Spanish Grand Prix 2026 Practice 1 at Circuit de Barcelona-Ca
+ talunya. Full schedule & US times: https://f1timezone.com/races/spain-20
+ 26.html
+URL:https://f1timezone.com/races/spain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Spanish Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spain-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260612T150000Z
+DTEND:20260612T160000Z
+SUMMARY:F1: Spanish Grand Prix — Practice 2
+LOCATION:Circuit de Barcelona-Catalunya\, Barcelona\, Spain
+DESCRIPTION:Spanish Grand Prix 2026 Practice 2 at Circuit de Barcelona-Ca
+ talunya. Full schedule & US times: https://f1timezone.com/races/spain-20
+ 26.html
+URL:https://f1timezone.com/races/spain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Spanish Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spain-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260613T103000Z
+DTEND:20260613T113000Z
+SUMMARY:F1: Spanish Grand Prix — Practice 3
+LOCATION:Circuit de Barcelona-Catalunya\, Barcelona\, Spain
+DESCRIPTION:Spanish Grand Prix 2026 Practice 3 at Circuit de Barcelona-Ca
+ talunya. Full schedule & US times: https://f1timezone.com/races/spain-20
+ 26.html
+URL:https://f1timezone.com/races/spain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Spanish Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spain-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260613T140000Z
+DTEND:20260613T150000Z
+SUMMARY:F1: Spanish Grand Prix — Qualifying
+LOCATION:Circuit de Barcelona-Catalunya\, Barcelona\, Spain
+DESCRIPTION:Spanish Grand Prix 2026 Qualifying at Circuit de Barcelona-Ca
+ talunya. Full schedule & US times: https://f1timezone.com/races/spain-20
+ 26.html
+URL:https://f1timezone.com/races/spain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Spanish Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spain-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260614T130000Z
+DTEND:20260614T150000Z
+SUMMARY:F1: Spanish Grand Prix — Race
+LOCATION:Circuit de Barcelona-Catalunya\, Barcelona\, Spain
+DESCRIPTION:Spanish Grand Prix 2026 Race at Circuit de Barcelona-Cataluny
+ a. Full schedule & US times: https://f1timezone.com/races/spain-2026.htm
+ l
+URL:https://f1timezone.com/races/spain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Spanish Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austria-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260626T113000Z
+DTEND:20260626T123000Z
+SUMMARY:F1: Austrian Grand Prix — Practice 1
+LOCATION:Red Bull Ring\, Spielberg\, Austria
+DESCRIPTION:Austrian Grand Prix 2026 Practice 1 at Red Bull Ring. Full sc
+ hedule & US times: https://f1timezone.com/races/austria-2026.html
+URL:https://f1timezone.com/races/austria-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Austrian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austria-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260626T150000Z
+DTEND:20260626T160000Z
+SUMMARY:F1: Austrian Grand Prix — Practice 2
+LOCATION:Red Bull Ring\, Spielberg\, Austria
+DESCRIPTION:Austrian Grand Prix 2026 Practice 2 at Red Bull Ring. Full sc
+ hedule & US times: https://f1timezone.com/races/austria-2026.html
+URL:https://f1timezone.com/races/austria-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Austrian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austria-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260627T103000Z
+DTEND:20260627T113000Z
+SUMMARY:F1: Austrian Grand Prix — Practice 3
+LOCATION:Red Bull Ring\, Spielberg\, Austria
+DESCRIPTION:Austrian Grand Prix 2026 Practice 3 at Red Bull Ring. Full sc
+ hedule & US times: https://f1timezone.com/races/austria-2026.html
+URL:https://f1timezone.com/races/austria-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Austrian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austria-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260627T140000Z
+DTEND:20260627T150000Z
+SUMMARY:F1: Austrian Grand Prix — Qualifying
+LOCATION:Red Bull Ring\, Spielberg\, Austria
+DESCRIPTION:Austrian Grand Prix 2026 Qualifying at Red Bull Ring. Full sc
+ hedule & US times: https://f1timezone.com/races/austria-2026.html
+URL:https://f1timezone.com/races/austria-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Austrian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austria-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260628T130000Z
+DTEND:20260628T150000Z
+SUMMARY:F1: Austrian Grand Prix — Race
+LOCATION:Red Bull Ring\, Spielberg\, Austria
+DESCRIPTION:Austrian Grand Prix 2026 Race at Red Bull Ring. Full schedule
+  & US times: https://f1timezone.com/races/austria-2026.html
+URL:https://f1timezone.com/races/austria-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Austrian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260703T123000Z
+DTEND:20260703T133000Z
+SUMMARY:F1: British Grand Prix — Practice 1
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Practice 1 at Silverstone Circuit. Fu
+ ll schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260703T163000Z
+DTEND:20260703T173000Z
+SUMMARY:F1: British Grand Prix — Sprint Qualifying
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Sprint Qualifying at Silverstone Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/britain-2026
+ .html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Sprint Qualifying starts in 30 min
+ utes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260704T110000Z
+DTEND:20260704T120000Z
+SUMMARY:F1: British Grand Prix — Sprint Race
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Sprint Race at Silverstone Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260704T150000Z
+DTEND:20260704T160000Z
+SUMMARY:F1: British Grand Prix — Qualifying
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Qualifying at Silverstone Circuit. Fu
+ ll schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260705T140000Z
+DTEND:20260705T160000Z
+SUMMARY:F1: British Grand Prix — Race
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Race at Silverstone Circuit. Full sch
+ edule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:belgium-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260717T113000Z
+DTEND:20260717T123000Z
+SUMMARY:F1: Belgian Grand Prix — Practice 1
+LOCATION:Circuit de Spa-Francorchamps\, Spa-Francorchamps\, Belgium
+DESCRIPTION:Belgian Grand Prix 2026 Practice 1 at Circuit de Spa-Francorc
+ hamps. Full schedule & US times: https://f1timezone.com/races/belgium-20
+ 26.html
+URL:https://f1timezone.com/races/belgium-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Belgian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:belgium-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260717T150000Z
+DTEND:20260717T160000Z
+SUMMARY:F1: Belgian Grand Prix — Practice 2
+LOCATION:Circuit de Spa-Francorchamps\, Spa-Francorchamps\, Belgium
+DESCRIPTION:Belgian Grand Prix 2026 Practice 2 at Circuit de Spa-Francorc
+ hamps. Full schedule & US times: https://f1timezone.com/races/belgium-20
+ 26.html
+URL:https://f1timezone.com/races/belgium-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Belgian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:belgium-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260718T103000Z
+DTEND:20260718T113000Z
+SUMMARY:F1: Belgian Grand Prix — Practice 3
+LOCATION:Circuit de Spa-Francorchamps\, Spa-Francorchamps\, Belgium
+DESCRIPTION:Belgian Grand Prix 2026 Practice 3 at Circuit de Spa-Francorc
+ hamps. Full schedule & US times: https://f1timezone.com/races/belgium-20
+ 26.html
+URL:https://f1timezone.com/races/belgium-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Belgian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:belgium-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260718T140000Z
+DTEND:20260718T150000Z
+SUMMARY:F1: Belgian Grand Prix — Qualifying
+LOCATION:Circuit de Spa-Francorchamps\, Spa-Francorchamps\, Belgium
+DESCRIPTION:Belgian Grand Prix 2026 Qualifying at Circuit de Spa-Francorc
+ hamps. Full schedule & US times: https://f1timezone.com/races/belgium-20
+ 26.html
+URL:https://f1timezone.com/races/belgium-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Belgian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:belgium-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260719T130000Z
+DTEND:20260719T150000Z
+SUMMARY:F1: Belgian Grand Prix — Race
+LOCATION:Circuit de Spa-Francorchamps\, Spa-Francorchamps\, Belgium
+DESCRIPTION:Belgian Grand Prix 2026 Race at Circuit de Spa-Francorchamps.
+  Full schedule & US times: https://f1timezone.com/races/belgium-2026.htm
+ l
+URL:https://f1timezone.com/races/belgium-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Belgian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260724T113000Z
+DTEND:20260724T123000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 1
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 1 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260724T150000Z
+DTEND:20260724T160000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 2
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 2 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260725T103000Z
+DTEND:20260725T113000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 3
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 3 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260725T140000Z
+DTEND:20260725T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Qualifying
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Qualifying at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260726T130000Z
+DTEND:20260726T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Race
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Race at Hungaroring. Full schedule 
+ & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260821T113000Z
+DTEND:20260821T123000Z
+SUMMARY:F1: Dutch Grand Prix — Practice 1
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Practice 1 at Circuit Zandvoort. Full s
+ chedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260821T153000Z
+DTEND:20260821T163000Z
+SUMMARY:F1: Dutch Grand Prix — Sprint Qualifying
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Sprint Qualifying at Circuit Zandvoort.
+  Full schedule & US times: https://f1timezone.com/races/netherlands-2026
+ .html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Sprint Qualifying starts in 30 minut
+ es
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260822T100000Z
+DTEND:20260822T110000Z
+SUMMARY:F1: Dutch Grand Prix — Sprint Race
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Sprint Race at Circuit Zandvoort. Full 
+ schedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260822T140000Z
+DTEND:20260822T150000Z
+SUMMARY:F1: Dutch Grand Prix — Qualifying
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Qualifying at Circuit Zandvoort. Full s
+ chedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260823T130000Z
+DTEND:20260823T150000Z
+SUMMARY:F1: Dutch Grand Prix — Race
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Race at Circuit Zandvoort. Full schedul
+ e & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260904T113000Z
+DTEND:20260904T123000Z
+SUMMARY:F1: Italian Grand Prix — Practice 1
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 1 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260904T150000Z
+DTEND:20260904T160000Z
+SUMMARY:F1: Italian Grand Prix — Practice 2
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 2 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260905T103000Z
+DTEND:20260905T113000Z
+SUMMARY:F1: Italian Grand Prix — Practice 3
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 3 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260905T140000Z
+DTEND:20260905T150000Z
+SUMMARY:F1: Italian Grand Prix — Qualifying
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Qualifying at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260906T130000Z
+DTEND:20260906T150000Z
+SUMMARY:F1: Italian Grand Prix — Race
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Race at Autodromo Nazionale Monza. Fu
+ ll schedule & US times: https://f1timezone.com/races/italy-2026.html
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madrid-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260911T113000Z
+DTEND:20260911T123000Z
+SUMMARY:F1: Madrid Grand Prix — Practice 1
+LOCATION:Madring\, Madrid\, Spain
+DESCRIPTION:Madrid Grand Prix 2026 Practice 1 at Madring. Full schedule &
+  US times: https://f1timezone.com/races/madrid-2026.html
+URL:https://f1timezone.com/races/madrid-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Madrid Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madrid-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260911T150000Z
+DTEND:20260911T160000Z
+SUMMARY:F1: Madrid Grand Prix — Practice 2
+LOCATION:Madring\, Madrid\, Spain
+DESCRIPTION:Madrid Grand Prix 2026 Practice 2 at Madring. Full schedule &
+  US times: https://f1timezone.com/races/madrid-2026.html
+URL:https://f1timezone.com/races/madrid-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Madrid Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madrid-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260912T103000Z
+DTEND:20260912T113000Z
+SUMMARY:F1: Madrid Grand Prix — Practice 3
+LOCATION:Madring\, Madrid\, Spain
+DESCRIPTION:Madrid Grand Prix 2026 Practice 3 at Madring. Full schedule &
+  US times: https://f1timezone.com/races/madrid-2026.html
+URL:https://f1timezone.com/races/madrid-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Madrid Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madrid-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260912T140000Z
+DTEND:20260912T150000Z
+SUMMARY:F1: Madrid Grand Prix — Qualifying
+LOCATION:Madring\, Madrid\, Spain
+DESCRIPTION:Madrid Grand Prix 2026 Qualifying at Madring. Full schedule &
+  US times: https://f1timezone.com/races/madrid-2026.html
+URL:https://f1timezone.com/races/madrid-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Madrid Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madrid-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260913T130000Z
+DTEND:20260913T150000Z
+SUMMARY:F1: Madrid Grand Prix — Race
+LOCATION:Madring\, Madrid\, Spain
+DESCRIPTION:Madrid Grand Prix 2026 Race at Madring. Full schedule & US ti
+ mes: https://f1timezone.com/races/madrid-2026.html
+URL:https://f1timezone.com/races/madrid-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Madrid Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260924T113000Z
+DTEND:20260924T123000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 1
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 1 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260924T150000Z
+DTEND:20260924T160000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 2
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 2 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260925T103000Z
+DTEND:20260925T113000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 3
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 3 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260925T140000Z
+DTEND:20260925T150000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Qualifying
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Qualifying at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260926T110000Z
+DTEND:20260926T130000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Race
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Race at Baku City Circuit. Full sc
+ hedule & US times: https://f1timezone.com/races/azerbaijan-2026.html
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261009T093000Z
+DTEND:20261009T103000Z
+SUMMARY:F1: Singapore Grand Prix — Practice 1
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Practice 1 at Marina Bay Street Cir
+ cuit. Full schedule & US times: https://f1timezone.com/races/singapore-2
+ 026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261009T133000Z
+DTEND:20261009T143000Z
+SUMMARY:F1: Singapore Grand Prix — Sprint Qualifying
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Sprint Qualifying at Marina Bay Str
+ eet Circuit. Full schedule & US times: https://f1timezone.com/races/sing
+ apore-2026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Sprint Qualifying starts in 30 m
+ inutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261010T110000Z
+DTEND:20261010T120000Z
+SUMMARY:F1: Singapore Grand Prix — Sprint Race
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Sprint Race at Marina Bay Street Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/singapore-
+ 2026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261010T130000Z
+DTEND:20261010T140000Z
+SUMMARY:F1: Singapore Grand Prix — Qualifying
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Qualifying at Marina Bay Street Cir
+ cuit. Full schedule & US times: https://f1timezone.com/races/singapore-2
+ 026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261011T120000Z
+DTEND:20261011T140000Z
+SUMMARY:F1: Singapore Grand Prix — Race
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Race at Marina Bay Street Circuit. 
+ Full schedule & US times: https://f1timezone.com/races/singapore-2026.ht
+ ml
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261023T183000Z
+DTEND:20261023T193000Z
+SUMMARY:F1: United States Grand Prix — Practice 1
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 1 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 1 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261023T220000Z
+DTEND:20261023T230000Z
+SUMMARY:F1: United States Grand Prix — Practice 2
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 2 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 2 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261024T173000Z
+DTEND:20261024T183000Z
+SUMMARY:F1: United States Grand Prix — Practice 3
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 3 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 3 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261024T210000Z
+DTEND:20261024T220000Z
+SUMMARY:F1: United States Grand Prix — Qualifying
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Qualifying at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Qualifying starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261025T200000Z
+DTEND:20261025T220000Z
+SUMMARY:F1: United States Grand Prix — Race
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Race at Circuit of the Americas
+ . Full schedule & US times: https://f1timezone.com/races/austin-2026.htm
+ l
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261030T193000Z
+DTEND:20261030T203000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 1
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 1 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 1 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261030T230000Z
+DTEND:20261031T000000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 2
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 2 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 2 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261031T183000Z
+DTEND:20261031T193000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 3
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 3 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 3 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261031T220000Z
+DTEND:20261031T230000Z
+SUMMARY:F1: Mexico City Grand Prix — Qualifying
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Qualifying at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Qualifying starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261101T200000Z
+DTEND:20261101T220000Z
+SUMMARY:F1: Mexico City Grand Prix — Race
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Race at Autódromo Hermanos Rodr
+ íguez. Full schedule & US times: https://f1timezone.com/races/mexico-20
+ 26.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brazil-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261106T143000Z
+DTEND:20261106T153000Z
+SUMMARY:F1: São Paulo Grand Prix — Practice 1
+LOCATION:Autódromo José Carlos Pace (Interlagos)\, São Paulo\, Brazil
+DESCRIPTION:São Paulo Grand Prix 2026 Practice 1 at Autódromo José Car
+ los Pace (Interlagos). Full schedule & US times: https://f1timezone.com/
+ races/brazil-2026.html
+URL:https://f1timezone.com/races/brazil-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: São Paulo Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brazil-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261106T180000Z
+DTEND:20261106T190000Z
+SUMMARY:F1: São Paulo Grand Prix — Practice 2
+LOCATION:Autódromo José Carlos Pace (Interlagos)\, São Paulo\, Brazil
+DESCRIPTION:São Paulo Grand Prix 2026 Practice 2 at Autódromo José Car
+ los Pace (Interlagos). Full schedule & US times: https://f1timezone.com/
+ races/brazil-2026.html
+URL:https://f1timezone.com/races/brazil-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: São Paulo Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brazil-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261107T143000Z
+DTEND:20261107T153000Z
+SUMMARY:F1: São Paulo Grand Prix — Practice 3
+LOCATION:Autódromo José Carlos Pace (Interlagos)\, São Paulo\, Brazil
+DESCRIPTION:São Paulo Grand Prix 2026 Practice 3 at Autódromo José Car
+ los Pace (Interlagos). Full schedule & US times: https://f1timezone.com/
+ races/brazil-2026.html
+URL:https://f1timezone.com/races/brazil-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: São Paulo Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brazil-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261107T180000Z
+DTEND:20261107T190000Z
+SUMMARY:F1: São Paulo Grand Prix — Qualifying
+LOCATION:Autódromo José Carlos Pace (Interlagos)\, São Paulo\, Brazil
+DESCRIPTION:São Paulo Grand Prix 2026 Qualifying at Autódromo José Car
+ los Pace (Interlagos). Full schedule & US times: https://f1timezone.com/
+ races/brazil-2026.html
+URL:https://f1timezone.com/races/brazil-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: São Paulo Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:brazil-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261108T170000Z
+DTEND:20261108T190000Z
+SUMMARY:F1: São Paulo Grand Prix — Race
+LOCATION:Autódromo José Carlos Pace (Interlagos)\, São Paulo\, Brazil
+DESCRIPTION:São Paulo Grand Prix 2026 Race at Autódromo José Carlos Pa
+ ce (Interlagos). Full schedule & US times: https://f1timezone.com/races/
+ brazil-2026.html
+URL:https://f1timezone.com/races/brazil-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: São Paulo Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:las-vegas-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261120T023000Z
+DTEND:20261120T033000Z
+SUMMARY:F1: Las Vegas Grand Prix — Practice 1
+LOCATION:Las Vegas Strip Circuit\, Las Vegas\, Nevada
+DESCRIPTION:Las Vegas Grand Prix 2026 Practice 1 at Las Vegas Strip Circu
+ it. Full schedule & US times: https://f1timezone.com/races/las-vegas-202
+ 6.html
+URL:https://f1timezone.com/races/las-vegas-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Las Vegas Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:las-vegas-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261120T110000Z
+DTEND:20261120T120000Z
+SUMMARY:F1: Las Vegas Grand Prix — Practice 2
+LOCATION:Las Vegas Strip Circuit\, Las Vegas\, Nevada
+DESCRIPTION:Las Vegas Grand Prix 2026 Practice 2 at Las Vegas Strip Circu
+ it. Full schedule & US times: https://f1timezone.com/races/las-vegas-202
+ 6.html
+URL:https://f1timezone.com/races/las-vegas-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Las Vegas Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:las-vegas-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261121T023000Z
+DTEND:20261121T033000Z
+SUMMARY:F1: Las Vegas Grand Prix — Practice 3
+LOCATION:Las Vegas Strip Circuit\, Las Vegas\, Nevada
+DESCRIPTION:Las Vegas Grand Prix 2026 Practice 3 at Las Vegas Strip Circu
+ it. Full schedule & US times: https://f1timezone.com/races/las-vegas-202
+ 6.html
+URL:https://f1timezone.com/races/las-vegas-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Las Vegas Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:las-vegas-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261121T080000Z
+DTEND:20261121T090000Z
+SUMMARY:F1: Las Vegas Grand Prix — Qualifying
+LOCATION:Las Vegas Strip Circuit\, Las Vegas\, Nevada
+DESCRIPTION:Las Vegas Grand Prix 2026 Qualifying at Las Vegas Strip Circu
+ it. Full schedule & US times: https://f1timezone.com/races/las-vegas-202
+ 6.html
+URL:https://f1timezone.com/races/las-vegas-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Las Vegas Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:las-vegas-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261122T040000Z
+DTEND:20261122T060000Z
+SUMMARY:F1: Las Vegas Grand Prix — Race
+LOCATION:Las Vegas Strip Circuit\, Las Vegas\, Nevada
+DESCRIPTION:Las Vegas Grand Prix 2026 Race at Las Vegas Strip Circuit. Fu
+ ll schedule & US times: https://f1timezone.com/races/las-vegas-2026.html
+URL:https://f1timezone.com/races/las-vegas-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Las Vegas Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261127T133000Z
+DTEND:20261127T143000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 1
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 1 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261127T170000Z
+DTEND:20261127T180000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 2
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 2 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261128T140000Z
+DTEND:20261128T150000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 3
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 3 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261128T180000Z
+DTEND:20261128T190000Z
+SUMMARY:F1: Qatar Grand Prix — Qualifying
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Qualifying at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261129T160000Z
+DTEND:20261129T180000Z
+SUMMARY:F1: Qatar Grand Prix — Race
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Race at Lusail International Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/qatar-2026.html
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261204T093000Z
+DTEND:20261204T103000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 1
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 1 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261204T130000Z
+DTEND:20261204T140000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 2
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 2 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261205T103000Z
+DTEND:20261205T113000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 3
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 3 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261205T140000Z
+DTEND:20261205T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Qualifying
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Qualifying at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261206T130000Z
+DTEND:20261206T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Race
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Race at Yas Marina Circuit. Full sc
+ hedule & US times: https://f1timezone.com/races/abu-dhabi-2026.html
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

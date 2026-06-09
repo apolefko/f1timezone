@@ -1,0 +1,94 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Miami Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:miami-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260501T173000Z
+DTEND:20260501T183000Z
+SUMMARY:F1: Miami Grand Prix — Practice 1
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Practice 1 at Miami International Autod
+ rome. Full schedule & US times: https://f1timezone.com/races/miami-2026.
+ html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260501T213000Z
+DTEND:20260501T223000Z
+SUMMARY:F1: Miami Grand Prix — Sprint Qualifying
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Sprint Qualifying at Miami Internationa
+ l Autodrome. Full schedule & US times: https://f1timezone.com/races/miam
+ i-2026.html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Sprint Qualifying starts in 30 minut
+ es
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260502T160000Z
+DTEND:20260502T170000Z
+SUMMARY:F1: Miami Grand Prix — Sprint Race
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Sprint Race at Miami International Auto
+ drome. Full schedule & US times: https://f1timezone.com/races/miami-2026
+ .html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260502T200000Z
+DTEND:20260502T210000Z
+SUMMARY:F1: Miami Grand Prix — Qualifying
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Qualifying at Miami International Autod
+ rome. Full schedule & US times: https://f1timezone.com/races/miami-2026.
+ html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:miami-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260503T200000Z
+DTEND:20260503T220000Z
+SUMMARY:F1: Miami Grand Prix — Race
+LOCATION:Miami International Autodrome\, Miami\, Florida
+DESCRIPTION:Miami Grand Prix 2026 Race at Miami International Autodrome. 
+ Full schedule & US times: https://f1timezone.com/races/miami-2026.html
+URL:https://f1timezone.com/races/miami-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Miami Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

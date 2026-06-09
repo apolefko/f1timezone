@@ -1,0 +1,98 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: United States Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:austin-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261023T183000Z
+DTEND:20261023T193000Z
+SUMMARY:F1: United States Grand Prix — Practice 1
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 1 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 1 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261023T220000Z
+DTEND:20261023T230000Z
+SUMMARY:F1: United States Grand Prix — Practice 2
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 2 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 2 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261024T173000Z
+DTEND:20261024T183000Z
+SUMMARY:F1: United States Grand Prix — Practice 3
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Practice 3 at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Practice 3 starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261024T210000Z
+DTEND:20261024T220000Z
+SUMMARY:F1: United States Grand Prix — Qualifying
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Qualifying at Circuit of the Am
+ ericas. Full schedule & US times: https://f1timezone.com/races/austin-20
+ 26.html
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Qualifying starts in 30 minu
+ tes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261025T200000Z
+DTEND:20261025T220000Z
+SUMMARY:F1: United States Grand Prix — Race
+LOCATION:Circuit of the Americas\, Austin\, Texas
+DESCRIPTION:United States Grand Prix 2026 Race at Circuit of the Americas
+ . Full schedule & US times: https://f1timezone.com/races/austin-2026.htm
+ l
+URL:https://f1timezone.com/races/austin-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: United States Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

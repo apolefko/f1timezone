@@ -1,0 +1,98 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Mexico City Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:mexico-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261030T193000Z
+DTEND:20261030T203000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 1
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 1 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 1 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261030T230000Z
+DTEND:20261031T000000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 2
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 2 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 2 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261031T183000Z
+DTEND:20261031T193000Z
+SUMMARY:F1: Mexico City Grand Prix — Practice 3
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Practice 3 at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Practice 3 starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261031T220000Z
+DTEND:20261031T230000Z
+SUMMARY:F1: Mexico City Grand Prix — Qualifying
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Qualifying at Autódromo Hermanos
+  Rodríguez. Full schedule & US times: https://f1timezone.com/races/mexi
+ co-2026.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Qualifying starts in 30 minute
+ s
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mexico-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261101T200000Z
+DTEND:20261101T220000Z
+SUMMARY:F1: Mexico City Grand Prix — Race
+LOCATION:Autódromo Hermanos Rodríguez\, Mexico City\, Mexico
+DESCRIPTION:Mexico City Grand Prix 2026 Race at Autódromo Hermanos Rodr
+ íguez. Full schedule & US times: https://f1timezone.com/races/mexico-20
+ 26.html
+URL:https://f1timezone.com/races/mexico-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Mexico City Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Hungarian Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:hungary-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260724T113000Z
+DTEND:20260724T123000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 1
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 1 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260724T150000Z
+DTEND:20260724T160000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 2
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 2 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260725T103000Z
+DTEND:20260725T113000Z
+SUMMARY:F1: Hungarian Grand Prix — Practice 3
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Practice 3 at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260725T140000Z
+DTEND:20260725T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Qualifying
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Qualifying at Hungaroring. Full sch
+ edule & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hungary-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260726T130000Z
+DTEND:20260726T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Race
+LOCATION:Hungaroring\, Budapest\, Hungary
+DESCRIPTION:Hungarian Grand Prix 2026 Race at Hungaroring. Full schedule 
+ & US times: https://f1timezone.com/races/hungary-2026.html
+URL:https://f1timezone.com/races/hungary-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Hungarian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

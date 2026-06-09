@@ -1,0 +1,95 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Chinese Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:china-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260313T033000Z
+DTEND:20260313T043000Z
+SUMMARY:F1: Chinese Grand Prix — Practice 1
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Practice 1 at Shanghai International 
+ Circuit. Full schedule & US times: https://f1timezone.com/races/china-20
+ 26.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260313T073000Z
+DTEND:20260313T083000Z
+SUMMARY:F1: Chinese Grand Prix — Sprint Qualifying
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Sprint Qualifying at Shanghai Interna
+ tional Circuit. Full schedule & US times: https://f1timezone.com/races/c
+ hina-2026.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Sprint Qualifying starts in 30 min
+ utes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260314T030000Z
+DTEND:20260314T040000Z
+SUMMARY:F1: Chinese Grand Prix — Sprint Race
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Sprint Race at Shanghai International
+  Circuit. Full schedule & US times: https://f1timezone.com/races/china-2
+ 026.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260314T070000Z
+DTEND:20260314T080000Z
+SUMMARY:F1: Chinese Grand Prix — Qualifying
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Qualifying at Shanghai International 
+ Circuit. Full schedule & US times: https://f1timezone.com/races/china-20
+ 26.html
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:china-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260315T070000Z
+DTEND:20260315T090000Z
+SUMMARY:F1: Chinese Grand Prix — Race
+LOCATION:Shanghai International Circuit\, Shanghai\, China
+DESCRIPTION:Chinese Grand Prix 2026 Race at Shanghai International Circui
+ t. Full schedule & US times: https://f1timezone.com/races/china-2026.htm
+ l
+URL:https://f1timezone.com/races/china-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Chinese Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
