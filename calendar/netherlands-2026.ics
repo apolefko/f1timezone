@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Dutch Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:netherlands-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260821T113000Z
+DTEND:20260821T123000Z
+SUMMARY:F1: Dutch Grand Prix — Practice 1
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Practice 1 at Circuit Zandvoort. Full s
+ chedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260821T153000Z
+DTEND:20260821T163000Z
+SUMMARY:F1: Dutch Grand Prix — Sprint Qualifying
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Sprint Qualifying at Circuit Zandvoort.
+  Full schedule & US times: https://f1timezone.com/races/netherlands-2026
+ .html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Sprint Qualifying starts in 30 minut
+ es
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260822T100000Z
+DTEND:20260822T110000Z
+SUMMARY:F1: Dutch Grand Prix — Sprint Race
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Sprint Race at Circuit Zandvoort. Full 
+ schedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260822T140000Z
+DTEND:20260822T150000Z
+SUMMARY:F1: Dutch Grand Prix — Qualifying
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Qualifying at Circuit Zandvoort. Full s
+ chedule & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:netherlands-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260823T130000Z
+DTEND:20260823T150000Z
+SUMMARY:F1: Dutch Grand Prix — Race
+LOCATION:Circuit Zandvoort\, Zandvoort\, Netherlands
+DESCRIPTION:Dutch Grand Prix 2026 Race at Circuit Zandvoort. Full schedul
+ e & US times: https://f1timezone.com/races/netherlands-2026.html
+URL:https://f1timezone.com/races/netherlands-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Dutch Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

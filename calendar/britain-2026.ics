@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: British Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:britain-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260703T123000Z
+DTEND:20260703T133000Z
+SUMMARY:F1: British Grand Prix — Practice 1
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Practice 1 at Silverstone Circuit. Fu
+ ll schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260703T163000Z
+DTEND:20260703T173000Z
+SUMMARY:F1: British Grand Prix — Sprint Qualifying
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Sprint Qualifying at Silverstone Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/britain-2026
+ .html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Sprint Qualifying starts in 30 min
+ utes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260704T110000Z
+DTEND:20260704T120000Z
+SUMMARY:F1: British Grand Prix — Sprint Race
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Sprint Race at Silverstone Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260704T150000Z
+DTEND:20260704T160000Z
+SUMMARY:F1: British Grand Prix — Qualifying
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Qualifying at Silverstone Circuit. Fu
+ ll schedule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:britain-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260705T140000Z
+DTEND:20260705T160000Z
+SUMMARY:F1: British Grand Prix — Race
+LOCATION:Silverstone Circuit\, Silverstone\, United Kingdom
+DESCRIPTION:British Grand Prix 2026 Race at Silverstone Circuit. Full sch
+ edule & US times: https://f1timezone.com/races/britain-2026.html
+URL:https://f1timezone.com/races/britain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: British Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

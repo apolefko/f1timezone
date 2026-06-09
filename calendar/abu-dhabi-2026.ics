@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Abu Dhabi Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261204T093000Z
+DTEND:20261204T103000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 1
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 1 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261204T130000Z
+DTEND:20261204T140000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 2
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 2 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261205T103000Z
+DTEND:20261205T113000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Practice 3
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Practice 3 at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261205T140000Z
+DTEND:20261205T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Qualifying
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Qualifying at Yas Marina Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/abu-dhabi-2026.htm
+ l
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:abu-dhabi-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261206T130000Z
+DTEND:20261206T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Race
+LOCATION:Yas Marina Circuit\, Abu Dhabi\, UAE
+DESCRIPTION:Abu Dhabi Grand Prix 2026 Race at Yas Marina Circuit. Full sc
+ hedule & US times: https://f1timezone.com/races/abu-dhabi-2026.html
+URL:https://f1timezone.com/races/abu-dhabi-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Abu Dhabi Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

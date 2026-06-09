@@ -1,0 +1,95 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Singapore Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:singapore-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261009T093000Z
+DTEND:20261009T103000Z
+SUMMARY:F1: Singapore Grand Prix — Practice 1
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Practice 1 at Marina Bay Street Cir
+ cuit. Full schedule & US times: https://f1timezone.com/races/singapore-2
+ 026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261009T133000Z
+DTEND:20261009T143000Z
+SUMMARY:F1: Singapore Grand Prix — Sprint Qualifying
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Sprint Qualifying at Marina Bay Str
+ eet Circuit. Full schedule & US times: https://f1timezone.com/races/sing
+ apore-2026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Sprint Qualifying starts in 30 m
+ inutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261010T110000Z
+DTEND:20261010T120000Z
+SUMMARY:F1: Singapore Grand Prix — Sprint Race
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Sprint Race at Marina Bay Street Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/singapore-
+ 2026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261010T130000Z
+DTEND:20261010T140000Z
+SUMMARY:F1: Singapore Grand Prix — Qualifying
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Qualifying at Marina Bay Street Cir
+ cuit. Full schedule & US times: https://f1timezone.com/races/singapore-2
+ 026.html
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:singapore-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261011T120000Z
+DTEND:20261011T140000Z
+SUMMARY:F1: Singapore Grand Prix — Race
+LOCATION:Marina Bay Street Circuit\, Marina Bay\, Singapore
+DESCRIPTION:Singapore Grand Prix 2026 Race at Marina Bay Street Circuit. 
+ Full schedule & US times: https://f1timezone.com/races/singapore-2026.ht
+ ml
+URL:https://f1timezone.com/races/singapore-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Singapore Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

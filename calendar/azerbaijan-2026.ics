@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Azerbaijan Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260924T113000Z
+DTEND:20260924T123000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 1
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 1 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260924T150000Z
+DTEND:20260924T160000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 2
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 2 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260925T103000Z
+DTEND:20260925T113000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Practice 3
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Practice 3 at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260925T140000Z
+DTEND:20260925T150000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Qualifying
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Qualifying at Baku City Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/azerbaijan-2026.ht
+ ml
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azerbaijan-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260926T110000Z
+DTEND:20260926T130000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Race
+LOCATION:Baku City Circuit\, Baku\, Azerbaijan
+DESCRIPTION:Azerbaijan Grand Prix 2026 Race at Baku City Circuit. Full sc
+ hedule & US times: https://f1timezone.com/races/azerbaijan-2026.html
+URL:https://f1timezone.com/races/azerbaijan-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Azerbaijan Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

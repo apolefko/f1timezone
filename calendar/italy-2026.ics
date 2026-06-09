@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Italian Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:italy-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260904T113000Z
+DTEND:20260904T123000Z
+SUMMARY:F1: Italian Grand Prix — Practice 1
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 1 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260904T150000Z
+DTEND:20260904T160000Z
+SUMMARY:F1: Italian Grand Prix — Practice 2
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 2 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260905T103000Z
+DTEND:20260905T113000Z
+SUMMARY:F1: Italian Grand Prix — Practice 3
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Practice 3 at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260905T140000Z
+DTEND:20260905T150000Z
+SUMMARY:F1: Italian Grand Prix — Qualifying
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Qualifying at Autodromo Nazionale Mon
+ za. Full schedule & US times: https://f1timezone.com/races/italy-2026.ht
+ ml
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:italy-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260906T130000Z
+DTEND:20260906T150000Z
+SUMMARY:F1: Italian Grand Prix — Race
+LOCATION:Autodromo Nazionale Monza\, Monza\, Italy
+DESCRIPTION:Italian Grand Prix 2026 Race at Autodromo Nazionale Monza. Fu
+ ll schedule & US times: https://f1timezone.com/races/italy-2026.html
+URL:https://f1timezone.com/races/italy-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Italian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

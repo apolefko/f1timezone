@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Qatar Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:qatar-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261127T133000Z
+DTEND:20261127T143000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 1
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 1 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-fp2@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261127T170000Z
+DTEND:20261127T180000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 2
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 2 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-fp3@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261128T140000Z
+DTEND:20261128T150000Z
+SUMMARY:F1: Qatar Grand Prix — Practice 3
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Practice 3 at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261128T180000Z
+DTEND:20261128T190000Z
+SUMMARY:F1: Qatar Grand Prix — Qualifying
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Qualifying at Lusail International Circ
+ uit. Full schedule & US times: https://f1timezone.com/races/qatar-2026.h
+ tml
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qatar-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20261129T160000Z
+DTEND:20261129T180000Z
+SUMMARY:F1: Qatar Grand Prix — Race
+LOCATION:Lusail International Circuit\, Lusail\, Qatar
+DESCRIPTION:Qatar Grand Prix 2026 Race at Lusail International Circuit. F
+ ull schedule & US times: https://f1timezone.com/races/qatar-2026.html
+URL:https://f1timezone.com/races/qatar-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Qatar Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,94 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Canadian Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:canada-2026-fp1@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260522T173000Z
+DTEND:20260522T183000Z
+SUMMARY:F1: Canadian Grand Prix — Practice 1
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Practice 1 at Circuit Gilles Villene
+ uve. Full schedule & US times: https://f1timezone.com/races/canada-2026.
+ html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-sprint_qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260522T213000Z
+DTEND:20260522T223000Z
+SUMMARY:F1: Canadian Grand Prix — Sprint Qualifying
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Sprint Qualifying at Circuit Gilles 
+ Villeneuve. Full schedule & US times: https://f1timezone.com/races/canad
+ a-2026.html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Sprint Qualifying starts in 30 mi
+ nutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-sprint@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260523T160000Z
+DTEND:20260523T170000Z
+SUMMARY:F1: Canadian Grand Prix — Sprint Race
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Sprint Race at Circuit Gilles Villen
+ euve. Full schedule & US times: https://f1timezone.com/races/canada-2026
+ .html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Sprint Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-qualifying@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260523T200000Z
+DTEND:20260523T210000Z
+SUMMARY:F1: Canadian Grand Prix — Qualifying
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Qualifying at Circuit Gilles Villene
+ uve. Full schedule & US times: https://f1timezone.com/races/canada-2026.
+ html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:canada-2026-race@f1timezone.com
+DTSTAMP:20260609T202703Z
+DTSTART:20260524T200000Z
+DTEND:20260524T220000Z
+SUMMARY:F1: Canadian Grand Prix — Race
+LOCATION:Circuit Gilles Villeneuve\, Montreal\, Canada
+DESCRIPTION:Canadian Grand Prix 2026 Race at Circuit Gilles Villeneuve. F
+ ull schedule & US times: https://f1timezone.com/races/canada-2026.html
+URL:https://f1timezone.com/races/canada-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Canadian Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
