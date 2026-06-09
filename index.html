@@ -186,15 +186,40 @@
             <div class="race-info" id="next-session">Next Session: Loading...</div>
         </article>
 
-        <!-- MON ETAG AD PLACEHOLDER #1: Primary Banner (728x90 or 300x250) -->
-        <!-- After you create an ad unit in MonetAG dashboard, add the code here -->
-        <!-- Example: <div class="ad-container ad-primary"><div id="ZONE_ID_HERE"></div></div> -->
+        <!-- Ad slot: configure zone IDs in monetag.js (the only file to edit) -->
+        <aside class="ad-container ad-banner" data-ad-slot="home-top" hidden aria-label="Advertisement">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-frame"></div>
+        </aside>
 
         <section class="schedule" itemscope itemtype="https://schema.org/ItemList">
             <h2 itemprop="name">2026 F1 Race Schedule</h2>
             <div id="race-list" itemprop="itemListElement">
                 <!-- Races will be populated by JavaScript -->
             </div>
+        </section>
+
+        <aside class="ad-container ad-banner" data-ad-slot="home-bottom" hidden aria-label="Advertisement">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-frame"></div>
+        </aside>
+
+        <!-- Affiliate slots: configure URLs in monetag.js; hidden until set -->
+        <section class="products" data-affiliate-section hidden>
+            <h2>Race Day Essentials</h2>
+            <div class="product-grid">
+                <div class="product-card" data-affiliate-slot="watch" hidden>
+                    <h3 class="affiliate-heading"></h3>
+                    <p class="affiliate-body"></p>
+                    <a class="product-link" href="#"></a>
+                </div>
+                <div class="product-card" data-affiliate-slot="gear" hidden>
+                    <h3 class="affiliate-heading"></h3>
+                    <p class="affiliate-body"></p>
+                    <a class="product-link" href="#"></a>
+                </div>
+            </div>
+            <p class="affiliate-disclosure">Some links above are affiliate links — purchases support this site at no extra cost to you.</p>
         </section>
 
         <footer role="contentinfo">
@@ -205,5 +230,6 @@
     
     <script src="race-data.js"></script>
     <script src="script.js"></script>
+    <script src="monetag.js"></script>
 </body>
 </html>
