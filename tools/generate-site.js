@@ -72,6 +72,12 @@ const isSprint = race => "sprint" in race.sessions;
 
 /* ---------------- shared page fragments ---------------- */
 
+// Google AdSense snippet — appears in the <head> of every generated race
+// page + the season index.
+const ADSENSE_SNIPPET = `<!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921648961583075"
+         crossorigin="anonymous"></script>`;
+
 const GA_SNIPPET = `<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7CQYP0VK8"></script>
 <script>
@@ -91,31 +97,6 @@ const FOOTER = `        <footer role="contentinfo">
             <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
             <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy Policy</a></p>
         </footer>`;
-
-function adSlot(name) {
-    return `        <aside class="ad-container ad-banner" data-ad-slot="${name}" hidden aria-label="Advertisement">
-            <span class="ad-label">Advertisement</span>
-            <div class="ad-frame"></div>
-        </aside>`;
-}
-
-const AFFILIATE_SECTION = `        <!-- Affiliate slots: configure URLs in /monetag.js; hidden until set -->
-        <section class="products" data-affiliate-section hidden>
-            <h2>Race Day Essentials</h2>
-            <div class="product-grid">
-                <div class="product-card" data-affiliate-slot="watch" hidden>
-                    <h3 class="affiliate-heading"></h3>
-                    <p class="affiliate-body"></p>
-                    <a class="product-link" href="#"></a>
-                </div>
-                <div class="product-card" data-affiliate-slot="gear" hidden>
-                    <h3 class="affiliate-heading"></h3>
-                    <p class="affiliate-body"></p>
-                    <a class="product-link" href="#"></a>
-                </div>
-            </div>
-            <p class="affiliate-disclosure">Some links above are affiliate links — purchases support this site at no extra cost to you.</p>
-        </section>`;
 
 /* ---------------- race page ---------------- */
 
@@ -218,6 +199,8 @@ function racePage(race, prev, next) {
     <meta name="twitter:title" content="${esc(`${race.gp} ${YEAR} — US Session Times & Countdown`)}">
     <meta name="twitter:description" content="${esc(description)}">
 
+    ${ADSENSE_SNIPPET}
+
 ${GA_SNIPPET}
 
     <script type="application/ld+json">
@@ -276,8 +259,6 @@ ${rows}
             </div>
         </section>
 
-${adSlot("race-mid")}
-
         <section class="schedule race-guide">
             <h2>Circuit Guide</h2>
             <p>${esc(race.intro)}</p>
@@ -288,10 +269,6 @@ ${factEntries}
             <p>${esc(race.viewingNotes)}</p>
 ${pager}
         </section>
-
-${AFFILIATE_SECTION}
-
-${adSlot("race-bottom")}
 
 ${FOOTER}
     </div>
@@ -328,7 +305,6 @@ ${FOOTER}
         tick();
     })();
     </script>
-    <script src="/monetag.js"></script>
 </body>
 </html>
 `;
@@ -387,6 +363,8 @@ function indexPage() {
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:locale" content="en_US">
 
+    ${ADSENSE_SNIPPET}
+
 ${GA_SNIPPET}
 
     <script type="application/ld+json">
@@ -417,12 +395,8 @@ ${itemListLd}
 ${cards}
         </section>
 
-${adSlot("race-bottom")}
-
 ${FOOTER}
     </div>
-
-    <script src="/monetag.js"></script>
 </body>
 </html>
 `;
