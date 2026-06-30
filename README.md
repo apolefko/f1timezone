@@ -16,7 +16,6 @@ drives the whole site.
 | `calendar/*.ics` | Per-race + full-season calendar downloads (generated) |
 | `sitemap.xml`, `robots.txt` | SEO (generated) |
 | `index.html`, `script.js`, `style.css` | Homepage (reads `race-data.js` in the browser) |
-| `monetag.js` | **The only file to edit for monetization** — ad zone IDs and affiliate URLs |
 
 ## Annual maintenance (once per season)
 
@@ -26,10 +25,15 @@ drives the whole site.
 3. Commit and push. That's it — countdowns, time zone conversion, past-race
    hiding and calendar files all follow from the data.
 
-## Turning on ads / affiliate links
+## Ads (Google AdSense)
 
-Open `monetag.js` and follow the comments at the top. Paste zone IDs from
-the Monetag dashboard (non-intrusive formats only — never the
-Multitag/popunder tag) and affiliate URLs. Slots stay hidden and take no
-space until configured; once shown, their height is reserved so the layout
-never shifts when an ad loads.
+Paste your AdSense snippet at the `<!-- Google AdSense ... -->` marker in:
+
+- `index.html` (homepage `<head>`)
+- `privacy.html` (`<head>`)
+- `tools/generate-site.js` — fill the `ADSENSE_SNIPPET` constant, then run
+  `node tools/generate-site.js` so every race page + the season index pick
+  it up.
+
+The privacy policy already discloses Google AdSense cookie usage, as required
+for approval.
