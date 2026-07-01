@@ -30,8 +30,8 @@ const SEASON = {
             circuit: "Albert Park Circuit",
             timezone: "Australia/Melbourne",
             sessions: {
-                fp1: "2026-03-06T13:30:00+11:00",
-                fp2: "2026-03-06T17:00:00+11:00",
+                fp1: "2026-03-06T12:30:00+11:00",
+                fp2: "2026-03-06T16:00:00+11:00",
                 fp3: "2026-03-07T12:30:00+11:00",
                 qualifying: "2026-03-07T16:00:00+11:00",
                 race: "2026-03-08T15:00:00+11:00"
@@ -68,10 +68,10 @@ const SEASON = {
             circuit: "Suzuka Circuit",
             timezone: "Asia/Tokyo",
             sessions: {
-                fp1: "2026-03-27T13:30:00+09:00",
-                fp2: "2026-03-27T17:00:00+09:00",
-                fp3: "2026-03-28T12:30:00+09:00",
-                qualifying: "2026-03-28T16:00:00+09:00",
+                fp1: "2026-03-27T11:30:00+09:00",
+                fp2: "2026-03-27T15:00:00+09:00",
+                fp3: "2026-03-28T11:30:00+09:00",
+                qualifying: "2026-03-28T15:00:00+09:00",
                 race: "2026-03-29T14:00:00+09:00"
             },
             facts: { length: "5.807 km", laps: 53, corners: 18, firstGp: 1987 },
@@ -106,8 +106,8 @@ const SEASON = {
             circuit: "Circuit Gilles Villeneuve",
             timezone: "America/Toronto",
             sessions: {
-                fp1: "2026-05-22T13:30:00-04:00",
-                sprint_qualifying: "2026-05-22T17:30:00-04:00",
+                fp1: "2026-05-22T12:30:00-04:00",
+                sprint_qualifying: "2026-05-22T16:30:00-04:00",
                 sprint: "2026-05-23T12:00:00-04:00",
                 qualifying: "2026-05-23T16:00:00-04:00",
                 race: "2026-05-24T16:00:00-04:00"
@@ -182,8 +182,8 @@ const SEASON = {
             circuit: "Silverstone Circuit",
             timezone: "Europe/London",
             sessions: {
-                fp1: "2026-07-03T13:30:00+01:00",
-                sprint_qualifying: "2026-07-03T17:30:00+01:00",
+                fp1: "2026-07-03T12:30:00+01:00",
+                sprint_qualifying: "2026-07-03T16:30:00+01:00",
                 sprint: "2026-07-04T12:00:00+01:00",
                 qualifying: "2026-07-04T16:00:00+01:00",
                 race: "2026-07-05T15:00:00+01:00"
@@ -239,8 +239,8 @@ const SEASON = {
             circuit: "Circuit Zandvoort",
             timezone: "Europe/Amsterdam",
             sessions: {
-                fp1: "2026-08-21T13:30:00+02:00",
-                sprint_qualifying: "2026-08-21T17:30:00+02:00",
+                fp1: "2026-08-21T12:30:00+02:00",
+                sprint_qualifying: "2026-08-21T16:30:00+02:00",
                 sprint: "2026-08-22T12:00:00+02:00",
                 qualifying: "2026-08-22T16:00:00+02:00",
                 race: "2026-08-23T15:00:00+02:00"
@@ -296,10 +296,10 @@ const SEASON = {
             circuit: "Baku City Circuit",
             timezone: "Asia/Baku",
             sessions: {
-                fp1: "2026-09-24T15:30:00+04:00",
-                fp2: "2026-09-24T19:00:00+04:00",
-                fp3: "2026-09-25T14:30:00+04:00",
-                qualifying: "2026-09-25T18:00:00+04:00",
+                fp1: "2026-09-24T12:30:00+04:00",
+                fp2: "2026-09-24T16:00:00+04:00",
+                fp3: "2026-09-25T12:30:00+04:00",
+                qualifying: "2026-09-25T16:00:00+04:00",
                 race: "2026-09-26T15:00:00+04:00"
             },
             facts: { length: "6.003 km", laps: 51, corners: 20, firstGp: 2016 },
@@ -315,9 +315,9 @@ const SEASON = {
             circuit: "Marina Bay Street Circuit",
             timezone: "Asia/Singapore",
             sessions: {
-                fp1: "2026-10-09T17:30:00+08:00",
-                sprint_qualifying: "2026-10-09T21:30:00+08:00",
-                sprint: "2026-10-10T19:00:00+08:00",
+                fp1: "2026-10-09T16:30:00+08:00",
+                sprint_qualifying: "2026-10-09T20:30:00+08:00",
+                sprint: "2026-10-10T17:00:00+08:00",
                 qualifying: "2026-10-10T21:00:00+08:00",
                 race: "2026-10-11T20:00:00+08:00"
             },
@@ -334,8 +334,8 @@ const SEASON = {
             circuit: "Circuit of the Americas",
             timezone: "America/Chicago",
             sessions: {
-                fp1: "2026-10-23T13:30:00-05:00",
-                fp2: "2026-10-23T17:00:00-05:00",
+                fp1: "2026-10-23T12:30:00-05:00",
+                fp2: "2026-10-23T16:30:00-05:00",
                 fp3: "2026-10-24T12:30:00-05:00",
                 qualifying: "2026-10-24T16:00:00-05:00",
                 race: "2026-10-25T15:00:00-05:00"
@@ -353,10 +353,10 @@ const SEASON = {
             circuit: "Autódromo Hermanos Rodríguez",
             timezone: "America/Mexico_City",
             sessions: {
-                fp1: "2026-10-30T13:30:00-06:00",
-                fp2: "2026-10-30T17:00:00-06:00",
-                fp3: "2026-10-31T12:30:00-06:00",
-                qualifying: "2026-10-31T16:00:00-06:00",
+                fp1: "2026-10-30T12:30:00-06:00",
+                fp2: "2026-10-30T16:00:00-06:00",
+                fp3: "2026-10-31T11:30:00-06:00",
+                qualifying: "2026-10-31T15:00:00-06:00",
                 race: "2026-11-01T14:00:00-06:00"
             },
             facts: { length: "4.304 km", laps: 71, corners: 17, firstGp: 1963 },
@@ -372,8 +372,8 @@ const SEASON = {
             circuit: "Autódromo José Carlos Pace (Interlagos)",
             timezone: "America/Sao_Paulo",
             sessions: {
-                fp1: "2026-11-06T11:30:00-03:00",
-                fp2: "2026-11-06T15:00:00-03:00",
+                fp1: "2026-11-06T12:30:00-03:00",
+                fp2: "2026-11-06T16:00:00-03:00",
                 fp3: "2026-11-07T11:30:00-03:00",
                 qualifying: "2026-11-07T15:00:00-03:00",
                 race: "2026-11-08T14:00:00-03:00"
@@ -392,9 +392,9 @@ const SEASON = {
             timezone: "America/Los_Angeles",
             sessions: {
                 fp1: "2026-11-19T18:30:00-08:00",
-                fp2: "2026-11-20T03:00:00-08:00",
+                fp2: "2026-11-19T22:00:00-08:00",
                 fp3: "2026-11-20T18:30:00-08:00",
-                qualifying: "2026-11-21T00:00:00-08:00",
+                qualifying: "2026-11-20T22:00:00-08:00",
                 race: "2026-11-21T20:00:00-08:00"
             },
             facts: { length: "6.201 km", laps: 50, corners: 17, firstGp: 2023 },
@@ -412,7 +412,7 @@ const SEASON = {
             sessions: {
                 fp1: "2026-11-27T16:30:00+03:00",
                 fp2: "2026-11-27T20:00:00+03:00",
-                fp3: "2026-11-28T17:00:00+03:00",
+                fp3: "2026-11-28T17:30:00+03:00",
                 qualifying: "2026-11-28T21:00:00+03:00",
                 race: "2026-11-29T19:00:00+03:00"
             },
