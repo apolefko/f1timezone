@@ -2,11 +2,18 @@
 /* ============================================================
    F1 Timezone — static site generator (zero dependencies)
    ============================================================
-   Reads ../race-data.js and writes:
+   Reads ../race-data.js, ../race-content.js and
+   ../guides-content.js and writes:
      races/<slug>.html        one page per Grand Prix
      races/index.html         season index linking every race
-     sitemap.xml              homepage + privacy + all race pages
+     guides/<slug>.html       one page per guide article
+     guides/index.html        guides index
+     index.html               homepage race schedule (injected
+                              between BEGIN/END:RACE-CARDS markers;
+                              the rest of the file is hand-edited)
+     sitemap.xml              every indexable page
      robots.txt               with sitemap reference
+     ads.txt                  Google AdSense seller declaration
      calendar/<slug>.ics      per-race calendar (all sessions)
      calendar/f1-<year>-season.ics  full season calendar
 
@@ -17,6 +24,17 @@
 const fs = require("fs");
 const path = require("path");
 const { SEASON, SESSION_LABELS, SESSION_DURATIONS } = require("../race-data.js");
+const { RACE_CONTENT } = require("../race-content.js");
+const { GUIDES } = require("../guides-content.js");
+
+// Every race must have extended editorial content — a thin page is
+// worse than a build failure.
+for (const race of SEASON.races) {
+    const c = RACE_CONTENT[race.slug];
+    if (!c || !Array.isArray(c.circuit) || !c.circuit.length || !c.history || !c.viewingExtra) {
+        throw new Error(`race-content.js is missing (or incomplete) for "${race.slug}"`);
+    }
+}
 
 const ROOT = path.join(__dirname, "..");
 const SITE = SEASON.siteUrl;
@@ -95,20 +113,48 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 
 const FOOTER = `        <footer role="contentinfo">
             <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
-            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy Policy</a></p>
+            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
         </footer>`;
 
 /* ---------------- race page ---------------- */
 
 function racePage(race, prev, next) {
     const url = `${SITE}/races/${race.slug}.html`;
+    const content = RACE_CONTENT[race.slug];
     const sprint = isSprint(race);
     const raceET = fmtLong(race.sessions.race, "America/New_York");
+    const raceCT = fmt(race.sessions.race, "America/Chicago",
+        { hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    const raceMT = fmt(race.sessions.race, "America/Denver",
+        { hour: "numeric", minute: "2-digit", timeZoneName: "short" });
     const racePT = fmt(race.sessions.race, "America/Los_Angeles",
         { hour: "numeric", minute: "2-digit", timeZoneName: "short" });
     const localStart = fmt(race.sessions.race, race.timezone,
         { hour: "numeric", minute: "2-digit" });
     const range = weekendRange(race);
+
+    // Per-race FAQ: schedule answers generated from the data (so they can
+    // never go stale), plus hand-written entries from race-content.js.
+    // Rendered as visible text AND as FAQPage JSON-LD built from the same
+    // array, so the markup always matches the on-page content.
+    const raceKm = parseFloat(race.facts.length);
+    const faq = [
+        {
+            q: `What time does the ${YEAR} ${race.gp} start in the US?`,
+            a: `The race starts ${raceET}. That's ${raceCT} Central, ${raceMT} Mountain, and ${racePT} Pacific.`
+        },
+        {
+            q: `Is the ${YEAR} ${race.gp} a sprint weekend?`,
+            a: sprint
+                ? `Yes. In addition to the Grand Prix, the weekend includes Sprint Qualifying (${fmtLong(race.sessions.sprint_qualifying, "America/New_York")}) and a points-paying Sprint race (${fmtLong(race.sessions.sprint, "America/New_York")}).`
+                : `No, it uses the standard format: three practice sessions, qualifying (${fmtLong(race.sessions.qualifying, "America/New_York")}), and the Grand Prix.`
+        },
+        {
+            q: `How many laps is the ${YEAR} ${race.gp}?`,
+            a: `${race.facts.laps} laps of the ${race.facts.length} ${race.circuit}, a race distance of about ${Math.round(race.facts.laps * raceKm)} km.`
+        },
+        ...(content.faq || [])
+    ];
 
     const title = `${race.gp} ${YEAR}: Race Start Time in ET, CT, MT & PT | F1 Timezone`;
     const description = `What time is the ${YEAR} ${race.gp}? The race starts ${raceET} (${racePT}). Full ${race.location} session schedule${sprint ? " including the sprint" : ""} in Eastern, Central, Mountain and Pacific time, with live countdown and calendar download.`;
@@ -153,6 +199,16 @@ function racePage(race, prev, next) {
             { "@type": "ListItem", "position": 2, "name": `F1 ${YEAR} Races`, "item": `${SITE}/races/` },
             { "@type": "ListItem", "position": 3, "name": `${race.gp} ${YEAR}`, "item": url }
         ]
+    }, null, 2);
+
+    const faqLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faq.map(({ q, a }) => ({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": { "@type": "Answer", "text": a }
+        }))
     }, null, 2);
 
     const factEntries = [
@@ -209,6 +265,9 @@ ${jsonLd}
     <script type="application/ld+json">
 ${breadcrumbLd}
     </script>
+    <script type="application/ld+json">
+${faqLd}
+    </script>
 
     ${FONTS}
 </head>
@@ -262,11 +321,25 @@ ${rows}
         <section class="schedule race-guide">
             <h2>Circuit Guide</h2>
             <p>${esc(race.intro)}</p>
+${content.circuit.map(p => `            <p>${esc(p)}</p>`).join("\n")}
             <div class="facts-grid">
 ${factEntries}
             </div>
+            <h3>Circuit History</h3>
+            <p>${esc(content.history)}</p>
             <h3>Watching from the US</h3>
             <p>${esc(race.viewingNotes)}</p>
+            <p>${esc(content.viewingExtra)}</p>
+        </section>
+
+        <section class="schedule race-guide">
+            <h2>${esc(race.gp)} ${YEAR} FAQ</h2>
+${faq.map(({ q, a }) => `            <h3>${esc(q)}</h3>
+            <p>${esc(a)}</p>`).join("\n")}
+            <p>New to Formula 1 or planning your viewing weekend? Read our guides to
+                <a href="/guides/how-to-watch-f1-in-the-us.html">watching F1 in the US</a>,
+                <a href="/guides/f1-race-weekend-format.html">how a race weekend works</a>, and
+                <a href="/guides/why-f1-race-times-vary.html">why F1 start times vary</a>.</p>
 ${pager}
         </section>
 
@@ -316,6 +389,15 @@ function indexPage() {
     const url = `${SITE}/races/`;
     const title = `F1 ${YEAR} Race Calendar: All ${SEASON.races.length} Grands Prix in US Time | F1 Timezone`;
     const description = `Every ${YEAR} Formula 1 race with start times in Eastern, Central, Mountain and Pacific time. Session schedules, sprint weekends, live countdowns and free calendar downloads for all ${SEASON.races.length} Grands Prix.`;
+
+    const sprints = SEASON.races.filter(isSprint);
+    const opener = SEASON.races[0];
+    const finale = SEASON.races[SEASON.races.length - 1];
+    const sprintNames = sprints.map(r => `<a href="/races/${r.slug}.html">${esc(r.gp)}</a>`)
+        .join(", ").replace(/, ([^,]*)$/, ", and $1");
+    const intro = `            <p>The ${YEAR} Formula 1 World Championship runs ${SEASON.races.length} rounds, opening with the <a href="/races/${opener.slug}.html">${esc(opener.gp)}</a> in ${esc(opener.location.split(",")[0])} on ${fmt(opener.sessions.race, opener.timezone, { month: "long", day: "numeric" })} and closing with the <a href="/races/${finale.slug}.html">${esc(finale.gp)}</a> at ${esc(finale.circuit)} on ${fmt(finale.sessions.race, finale.timezone, { month: "long", day: "numeric" })}. It's the first season of the sport's new technical regulations — smaller, lighter cars with active aerodynamics — and the calendar brings a brand-new race in Madrid alongside the classics.</p>
+            <p>${sprints.length} weekends run the sprint format with points on offer across all three days: ${sprintNames}. Two races don't run on a Sunday at all — Baku and Las Vegas both race on Saturday — so double-check the dates below. If you're new to how a Grand Prix weekend is structured, our <a href="/guides/f1-race-weekend-format.html">race weekend format guide</a> walks through every session.</p>
+            <p>Every race below links to a full session schedule converted to Eastern, Central, Mountain, and Pacific time, with a live countdown and a free .ics calendar download. For the ${YEAR} US streaming landscape, see <a href="/guides/how-to-watch-f1-in-the-us.html">how to watch F1 in the US</a>.</p>`;
 
     const cards = SEASON.races.map(race => {
         const raceET = fmtCell(race.sessions.race, "America/New_York");
@@ -390,8 +472,222 @@ ${itemListLd}
             </div>
         </header>
 
+        <section class="schedule race-guide">
+            <h2>The ${YEAR} Season at a Glance</h2>
+${intro}
+        </section>
+
         <section class="schedule">
             <h2>${YEAR} Season</h2>
+${cards}
+        </section>
+
+${FOOTER}
+    </div>
+</body>
+</html>
+`;
+}
+
+/* ---------------- homepage schedule injection ---------------- */
+
+// Static race cards for index.html, matching the markup script.js builds,
+// with times in the site's default zone (Eastern). JS progressively
+// enhances this into the visitor's chosen time zone; crawlers and no-JS
+// visitors get the full schedule either way.
+function homeRaceCards() {
+    return SEASON.races.map(race => {
+        const sessions = Object.entries(race.sessions).map(([key, time]) => `
+                        <div class="session">
+                            <div class="session-name">${SESSION_LABELS[key].toUpperCase()}</div>
+                            <div class="session-time">${fmtCell(time, "America/New_York")}</div>
+                        </div>`).join("");
+        return `                <div class="race-card">
+                    <div class="race-header">
+                        <div class="race-name"><a href="/races/${race.slug}.html" title="${esc(`${race.gp}: full schedule, countdown & calendar download`)}">${esc(race.name)}</a></div>
+                        <div class="race-date">${esc(race.location)}</div>
+                    </div>
+                    <div class="session-times">${sessions}
+                    </div>
+                </div>`;
+    }).join("\n");
+}
+
+const BEGIN_MARK = "<!-- BEGIN:RACE-CARDS (generated by tools/generate-site.js — do not edit by hand) -->";
+const END_MARK = "<!-- END:RACE-CARDS -->";
+
+function injectBetweenMarkers(filePath, begin, end, html) {
+    const src = fs.readFileSync(filePath, "utf8");
+    const i = src.indexOf(begin), j = src.indexOf(end);
+    if (i === -1 || j === -1 || j < i) {
+        throw new Error(`${path.basename(filePath)}: missing ${begin} / ${end} markers — restore them so the generator can inject the schedule.`);
+    }
+    const out = src.slice(0, i + begin.length) + "\n" + html + "\n            " + src.slice(j);
+    if (out !== src) fs.writeFileSync(filePath, out);
+}
+
+/* ---------------- guide pages ---------------- */
+
+function guidePage(guide) {
+    const url = `${SITE}/guides/${guide.slug}.html`;
+
+    const articleLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": guide.title,
+        "description": guide.description,
+        "dateModified": guide.updated,
+        "author": { "@type": "Organization", "name": "F1 Timezone", "url": SITE },
+        "publisher": { "@type": "Organization", "name": "F1 Timezone", "url": SITE },
+        "mainEntityOfPage": url
+    }, null, 2);
+
+    const breadcrumbLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}` },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE}/guides/` },
+            { "@type": "ListItem", "position": 3, "name": guide.title, "item": url }
+        ]
+    }, null, 2);
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>${esc(guide.title)} | F1 Timezone</title>
+    <meta name="title" content="${esc(guide.title)} | F1 Timezone">
+    <meta name="description" content="${esc(guide.description)}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="${url}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="F1 Timezone">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="${esc(guide.title)}">
+    <meta property="og:description" content="${esc(guide.description)}">
+    <meta property="og:locale" content="en_US">
+
+    ${ADSENSE_SNIPPET}
+
+${GA_SNIPPET}
+
+    <script type="application/ld+json">
+${articleLd}
+    </script>
+    <script type="application/ld+json">
+${breadcrumbLd}
+    </script>
+
+    ${FONTS}
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">F1 Timezone</a> <span aria-hidden="true">&rsaquo;</span>
+                <a href="/guides/">Guides</a> <span aria-hidden="true">&rsaquo;</span>
+                <span>${esc(guide.title)}</span>
+            </nav>
+            <div class="deco-ornament" aria-hidden="true"></div>
+            <h1>${esc(guide.title)}</h1>
+            <p class="tagline">Updated ${fmt(guide.updated + "T12:00:00Z", "UTC", { month: "long", day: "numeric", year: "numeric" })}</p>
+            <div class="deco-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="privacy-content">
+${guide.bodyHtml.trim()}
+        </div>
+
+${FOOTER}
+    </div>
+</body>
+</html>
+`;
+}
+
+function guidesIndexPage() {
+    const url = `${SITE}/guides/`;
+    const title = `F1 Guides: Watching, Schedules & How the Sport Works | F1 Timezone`;
+    const description = `Practical guides for US Formula 1 fans: where to watch every ${YEAR} session, how race weekends and sprints work, and why F1 start times vary so much across the season.`;
+
+    const cards = GUIDES.map(g => `            <div class="race-card index-card">
+                <div class="race-header">
+                    <div class="race-name"><a href="/guides/${g.slug}.html">${esc(g.title)}</a></div>
+                </div>
+                <div class="index-meta">
+                    <span>${esc(g.description)}</span>
+                </div>
+            </div>`).join("\n");
+
+    const itemListLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "F1 Timezone Guides",
+        "itemListElement": GUIDES.map((g, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": g.title,
+            "url": `${SITE}/guides/${g.slug}.html`
+        }))
+    }, null, 2);
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>${esc(title)}</title>
+    <meta name="title" content="${esc(title)}">
+    <meta name="description" content="${esc(description)}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="${url}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="F1 Timezone">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="F1 Guides for US Fans">
+    <meta property="og:description" content="${esc(description)}">
+    <meta property="og:locale" content="en_US">
+
+    ${ADSENSE_SNIPPET}
+
+${GA_SNIPPET}
+
+    <script type="application/ld+json">
+${itemListLd}
+    </script>
+
+    ${FONTS}
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">F1 Timezone</a> <span aria-hidden="true">&rsaquo;</span>
+                <span>Guides</span>
+            </nav>
+            <div class="deco-ornament" aria-hidden="true"></div>
+            <h1>F1 Guides</h1>
+            <p class="tagline">Watching &middot; Schedules &middot; How the Sport Works</p>
+            <div class="deco-rule" aria-hidden="true"></div>
+        </header>
+
+        <section class="schedule race-guide">
+            <h2>Guides for US F1 Fans</h2>
+            <p>Everything on this site exists to answer one question — <em>when is the race, in my time zone?</em> — but the schedule is only half the battle. These guides cover the rest: where to actually watch each session in the US, how a Grand Prix weekend is structured, what changed for the ${YEAR} season, and why the start times bounce between 1 AM and prime time. Pair them with the <a href="/races/">full ${YEAR} race calendar</a> and the <a href="/calendar/f1-${YEAR}-season.ics">season calendar download</a>.</p>
+        </section>
+
+        <section class="schedule">
+            <h2>All Guides</h2>
 ${cards}
         </section>
 
@@ -411,7 +707,14 @@ function sitemap() {
         ...SEASON.races.map(r => ({
             loc: `${SITE}/races/${r.slug}.html`, priority: "0.8", changefreq: "weekly"
         })),
-        { loc: `${SITE}/privacy.html`, priority: "0.2", changefreq: "yearly" }
+        { loc: `${SITE}/guides/`, priority: "0.7", changefreq: "monthly" },
+        ...GUIDES.map(g => ({
+            loc: `${SITE}/guides/${g.slug}.html`, priority: "0.6", changefreq: "monthly"
+        })),
+        { loc: `${SITE}/about.html`, priority: "0.3", changefreq: "yearly" },
+        { loc: `${SITE}/contact.html`, priority: "0.3", changefreq: "yearly" },
+        { loc: `${SITE}/privacy.html`, priority: "0.2", changefreq: "yearly" },
+        { loc: `${SITE}/terms.html`, priority: "0.2", changefreq: "yearly" }
     ];
     const entries = urls.map(u => `  <url>
     <loc>${u.loc}</loc>
@@ -430,6 +733,10 @@ const ROBOTS = `User-agent: *
 Allow: /
 
 Sitemap: ${SITE}/sitemap.xml
+`;
+
+// Google AdSense seller declaration — must be served at ${SITE}/ads.txt
+const ADS_TXT = `google.com, pub-5921648961583075, DIRECT, f08c47fec0942fa0
 `;
 
 /* ---------------- .ics calendars ---------------- */
@@ -498,6 +805,7 @@ function icsCalendar(name, races) {
 /* ---------------- write everything ---------------- */
 
 fs.mkdirSync(path.join(ROOT, "races"), { recursive: true });
+fs.mkdirSync(path.join(ROOT, "guides"), { recursive: true });
 fs.mkdirSync(path.join(ROOT, "calendar"), { recursive: true });
 
 SEASON.races.forEach((race, i) => {
@@ -507,9 +815,17 @@ SEASON.races.forEach((race, i) => {
     fs.writeFileSync(path.join(ROOT, "calendar", `${race.slug}.ics`), icsCalendar(`F1 ${YEAR}: ${race.gp}`, [race]));
 });
 
+GUIDES.forEach(guide => {
+    fs.writeFileSync(path.join(ROOT, "guides", `${guide.slug}.html`), guidePage(guide));
+});
+
+injectBetweenMarkers(path.join(ROOT, "index.html"), BEGIN_MARK, END_MARK, homeRaceCards());
+
 fs.writeFileSync(path.join(ROOT, "races", "index.html"), indexPage());
+fs.writeFileSync(path.join(ROOT, "guides", "index.html"), guidesIndexPage());
 fs.writeFileSync(path.join(ROOT, "calendar", `f1-${YEAR}-season.ics`), icsCalendar(`F1 ${YEAR} Season`, SEASON.races));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap());
 fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
+fs.writeFileSync(path.join(ROOT, "ads.txt"), ADS_TXT);
 
-console.log(`Generated ${SEASON.races.length} race pages, races/index.html, sitemap.xml, robots.txt and ${SEASON.races.length + 1} calendar files.`);
+console.log(`Generated ${SEASON.races.length} race pages, ${GUIDES.length} guide pages, races/index.html, guides/index.html, the homepage schedule, sitemap.xml, robots.txt, ads.txt and ${SEASON.races.length + 1} calendar files.`);
