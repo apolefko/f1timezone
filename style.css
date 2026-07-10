@@ -515,6 +515,20 @@ footer a:hover { color: var(--gold-bright); }
     margin: 24px 0 12px;
 }
 
+/* In-content links (guides, race guides, FAQ, info pages) */
+.race-guide a,
+.privacy-content a,
+.index-meta a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.race-guide a:hover,
+.privacy-content a:hover,
+.index-meta a:hover { color: var(--gold-bright); }
+
 .facts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
