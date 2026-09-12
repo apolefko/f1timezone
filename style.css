@@ -670,3 +670,171 @@ footer a:hover { color: var(--gold-bright); }
 .calendar-note a, .race-info a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200, 164, 92, 0.4); }
 .calendar-note a:hover, .race-info a:hover { color: var(--gold-bright); }
 .tz-note { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; margin-top: 14px; }
+
+/* ============================================================
+   Deco Grand Prix pass — sunburst, skyline, departures board,
+   ticket stubs, mid-century accents
+   ============================================================ */
+:root {
+    --teal:    #4f9a94;
+    --mustard: #d9a441;
+    --sage:    #8fa66b;
+    --rust:    #c8663c;
+}
+
+/* Body copy in a geometric 1920s-rooted face; Poiret One stays for the tagline */
+body { font-family: 'Josefin Sans', 'Poiret One', 'Segoe UI', Roboto, sans-serif; font-size: 1.04rem; }
+.race-guide p, .privacy-content p, .privacy-content li, .index-meta, .fact-value, .session-time, .race-info { font-weight: 400; }
+strong { font-weight: 600; }
+
+/* Sunburst rays fanning down from above the page title */
+header {
+    background:
+        radial-gradient(ellipse 130% 110% at 50% -30%, transparent 28%, var(--panel) 78%),
+        repeating-conic-gradient(from 140deg at 50% -30%, rgba(200, 164, 92, 0.075) 0deg 2.4deg, transparent 2.4deg 8deg),
+        linear-gradient(160deg, var(--panel) 0%, var(--panel-2) 100%);
+}
+
+/* Stepped skyline along the bottom of the footer */
+footer {
+    padding-bottom: 92px;
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60 H8 V46 h10 V34 h6 V22 h4 V10 h2 V2 h1 V10 h2 V22 h4 V34 h6 V46 h10 V60 H67 V50 h16 V38 h8 V26 h4 V14 h2 V26 h4 V38 h8 V50 h16 V60 H137 V42 h12 V28 h6 V14 h3 V4 h1 V14 h3 V28 h6 V42 h12 V60 H196 V52 h20 V40 h10 V28 h5 V16 h3 V6 h1 V16 h3 V28 h5 V40 h10 V52 h20 V60 H283 V44 h14 V30 h7 V18 h4 V8 h2 V18 h4 V30 h7 V44 h14 V60 H349 V48 h10 V32 h5 V20 h3 V8 h1 V20 h3 V32 h5 V48 h10 V60 H400 Z' fill='%23c8a45c'/%3E%3C/svg%3E") bottom center / 320px 60px repeat-x,
+        linear-gradient(160deg, var(--panel) 0%, var(--panel-2) 100%);
+}
+footer::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 60px;
+    background: linear-gradient(180deg, rgba(17,17,17,0.6), rgba(17,17,17,0.15));
+    pointer-events: none;
+}
+footer p { position: relative; z-index: 1; }
+
+/* Stepped deco rule under section headings */
+.schedule h2::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 8px;
+    margin-top: 10px;
+    background:
+        linear-gradient(90deg, var(--gold) 0 100%) 0 0 / 100% 2px no-repeat,
+        linear-gradient(90deg, var(--gold) 0 100%) 0 6px / 55% 2px no-repeat;
+}
+.next-race h2::after { margin-left: auto; margin-right: auto; background-position: center 0, center 6px; }
+
+/* Departures board: homepage session list */
+.board .session-times {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 6px;
+}
+.board .session-name, .board .session-time { white-space: nowrap; }
+.board .session {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: #0b0a08;
+    border: 1px solid rgba(200, 164, 92, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.6);
+    perspective: 500px;
+    position: relative;
+}
+.board .session::after {
+    /* the flap hinge */
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    height: 1px;
+    background: rgba(0,0,0,0.75);
+    pointer-events: none;
+}
+.board .session-name { margin: 0; }
+.board .session-time {
+    font-family: 'Cinzel', serif;
+    font-size: 0.98rem;
+    letter-spacing: 0.06em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ivory);
+    text-align: right;
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+}
+@keyframes flap {
+    0%   { transform: rotateX(0deg); }
+    45%  { transform: rotateX(-88deg); opacity: 0.55; }
+    55%  { transform: rotateX(88deg);  opacity: 0.55; }
+    100% { transform: rotateX(0deg); }
+}
+.board.flipping .session-time {
+    animation: flap 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 45ms);
+}
+@media (prefers-reduced-motion: reduce) {
+    .board.flipping .session-time { animation: none; }
+}
+
+/* Ticket stubs: the races index */
+.ticket {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    padding: 0;
+    overflow: visible;
+}
+.stub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 16px 6px;
+    background: rgba(200, 164, 92, 0.07);
+    border-right: 2px dashed rgba(200, 164, 92, 0.45);
+    font-family: 'Cinzel', serif;
+    text-align: center;
+}
+.stub span {
+    font-size: 0.55rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+.stub strong { font-size: 1.7rem; line-height: 1; color: var(--gold-bright); font-weight: 700; }
+.stub::before, .stub::after {
+    /* perforation notches */
+    content: "";
+    position: absolute;
+    right: -10px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: #121110;
+    border: 1px solid rgba(200, 164, 92, 0.18);
+}
+.stub::before { top: -10px; border-top-color: transparent; border-left-color: transparent; }
+.stub::after  { bottom: -10px; border-bottom-color: transparent; border-left-color: transparent; }
+.ticket-body { padding: 18px 20px 20px; min-width: 0; }
+.ticket .race-header { padding-bottom: 10px; }
+
+/* Mid-century accent badges */
+.badge-sprint   { border-color: var(--teal);    color: #7fc4be; }
+.badge-champion { border-color: var(--mustard); color: #e6c878; background: rgba(217, 164, 65, 0.14); }
+.badge-rookie   { border-color: var(--sage);    color: #b5c98f; }
+.badge-now      { border-color: var(--rust);    color: #e88a5e; background: rgba(200, 102, 60, 0.14); }
+
+/* Countdown shimmer in the final hour */
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.countdown.imminent {
+    background-image: linear-gradient(100deg, #9a7b34 0%, #c8a45c 35%, #fff3c4 50%, #c8a45c 65%, #9a7b34 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.4s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .ticket { grid-template-columns: 64px 1fr; }
+    .board .session-times { grid-template-columns: 1fr; }
+    footer { padding-bottom: 80px; }
+}

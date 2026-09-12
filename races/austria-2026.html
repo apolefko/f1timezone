@@ -189,8 +189,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poiret+One&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -384,6 +385,7 @@
                 return;
             }
             let diff = new Date(upcoming[1]).getTime() - now;
+            el.classList.toggle("imminent", diff < 3600000);
             const days = Math.floor(diff / 86400000);
             const hours = Math.floor(diff % 86400000 / 3600000);
             const minutes = Math.floor(diff % 3600000 / 60000);
