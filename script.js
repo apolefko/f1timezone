@@ -130,6 +130,7 @@ function updateCountdown() {
         return;
     }
     
+    document.getElementById('countdown').classList.toggle('imminent', diff < 3600000);
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -158,7 +159,8 @@ function displayRaces() {
     raceList.innerHTML = '';
     
     const now = new Date();
-    
+    let flapIndex = 0;
+
     races.forEach(race => {
         // Skip past races
         const raceDate = new Date(race.sessions.race);
@@ -200,7 +202,8 @@ function displayRaces() {
             const sessionTimeDiv = document.createElement('div');
             sessionTimeDiv.className = 'session-time';
             sessionTimeDiv.textContent = convertToUserTimezone(sessionTime, race.timezone);
-            
+            sessionTimeDiv.style.setProperty('--i', flapIndex++);
+
             session.appendChild(sessionNameDiv);
             session.appendChild(sessionTimeDiv);
             sessionTimes.appendChild(session);
@@ -210,6 +213,13 @@ function displayRaces() {
         raceCard.appendChild(sessionTimes);
         raceList.appendChild(raceCard);
     });
+
+    // Split-flap flip on the departures board whenever the times re-render
+    raceList.classList.remove('flipping');
+    void raceList.offsetWidth;
+    raceList.classList.add('flipping');
+    clearTimeout(displayRaces.flapTimer);
+    displayRaces.flapTimer = setTimeout(() => raceList.classList.remove('flipping'), 1500 + flapIndex * 45);
 }
 
 // Update all displays

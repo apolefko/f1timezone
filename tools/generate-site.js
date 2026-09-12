@@ -116,8 +116,9 @@ const GA_SNIPPET = `<!-- Google tag (gtag.js) -->
 
 const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">`;
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poiret+One&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">`;
 
 // Season calendar as a subscription: webcal:// opens Apple/Outlook's
 // "subscribe" flow, and Google Calendar takes the same URL via ?cid=.
@@ -402,6 +403,7 @@ ${FOOTER}
                 return;
             }
             let diff = new Date(upcoming[1]).getTime() - now;
+            el.classList.toggle("imminent", diff < 3600000);
             const days = Math.floor(diff / 86400000);
             const hours = Math.floor(diff % 86400000 / 3600000);
             const minutes = Math.floor(diff % 3600000 / 60000);
@@ -476,14 +478,17 @@ function indexPage() {
     const cards = SEASON.races.map(race => {
         const raceET = fmtCell(race.sessions.race, "America/New_York");
         const result = RESULTS.races[race.slug];
-        return `            <div class="race-card index-card">
-                <div class="race-header">
-                    <div class="race-name"><a href="/races/${race.slug}.html">${esc(race.gp)}</a>${isSprint(race) ? ' <span class="sprint-badge">Sprint</span>' : ""}</div>
-                    <div class="race-date">Round ${race.round}&nbsp;&middot;&nbsp;${esc(race.location)}</div>
-                </div>
-                <div class="index-meta">
-                    <span>${esc(weekendRange(race))}</span>
-                    <span>${result ? `Winner: ${esc(result.podium[0].driver)} (${esc(result.podium[0].team)})` : `Race: ${esc(raceET)}`}</span>
+        return `            <div class="race-card index-card ticket">
+                <div class="stub" aria-label="Round ${race.round}"><span>Round</span><strong>${race.round}</strong></div>
+                <div class="ticket-body">
+                    <div class="race-header">
+                        <div class="race-name"><a href="/races/${race.slug}.html">${esc(race.gp)}</a>${isSprint(race) ? ' <span class="sprint-badge badge-sprint">Sprint</span>' : ""}</div>
+                        <div class="race-date">${esc(race.location)}</div>
+                    </div>
+                    <div class="index-meta">
+                        <span>${esc(weekendRange(race))}</span>
+                        <span>${result ? `Winner: ${esc(result.podium[0].driver)} (${esc(result.podium[0].team)})` : `Race: ${esc(raceET)}`}</span>
+                    </div>
                 </div>
             </div>`;
     }).join("\n");
@@ -784,7 +789,7 @@ function driversPage() {
     const title = `F1 ${YEAR} Drivers: Every Current Driver & Team | F1 Timezone`;
     const description = `The full ${YEAR} Formula 1 grid — all ${TEAMS.length} teams and every current driver with car numbers, including stand-ins racing right now. Updated ${fmt(DRIVERS_UPDATED + "T12:00:00Z", "UTC", { month: "long", day: "numeric", year: "numeric" })}.`;
 
-    const driverBadges = d => `${d.champion ? ' <span class="sprint-badge">Champion</span>' : ""}${d.rookie ? ' <span class="sprint-badge">Rookie</span>' : ""}`;
+    const driverBadges = d => `${d.champion ? ' <span class="sprint-badge badge-champion">Champion</span>' : ""}${d.rookie ? ' <span class="sprint-badge badge-rookie">Rookie</span>' : ""}`;
 
     const teamCards = TEAMS.map(team => {
         const rows = team.drivers.map(d => `                    <div class="session">
@@ -794,7 +799,7 @@ function driversPage() {
                     </div>`).join("\n");
         const sub = team.standIn ? `\n                <div class="session">
                         <div class="session-name">#${team.standIn.number} &middot; ${esc(team.standIn.country)}</div>
-                        <div class="session-time">${esc(team.standIn.name)} <span class="sprint-badge">Racing Now</span></div>
+                        <div class="session-time">${esc(team.standIn.name)} <span class="sprint-badge badge-now">Racing Now</span></div>
                         <div class="calendar-note">${esc(team.standIn.note)}</div>
                     </div>` : "";
         return `            <div class="race-card">

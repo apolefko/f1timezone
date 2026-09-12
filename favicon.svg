@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <polygon points="19,2 45,2 62,19 62,45 45,62 19,62 2,45 2,19" fill="#0a0a0a" stroke="#c8a45c" stroke-width="3"/>
+  <polygon points="22,8 42,8 56,22 56,42 42,56 22,56 8,42 8,22" fill="none" stroke="#c8a45c" stroke-width="1.2" opacity="0.7"/>
+  <path d="M32 9 L32 18 M32 46 L32 55 M9 32 L18 32 M46 32 L55 32" stroke="#c8a45c" stroke-width="1.2" opacity="0.5"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#e6c878" letter-spacing="1">F1</text>
+</svg>
