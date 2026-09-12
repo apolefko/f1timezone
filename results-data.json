@@ -1,0 +1,713 @@
+{
+  "updated": "2026-09-12",
+  "season": 2026,
+  "afterRound": 13,
+  "races": {
+    "australia-2026": {
+      "round": 1,
+      "apiRound": 1,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "1:23:06.801",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+2.974",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "number": "16",
+          "team": "Ferrari",
+          "time": "+15.519",
+          "status": "Finished"
+        }
+      ]
+    },
+    "china-2026": {
+      "round": 2,
+      "apiRound": 2,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:33:15.607",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "+5.515",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "+25.267",
+          "status": "Finished"
+        }
+      ]
+    },
+    "japan-2026": {
+      "round": 3,
+      "apiRound": 3,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:28:03.403",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Oscar Piastri",
+          "code": "PIA",
+          "number": "81",
+          "team": "McLaren",
+          "time": "+13.722",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "number": "16",
+          "team": "Ferrari",
+          "time": "+15.270",
+          "status": "Finished"
+        }
+      ]
+    },
+    "miami-2026": {
+      "round": 4,
+      "apiRound": 4,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:33:19.273",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Lando Norris",
+          "code": "NOR",
+          "number": "1",
+          "team": "McLaren",
+          "time": "+3.264",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Oscar Piastri",
+          "code": "PIA",
+          "number": "81",
+          "team": "McLaren",
+          "time": "+27.092",
+          "status": "Finished"
+        }
+      ]
+    },
+    "canada-2026": {
+      "round": 5,
+      "apiRound": 5,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:28:15.758",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "+10.768",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "+11.276",
+          "status": "Finished"
+        }
+      ]
+    },
+    "monaco-2026": {
+      "round": 6,
+      "apiRound": 6,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "2:23:31.243",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "+6.271",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Isack Hadjar",
+          "code": "HAD",
+          "number": "6",
+          "team": "Red Bull",
+          "time": "+23.394",
+          "status": "Finished"
+        }
+      ]
+    },
+    "spain-2026": {
+      "round": 7,
+      "apiRound": 7,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "1:32:28.105",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "+19.561",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Lando Norris",
+          "code": "NOR",
+          "number": "1",
+          "team": "McLaren",
+          "time": "+23.719",
+          "status": "Finished"
+        }
+      ]
+    },
+    "austria-2026": {
+      "round": 8,
+      "apiRound": 8,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "1:26:37.979",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "+1.611",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+1.986",
+          "status": "Finished"
+        }
+      ]
+    },
+    "britain-2026": {
+      "round": 9,
+      "apiRound": 9,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "number": "16",
+          "team": "Ferrari",
+          "time": "1:27:11.335",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "+0.427",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "+0.772",
+          "status": "Finished"
+        }
+      ]
+    },
+    "belgium-2026": {
+      "round": 10,
+      "apiRound": 10,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:24:42.479",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "number": "16",
+          "team": "Ferrari",
+          "time": "+1.952",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "+11.586",
+          "status": "Finished"
+        }
+      ]
+    },
+    "hungary-2026": {
+      "round": 11,
+      "apiRound": 11,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Lando Norris",
+          "code": "NOR",
+          "number": "1",
+          "team": "McLaren",
+          "time": "1:39:56.180",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "+15.080",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+18.728",
+          "status": "Finished"
+        }
+      ]
+    },
+    "netherlands-2026": {
+      "round": 12,
+      "apiRound": 12,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Lando Norris",
+          "code": "NOR",
+          "number": "1",
+          "team": "McLaren",
+          "time": "2:04:44.859",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+11.536",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "+15.906",
+          "status": "Finished"
+        }
+      ]
+    },
+    "italy-2026": {
+      "round": 13,
+      "apiRound": 13,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "1:51:15.281",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "code": "RUS",
+          "number": "63",
+          "team": "Mercedes",
+          "time": "+3.857",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "+14.718",
+          "status": "Finished"
+        }
+      ]
+    }
+  },
+  "driverStandings": [
+    {
+      "position": 1,
+      "driver": "Andrea Kimi Antonelli",
+      "code": "ANT",
+      "number": "12",
+      "team": "Mercedes",
+      "points": 267,
+      "wins": 7
+    },
+    {
+      "position": 2,
+      "driver": "George Russell",
+      "code": "RUS",
+      "number": "63",
+      "team": "Mercedes",
+      "points": 201,
+      "wins": 2
+    },
+    {
+      "position": 3,
+      "driver": "Lewis Hamilton",
+      "code": "HAM",
+      "number": "44",
+      "team": "Ferrari",
+      "points": 191,
+      "wins": 1
+    },
+    {
+      "position": 4,
+      "driver": "Lando Norris",
+      "code": "NOR",
+      "number": "1",
+      "team": "McLaren",
+      "points": 171,
+      "wins": 2
+    },
+    {
+      "position": 5,
+      "driver": "Charles Leclerc",
+      "code": "LEC",
+      "number": "16",
+      "team": "Ferrari",
+      "points": 155,
+      "wins": 1
+    },
+    {
+      "position": 6,
+      "driver": "Max Verstappen",
+      "code": "VER",
+      "number": "3",
+      "team": "Red Bull",
+      "points": 127,
+      "wins": 0
+    },
+    {
+      "position": 7,
+      "driver": "Oscar Piastri",
+      "code": "PIA",
+      "number": "81",
+      "team": "McLaren",
+      "points": 116,
+      "wins": 0
+    },
+    {
+      "position": 8,
+      "driver": "Isack Hadjar",
+      "code": "HAD",
+      "number": "6",
+      "team": "Red Bull",
+      "points": 71,
+      "wins": 0
+    },
+    {
+      "position": 9,
+      "driver": "Liam Lawson",
+      "code": "LAW",
+      "number": "30",
+      "team": "RB F1 Team / Red Bull",
+      "points": 51,
+      "wins": 0
+    },
+    {
+      "position": 10,
+      "driver": "Pierre Gasly",
+      "code": "GAS",
+      "number": "10",
+      "team": "Alpine F1 Team",
+      "points": 41,
+      "wins": 0
+    },
+    {
+      "position": 11,
+      "driver": "Arvid Lindblad",
+      "code": "LIN",
+      "number": "41",
+      "team": "RB F1 Team",
+      "points": 29,
+      "wins": 0
+    },
+    {
+      "position": 12,
+      "driver": "Franco Colapinto",
+      "code": "COL",
+      "number": "43",
+      "team": "Alpine F1 Team",
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "position": 13,
+      "driver": "Oliver Bearman",
+      "code": "BEA",
+      "number": "87",
+      "team": "Haas F1 Team",
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "position": 14,
+      "driver": "Gabriel Bortoleto",
+      "code": "BOR",
+      "number": "5",
+      "team": "Audi",
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "position": 15,
+      "driver": "Nico Hülkenberg",
+      "code": "HUL",
+      "number": "27",
+      "team": "Audi",
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "position": 16,
+      "driver": "Carlos Sainz",
+      "code": "SAI",
+      "number": "55",
+      "team": "Williams",
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "position": 17,
+      "driver": "Alexander Albon",
+      "code": "ALB",
+      "number": "23",
+      "team": "Williams",
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "position": 18,
+      "driver": "Esteban Ocon",
+      "code": "OCO",
+      "number": "31",
+      "team": "Haas F1 Team",
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "position": 19,
+      "driver": "Fernando Alonso",
+      "code": "ALO",
+      "number": "14",
+      "team": "Aston Martin",
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "position": 20,
+      "driver": "Yuki Tsunoda",
+      "code": "TSU",
+      "number": "22",
+      "team": "RB F1 Team",
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "position": 21,
+      "driver": "Lance Stroll",
+      "code": "STR",
+      "number": "18",
+      "team": "Aston Martin",
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "position": 22,
+      "driver": "Valtteri Bottas",
+      "code": "BOT",
+      "number": "77",
+      "team": "Cadillac F1 Team",
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "position": 23,
+      "driver": "Sergio Pérez",
+      "code": "PER",
+      "number": "11",
+      "team": "Cadillac F1 Team",
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "constructorStandings": [
+    {
+      "position": 1,
+      "team": "Mercedes",
+      "points": 468,
+      "wins": 9
+    },
+    {
+      "position": 2,
+      "team": "Ferrari",
+      "points": 346,
+      "wins": 2
+    },
+    {
+      "position": 3,
+      "team": "McLaren",
+      "points": 287,
+      "wins": 2
+    },
+    {
+      "position": 4,
+      "team": "Red Bull",
+      "points": 204,
+      "wins": 0
+    },
+    {
+      "position": 5,
+      "team": "RB F1 Team",
+      "points": 75,
+      "wins": 0
+    },
+    {
+      "position": 6,
+      "team": "Alpine F1 Team",
+      "points": 62,
+      "wins": 0
+    },
+    {
+      "position": 7,
+      "team": "Haas F1 Team",
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "position": 8,
+      "team": "Audi",
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "position": 9,
+      "team": "Williams",
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "position": 10,
+      "team": "Aston Martin",
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "position": 11,
+      "team": "Cadillac F1 Team",
+      "points": 0,
+      "wins": 0
+    }
+  ]
+}
