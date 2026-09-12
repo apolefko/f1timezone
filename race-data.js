@@ -307,8 +307,27 @@ const SEASON = {
             viewingNotes: "Read the schedule twice: the race is on SATURDAY, not Sunday, starting in the early morning hours for US viewers. Baku races are rarely decided until the final laps — multiple editions have flipped on a restart with five laps to go — so if you record it, avoid social media until you've watched the end."
         },
         {
-            slug: "singapore-2026",
+            slug: "bahrain-2026",
             round: 16,
+            name: "F1 Bahrain Grand Prix 2026 (at Sepang)",
+            gp: "Bahrain Grand Prix",
+            location: "Sepang, Malaysia",
+            circuit: "Sepang International Circuit",
+            timezone: "Asia/Kuala_Lumpur",
+            sessions: {
+                fp1: "2026-10-02T12:30:00+08:00",
+                fp2: "2026-10-02T16:00:00+08:00",
+                fp3: "2026-10-03T12:30:00+08:00",
+                qualifying: "2026-10-03T16:00:00+08:00",
+                race: "2026-10-04T15:00:00+08:00"
+            },
+            facts: { length: "5.543 km", laps: 56, corners: 15, firstGp: 1999 },
+            intro: "The strangest entry on the 2026 calendar: the Bahrain Grand Prix, held in Malaysia. Cancelled from its April date because of the conflict in the Middle East, the race was reinstated mid-season and relocated to the Sepang International Circuit outside Kuala Lumpur — Formula 1's first visit to the beloved Hermann Tilke-designed track since 2017. Sepang's pair of huge straights, sweeping double-apex corners, and near-guaranteed tropical thunderstorms made it a fan favorite for two decades, and the whole grid arrives with no modern data on it.",
+            viewingNotes: "An overnighter for US fans: the race starts at 3 AM Eastern / midnight Pacific on Sunday morning, sandwiched between Baku and Singapore in a triple-header. Record it or set the alarm — a returning classic circuit plus 2026 cars nobody has raced there is a genuine curiosity, and Sepang's afternoon storm clouds have upended more than a few races."
+        },
+        {
+            slug: "singapore-2026",
+            round: 17,
             name: "F1 Singapore Grand Prix 2026",
             gp: "Singapore Grand Prix",
             location: "Marina Bay, Singapore",
@@ -327,7 +346,7 @@ const SEASON = {
         },
         {
             slug: "austin-2026",
-            round: 17,
+            round: 18,
             name: "F1 United States Grand Prix 2026",
             gp: "United States Grand Prix",
             location: "Austin, Texas",
@@ -346,7 +365,7 @@ const SEASON = {
         },
         {
             slug: "mexico-2026",
-            round: 18,
+            round: 19,
             name: "F1 Mexico City Grand Prix 2026",
             gp: "Mexico City Grand Prix",
             location: "Mexico City, Mexico",
@@ -365,7 +384,7 @@ const SEASON = {
         },
         {
             slug: "brazil-2026",
-            round: 19,
+            round: 20,
             name: "F1 Brazilian Grand Prix 2026",
             gp: "São Paulo Grand Prix",
             location: "São Paulo, Brazil",
@@ -384,7 +403,7 @@ const SEASON = {
         },
         {
             slug: "las-vegas-2026",
-            round: 20,
+            round: 21,
             name: "F1 Las Vegas Grand Prix 2026",
             gp: "Las Vegas Grand Prix",
             location: "Las Vegas, Nevada",
@@ -403,7 +422,7 @@ const SEASON = {
         },
         {
             slug: "qatar-2026",
-            round: 21,
+            round: 22,
             name: "F1 Qatar Grand Prix 2026",
             gp: "Qatar Grand Prix",
             location: "Lusail, Qatar",
@@ -422,7 +441,7 @@ const SEASON = {
         },
         {
             slug: "abu-dhabi-2026",
-            round: 22,
+            round: 23,
             name: "F1 Abu Dhabi Grand Prix 2026",
             gp: "Abu Dhabi Grand Prix",
             location: "Abu Dhabi, UAE",

@@ -243,6 +243,21 @@ const RACE_CONTENT = {
         ]
     },
 
+    "bahrain-2026": {
+        circuit: [
+            "Sepang was Hermann Tilke's first Formula 1 circuit, and many still consider it his best: two enormous straights split by a tight hairpin, a pair of long double-apex corners (Turns 5-6 and the famous final Turn 15) that punish understeer, and enough width that three-abreast racing into Turn 1 is genuinely possible. The layout rewards a car that is balanced through fast changes of direction but stable under the two biggest braking events on the lap — a setup compromise the all-new 2026 machines have never had to solve here.",
+            "Then there's the weather. Sepang sits eight degrees off the equator, and mid-afternoon tropical thunderstorms are close to a scheduled event — several past races were red-flagged or flipped by rain arriving mid-stint. Combine a 3 PM local start, 2026 cars with no historical data at the track, and tires under near-Singapore heat stress, and this reinstated race may be the biggest wildcard of the season's closing stretch."
+        ],
+        history: "This weekend is a calendar oddity years in the making: the Bahrain Grand Prix, cancelled from its April slot because of the conflict in the Middle East, reinstated in October at Sepang — with Malaysia hosting under the Bahrain name by agreement between F1, the FIA, and both governments. It is Formula 1's first race at Sepang since 2017, ending a nine-year absence from a circuit that hosted 19 Grands Prix between 1999 and 2017 and delivered classics like Vettel's shock 2015 Ferrari win and the Hamilton engine failure that swung the 2016 title.",
+        viewingExtra: "The 3 PM Sunday start in Malaysia lands at 3 AM Eastern / midnight Pacific — one of only a handful of true overnighters in the second half of the season, so plan to record it or make it a very late West Coast night. If you record, the usual Baku rule applies: stay off social media, because between the storms and the field's total lack of Sepang data, this one has upset written all over it.",
+        faq: [
+            {
+                q: "Why is the Bahrain Grand Prix being held in Malaysia?",
+                a: "The race was cancelled from its original April 2026 date in Bahrain due to the conflict in the Middle East. Formula 1, the FIA, and the governments of Bahrain and Malaysia agreed to reinstate it at the Sepang International Circuit on October 2-4, keeping the Bahrain Grand Prix name. It is F1's first race at Sepang since the 2017 Malaysian Grand Prix."
+            }
+        ]
+    },
+
     "singapore-2026": {
         circuit: [
             "Marina Bay is F1's original night race and still its most physically brutal: 62 laps between concrete walls in 30°C heat and 90% humidity, with cockpit temperatures topping 50°C. Drivers lose up to three kilograms over a race distance and describe the final 20 laps as an exercise in pure willpower. The 2023 layout revision removed four corners along the waterfront, but 19 remain, most of them 90-degree street corners with no forgiveness.",

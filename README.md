@@ -12,8 +12,10 @@ drives the whole site.
 | `race-data.js` | **Single source of truth**: all races, session times, circuit facts, per-race intro/viewing text |
 | `race-content.js` | Extended per-race editorial (circuit guide paragraphs, history, FAQ) — Node-only, never shipped to the browser |
 | `guides-content.js` | Guide articles (how to watch, season guide, weekend format, start times) — Node-only |
+| `drivers-data.js` | Current teams & drivers (incl. stand-ins) — Node-only, becomes `drivers.html` |
 | `tools/generate-site.js` | Zero-dependency Node script that generates everything below |
 | `races/*.html` | One static page per Grand Prix (generated) |
+| `drivers.html` | Current driver lineup page (generated) |
 | `races/index.html` | Season calendar index (generated) |
 | `guides/*.html`, `guides/index.html` | Guide articles (generated) |
 | `calendar/*.ics` | Per-race + full-season calendar downloads (generated) |
