@@ -727,10 +727,12 @@ footer p { position: relative; z-index: 1; }
 
 /* Departures board: homepage session list */
 .board .session-times {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
     gap: 6px;
 }
-.board .session-name, .board .session-time { white-space: nowrap; }
+.board .session { min-width: 0; }
+.board .session-name { white-space: nowrap; }
+.board .session-time { white-space: nowrap; min-width: 0; }
 .board .session {
     display: flex;
     justify-content: space-between;
@@ -835,6 +837,10 @@ footer p { position: relative; z-index: 1; }
 
 @media (max-width: 768px) {
     .ticket { grid-template-columns: 64px 1fr; }
-    .board .session-times { grid-template-columns: 1fr; }
+    .board .session-times { grid-template-columns: minmax(0, 1fr); }
+    .board .session { padding: 9px 12px; }
+    .board .session-name { font-size: 0.64rem; letter-spacing: 0.16em; }
+    /* Safari's "Fri, Sep 11 at 11:00 AM" is long: let it wrap inside the card */
+    .board .session-time { white-space: normal; font-size: 0.88rem; letter-spacing: 0.03em; line-height: 1.3; }
     footer { padding-bottom: 80px; }
 }
