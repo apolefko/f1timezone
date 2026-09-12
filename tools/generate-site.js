@@ -28,6 +28,14 @@ const { RACE_CONTENT } = require("../race-content.js");
 const { GUIDES } = require("../guides-content.js");
 const { TEAMS, DRIVERS_UPDATED } = require("../drivers-data.js");
 
+// Race podiums + championship standings, written by tools/fetch-results.js
+// (the results workflow runs it daily). Absent before the first race of a
+// season, in which case everything below degrades gracefully.
+let RESULTS = { updated: null, afterRound: 0, races: {}, driverStandings: [], constructorStandings: [] };
+try {
+    RESULTS = { ...RESULTS, ...JSON.parse(fs.readFileSync(path.join(__dirname, "..", "results-data.json"), "utf8")) };
+} catch (e) { /* no results yet */ }
+
 // Every race must have extended editorial content — a thin page is
 // worse than a build failure.
 for (const race of SEASON.races) {
@@ -112,9 +120,16 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">`;
 
+// Season calendar as a subscription: webcal:// opens Apple/Outlook's
+// "subscribe" flow, and Google Calendar takes the same URL via ?cid=.
+const SEASON_ICS = `${SITE}/calendar/f1-${YEAR}-season.ics`;
+const WEBCAL = SEASON_ICS.replace(/^https?:/, "webcal:");
+const GCAL = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(WEBCAL)}`;
+const SUBSCRIBE_NOTE = `Subscribe instead of downloading and schedule changes update in your calendar automatically &mdash; or <a href="${GCAL}" rel="noopener" target="_blank">add it to Google Calendar</a>.`;
+
 const FOOTER = `        <footer role="contentinfo">
             <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
-            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/drivers.html">Drivers</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/drivers.html">Drivers</a> &middot; <a href="/standings.html">Standings</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
         </footer>`;
 
 /* ---------------- race page ---------------- */
@@ -133,6 +148,7 @@ function racePage(race, prev, next) {
     const localStart = fmt(race.sessions.race, race.timezone,
         { hour: "numeric", minute: "2-digit" });
     const range = weekendRange(race);
+    const result = RESULTS.races[race.slug] || null;
 
     // Per-race FAQ: schedule answers generated from the data (so they can
     // never go stale), plus hand-written entries from race-content.js.
@@ -154,6 +170,10 @@ function racePage(race, prev, next) {
             q: `How many laps is the ${YEAR} ${race.gp}?`,
             a: `${race.facts.laps} laps of the ${race.facts.length} ${race.circuit}, a race distance of about ${Math.round(race.facts.laps * raceKm)} km.`
         },
+        ...(result ? [{
+            q: `Who won the ${YEAR} ${race.gp}?`,
+            a: `${result.podium[0].driver} (${result.podium[0].team}) won the ${YEAR} ${race.gp}${result.podium[1] ? `, ahead of ${result.podium[1].driver}` : ""}${result.podium[2] ? ` and ${result.podium[2].driver}` : ""}.`
+        }] : []),
         ...(content.faq || [])
     ];
 
@@ -294,10 +314,22 @@ ${faqLd}
             <div class="race-info" id="countdown-session">&nbsp;</div>
             <div class="calendar-buttons">
                 <a class="product-link" href="/calendar/${race.slug}.ics" download>&#128197; Add This Race to Calendar</a>
-                <a class="product-link" href="/calendar/f1-${YEAR}-season.ics" download>Add Full ${YEAR} Season</a>
+                <a class="product-link" href="${WEBCAL}">Subscribe to Full ${YEAR} Season</a>
             </div>
-            <p class="calendar-note">Free .ics download &mdash; sessions appear in your local time in Google, Apple &amp; Outlook calendars.</p>
+            <p class="calendar-note">Free &mdash; sessions appear in your local time in Google, Apple &amp; Outlook calendars. ${SUBSCRIBE_NOTE}</p>
         </article>
+${result ? `
+        <section class="schedule">
+            <h2>Race Result</h2>
+            <div class="facts-grid podium">
+${result.podium.map(p => `                <div class="fact">
+                    <div class="fact-label">${["Winner", "Second", "Third"][p.position - 1]}</div>
+                    <div class="fact-value">${esc(p.driver)}</div>
+                    <div class="fact-sub">${esc(p.team)}${p.time ? ` &middot; ${esc(p.time)}` : ""}</div>
+                </div>`).join("\n")}
+            </div>
+            <p class="calendar-note">Full <a href="/standings.html">${YEAR} championship standings</a> &middot; results via the Jolpica F1 API</p>
+        </section>` : ""}
 
         <section class="schedule">
             <h2>Session Times (US Time Zones)</h2>
@@ -317,6 +349,12 @@ ${rows}
                     </tbody>
                 </table>
             </div>
+        </section>
+
+        <section class="schedule" id="weather" hidden>
+            <h2>Race Weekend Forecast</h2>
+            <div class="facts-grid" id="weather-grid"></div>
+            <p class="calendar-note">Forecast at each session's start time in ${esc(race.location.split(",")[0])}, from <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo</a>. Appears once the weekend is within forecast range.</p>
         </section>
 
         <section class="schedule race-guide">
@@ -377,6 +415,42 @@ ${FOOTER}
             setTimeout(tick, 1000);
         }
         tick();
+
+        // Session-start weather from Open-Meteo (free, no key) once the
+        // weekend is within the 16-day forecast window; silent otherwise.
+        const tz = ${JSON.stringify(race.timezone)};
+        const [lat, lon] = ${JSON.stringify(race.coords)};
+        const now = Date.now();
+        const firstMs = new Date(sessions[0][1]).getTime();
+        const lastMs = new Date(sessions[sessions.length - 1][1]).getTime();
+        if (now > lastMs + 3 * 3600000 || firstMs - now > 15 * 86400000) return;
+        const day = ms => new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(ms));
+        const hourKey = ms => {
+            const p = new Intl.DateTimeFormat("en-CA", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit" }).formatToParts(new Date(ms));
+            const g = t => p.find(x => x.type === t).value;
+            return g("year") + "-" + g("month") + "-" + g("day") + "T" + g("hour") + ":00";
+        };
+        const icon = c => c === 0 ? "\\u2600\\uFE0F Clear" : c <= 2 ? "\\uD83C\\uDF24\\uFE0F Partly cloudy" : c === 3 ? "\\u2601\\uFE0F Overcast"
+            : c <= 48 ? "\\uD83C\\uDF2B\\uFE0F Fog" : c <= 57 ? "\\uD83C\\uDF26\\uFE0F Drizzle" : c <= 67 ? "\\uD83C\\uDF27\\uFE0F Rain"
+            : c <= 77 ? "\\u2744\\uFE0F Snow" : c <= 82 ? "\\uD83C\\uDF26\\uFE0F Showers" : c <= 86 ? "\\u2744\\uFE0F Snow showers" : "\\u26C8\\uFE0F Thunderstorm";
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon +
+            "&hourly=temperature_2m,precipitation_probability,weather_code&temperature_unit=fahrenheit" +
+            "&timezone=" + encodeURIComponent(tz) + "&start_date=" + day(firstMs) + "&end_date=" + day(lastMs);
+        fetch(url).then(r => r.ok ? r.json() : null).then(data => {
+            if (!data || !data.hourly || !data.hourly.time) return;
+            const h = data.hourly;
+            const cards = sessions.map(([name, time]) => {
+                const i = h.time.indexOf(hourKey(new Date(time).getTime()));
+                if (i === -1) return "";
+                const rain = h.precipitation_probability[i];
+                return '<div class="fact"><div class="fact-label">' + name + '</div>' +
+                    '<div class="fact-value">' + Math.round(h.temperature_2m[i]) + '\\u00B0F</div>' +
+                    '<div class="fact-sub">' + icon(h.weather_code[i]) + (rain != null ? ' \\u00B7 ' + rain + '% rain' : '') + '</div></div>';
+            }).join("");
+            if (!cards) return;
+            document.getElementById("weather-grid").innerHTML = cards;
+            document.getElementById("weather").hidden = false;
+        }).catch(() => {});
     })();
     </script>
 </body>
@@ -402,6 +476,7 @@ function indexPage() {
 
     const cards = SEASON.races.map(race => {
         const raceET = fmtCell(race.sessions.race, "America/New_York");
+        const result = RESULTS.races[race.slug];
         return `            <div class="race-card index-card">
                 <div class="race-header">
                     <div class="race-name"><a href="/races/${race.slug}.html">${esc(race.gp)}</a>${isSprint(race) ? ' <span class="sprint-badge">Sprint</span>' : ""}</div>
@@ -409,7 +484,7 @@ function indexPage() {
                 </div>
                 <div class="index-meta">
                     <span>${esc(weekendRange(race))}</span>
-                    <span>Race: ${esc(raceET)}</span>
+                    <span>${result ? `Winner: ${esc(result.podium[0].driver)} (${esc(result.podium[0].team)})` : `Race: ${esc(raceET)}`}</span>
                 </div>
             </div>`;
     }).join("\n");
@@ -469,8 +544,10 @@ ${itemListLd}
             <p class="tagline">All ${SEASON.races.length} Grands Prix&nbsp;&middot;&nbsp;US Race Times&nbsp;&middot;&nbsp;Calendar Downloads</p>
             <div class="deco-rule" aria-hidden="true"></div>
             <div class="calendar-buttons">
-                <a class="product-link" href="/calendar/f1-${YEAR}-season.ics" download>&#128197; Add Full ${YEAR} Season to Calendar</a>
+                <a class="product-link" href="${WEBCAL}">&#128197; Subscribe to the ${YEAR} Season Calendar</a>
+                <a class="product-link" href="/calendar/f1-${YEAR}-season.ics" download>Download .ics</a>
             </div>
+            <p class="calendar-note">${SUBSCRIBE_NOTE}</p>
         </header>
 
         <section class="schedule race-guide">
@@ -822,6 +899,139 @@ ${FOOTER}
 `;
 }
 
+/* ---------------- standings page ---------------- */
+
+function standingsPage() {
+    const url = `${SITE}/standings.html`;
+    const hasData = RESULTS.driverStandings.length > 0;
+    const completed = SEASON.races.filter(r => RESULTS.races[r.slug]);
+    const lastDone = completed[completed.length - 1] || null;
+    const nextRace = SEASON.races.find(r => !RESULTS.races[r.slug] && Date.parse(r.sessions.race) > Date.now()) || null;
+    const leader = hasData ? RESULTS.driverStandings[0] : null;
+    const title = `F1 ${YEAR} Standings: Drivers & Constructors Championship | F1 Timezone`;
+    const description = hasData
+        ? `${YEAR} Formula 1 championship standings after ${RESULTS.afterRound} of ${SEASON.races.length} rounds: ${leader.driver} leads the drivers' championship on ${leader.points} points, ${RESULTS.constructorStandings[0].team} leads the constructors'. Updated automatically after every race.`
+        : `${YEAR} Formula 1 drivers' and constructors' championship standings, updated automatically after every race.`;
+
+    const driverRows = RESULTS.driverStandings.map(s => `                    <tr${s.position === 1 ? ' class="row-race"' : ""}>
+                        <td>${s.position}</td>
+                        <th scope="row">${esc(s.driver)}${s.number ? ` <span class="muted">#${esc(s.number)}</span>` : ""}</th>
+                        <td>${esc(s.team)}</td>
+                        <td>${s.wins}</td>
+                        <td>${s.points}</td>
+                    </tr>`).join("\n");
+    const teamRows = RESULTS.constructorStandings.map(s => `                    <tr${s.position === 1 ? ' class="row-race"' : ""}>
+                        <td>${s.position}</td>
+                        <th scope="row">${esc(s.team)}</th>
+                        <td>${s.wins}</td>
+                        <td>${s.points}</td>
+                    </tr>`).join("\n");
+    const winnerRows = completed.map(r => {
+        const p = RESULTS.races[r.slug].podium;
+        return `                    <tr>
+                        <td>${r.round}</td>
+                        <th scope="row"><a href="/races/${r.slug}.html">${esc(r.gp)}</a></th>
+                        <td>${esc(p[0].driver)}</td>
+                        <td>${esc(p[0].team)}</td>
+                        <td>${p[1] ? esc(p[1].driver) : ""}${p[2] ? `, ${esc(p[2].driver)}` : ""}</td>
+                    </tr>`;
+    }).join("\n");
+
+    const table = (caption, head, rows) => `            <div class="table-scroll">
+                <table class="session-table">
+                    <caption class="sr-only">${esc(caption)}</caption>
+                    <thead>
+                        <tr>${head.map(h => `<th scope="col">${h}</th>`).join("")}</tr>
+                    </thead>
+                    <tbody>
+${rows}
+                    </tbody>
+                </table>
+            </div>`;
+
+    const breadcrumbLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}` },
+            { "@type": "ListItem", "position": 2, "name": `F1 ${YEAR} Standings`, "item": url }
+        ]
+    }, null, 2);
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>${esc(title)}</title>
+    <meta name="title" content="${esc(title)}">
+    <meta name="description" content="${esc(description)}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="${url}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="F1 Timezone">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="F1 ${YEAR} Championship Standings">
+    <meta property="og:description" content="${esc(description)}">
+    <meta property="og:locale" content="en_US">
+
+    ${ADSENSE_SNIPPET}
+
+${GA_SNIPPET}
+
+    <script type="application/ld+json">
+${breadcrumbLd}
+    </script>
+
+    ${FONTS}
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">F1 Timezone</a> <span aria-hidden="true">&rsaquo;</span>
+                <span>${YEAR} Standings</span>
+            </nav>
+            <div class="deco-ornament" aria-hidden="true"></div>
+            <h1>F1 ${YEAR} Standings</h1>
+            <p class="tagline">${hasData ? `After Round ${RESULTS.afterRound} of ${SEASON.races.length}${lastDone ? `&nbsp;&middot;&nbsp;${esc(lastDone.gp)}` : ""}&nbsp;&middot;&nbsp;Updated ${fmt(RESULTS.updated + "T12:00:00Z", "UTC", { month: "long", day: "numeric", year: "numeric" })}` : "Drivers &amp; Constructors Championship"}</p>
+            <div class="deco-rule" aria-hidden="true"></div>
+        </header>
+
+${hasData ? `        <section class="schedule race-guide">
+            <h2>Championship at a Glance</h2>
+            <p><strong>${esc(leader.driver)}</strong> leads the ${YEAR} Drivers' Championship with ${leader.points} points and ${leader.wins} win${leader.wins === 1 ? "" : "s"}${RESULTS.driverStandings[1] ? `, ${leader.points - RESULTS.driverStandings[1].points} ahead of ${esc(RESULTS.driverStandings[1].driver)}` : ""}. <strong>${esc(RESULTS.constructorStandings[0].team)}</strong> leads the Constructors' Championship on ${RESULTS.constructorStandings[0].points} points. ${SEASON.races.length - RESULTS.afterRound} round${SEASON.races.length - RESULTS.afterRound === 1 ? "" : "s"} remain${nextRace ? ` — next up is the <a href="/races/${nextRace.slug}.html">${esc(nextRace.gp)}</a> (${fmtLong(nextRace.sessions.race, "America/New_York")})` : ""}. Standings update automatically after every race; see the <a href="/drivers.html">current driver lineup</a> for who's in each car.</p>
+        </section>
+
+        <section class="schedule">
+            <h2>Drivers' Championship</h2>
+${table("Drivers' Championship standings", ["Pos", "Driver", "Team", "Wins", "Points"], driverRows)}
+        </section>
+
+        <section class="schedule">
+            <h2>Constructors' Championship</h2>
+${table("Constructors' Championship standings", ["Pos", "Team", "Wins", "Points"], teamRows)}
+        </section>
+
+        <section class="schedule">
+            <h2>${YEAR} Race Winners</h2>
+${table("Race winners", ["Rd", "Grand Prix", "Winner", "Team", "Podium"], winnerRows)}
+        </section>` : `        <section class="schedule race-guide">
+            <h2>Standings Coming Soon</h2>
+            <p>The ${YEAR} Drivers' and Constructors' Championship tables appear here automatically once the season's first race result is in. In the meantime, see the <a href="/races/">full ${YEAR} calendar</a> in US time zones and the <a href="/drivers.html">current driver lineup</a>.</p>
+        </section>`}
+
+${FOOTER}
+    </div>
+</body>
+</html>
+`;
+}
+
 /* ---------------- sitemap + robots ---------------- */
 
 function sitemap() {
@@ -832,6 +1042,7 @@ function sitemap() {
             loc: `${SITE}/races/${r.slug}.html`, priority: "0.8", changefreq: "weekly"
         })),
         { loc: `${SITE}/drivers.html`, priority: "0.7", changefreq: "weekly" },
+        { loc: `${SITE}/standings.html`, priority: "0.8", changefreq: "weekly" },
         { loc: `${SITE}/guides/`, priority: "0.7", changefreq: "monthly" },
         ...GUIDES.map(g => ({
             loc: `${SITE}/guides/${g.slug}.html`, priority: "0.6", changefreq: "monthly"
@@ -916,7 +1127,11 @@ function icsCalendar(name, races) {
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         `X-WR-CALNAME:${escIcs(name)}`,
-        "X-WR-CALDESC:Session times from f1timezone.com — shown in your local time zone"
+        "X-WR-CALDESC:Session times from f1timezone.com — shown in your local time zone",
+        // Subscribed calendars re-fetch on this cadence, so schedule changes
+        // pushed to the site reach every subscriber automatically.
+        "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
+        "X-PUBLISHED-TTL:PT12H"
     ];
     for (const race of races) {
         for (const [key, time] of Object.entries(race.sessions)) {
@@ -948,6 +1163,7 @@ injectBetweenMarkers(path.join(ROOT, "index.html"), BEGIN_MARK, END_MARK, homeRa
 
 fs.writeFileSync(path.join(ROOT, "races", "index.html"), indexPage());
 fs.writeFileSync(path.join(ROOT, "drivers.html"), driversPage());
+fs.writeFileSync(path.join(ROOT, "standings.html"), standingsPage());
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), guidesIndexPage());
 fs.writeFileSync(path.join(ROOT, "calendar", `f1-${YEAR}-season.ics`), icsCalendar(`F1 ${YEAR} Season`, SEASON.races));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap());

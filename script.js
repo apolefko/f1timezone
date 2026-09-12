@@ -2,8 +2,38 @@
 // Race data lives in race-data.js (loaded before this script).
 const races = SEASON.races;
 
-// Get user's selected timezone (default to EST)
-let userTimezone = localStorage.getItem('selectedTimezone') || 'America/New_York';
+const US_ZONES = ['America/New_York', 'America/Chicago', 'America/Denver', 'America/Los_Angeles'];
+const ZONE_NAMES = { 'America/New_York': 'Eastern', 'America/Chicago': 'Central', 'America/Denver': 'Mountain', 'America/Los_Angeles': 'Pacific' };
+
+function storedTimezone() {
+    try { return localStorage.getItem('selectedTimezone'); } catch (e) { return null; }
+}
+
+// Map the device's zone onto one of the four US zones by current UTC
+// offset, so Detroit, Phoenix, Boise etc. land on the right column too.
+function detectUsZone() {
+    try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!tz) return null;
+        if (US_ZONES.includes(tz)) return tz;
+        const offsetOf = zone => new Intl.DateTimeFormat('en-US', { timeZone: zone, timeZoneName: 'longOffset' })
+            .formatToParts(new Date()).find(p => p.type === 'timeZoneName').value;
+        const mine = offsetOf(tz);
+        return US_ZONES.find(zone => offsetOf(zone) === mine) || null;
+    } catch (e) {
+        return null;
+    }
+}
+
+// Selected timezone: saved choice, else detected from the device, else Eastern
+const detectedTimezone = storedTimezone() ? null : detectUsZone();
+let userTimezone = storedTimezone() || detectedTimezone || 'America/New_York';
+
+const tzNote = document.getElementById('tz-note');
+if (tzNote && detectedTimezone) {
+    tzNote.textContent = `Showing ${ZONE_NAMES[detectedTimezone]} time, detected from your device — change it above if that's wrong.`;
+    tzNote.hidden = false;
+}
 
 // Initialize timezone buttons
 document.querySelectorAll('.tz-btn').forEach(btn => {
@@ -16,7 +46,8 @@ document.querySelectorAll('.tz-btn').forEach(btn => {
         btn.setAttribute('aria-pressed', 'true');
 
         userTimezone = btn.dataset.tz;
-        localStorage.setItem('selectedTimezone', userTimezone);
+        try { localStorage.setItem('selectedTimezone', userTimezone); } catch (e) { /* private mode */ }
+        if (tzNote) tzNote.hidden = true;
         updateDisplay();
     });
 
