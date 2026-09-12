@@ -12,6 +12,7 @@
      3. Run:  node tools/generate-site.js
      4. Commit + push. Done.
 
+   coords are [latitude, longitude] of the circuit (race-page weather).
    Times are in LOCAL track time with the correct UTC offset for
    that date (mind DST at the track!). The browser and the
    generator convert them to US time zones automatically.
@@ -29,6 +30,7 @@ const SEASON = {
             location: "Melbourne, Australia",
             circuit: "Albert Park Circuit",
             timezone: "Australia/Melbourne",
+            coords: [-37.8497, 144.968],
             sessions: {
                 fp1: "2026-03-06T12:30:00+11:00",
                 fp2: "2026-03-06T16:00:00+11:00",
@@ -48,6 +50,7 @@ const SEASON = {
             location: "Shanghai, China",
             circuit: "Shanghai International Circuit",
             timezone: "Asia/Shanghai",
+            coords: [31.3389, 121.2197],
             sessions: {
                 fp1: "2026-03-13T11:30:00+08:00",
                 sprint_qualifying: "2026-03-13T15:30:00+08:00",
@@ -67,6 +70,7 @@ const SEASON = {
             location: "Suzuka, Japan",
             circuit: "Suzuka Circuit",
             timezone: "Asia/Tokyo",
+            coords: [34.8431, 136.541],
             sessions: {
                 fp1: "2026-03-27T11:30:00+09:00",
                 fp2: "2026-03-27T15:00:00+09:00",
@@ -86,6 +90,7 @@ const SEASON = {
             location: "Miami, Florida",
             circuit: "Miami International Autodrome",
             timezone: "America/New_York",
+            coords: [25.9581, -80.2389],
             sessions: {
                 fp1: "2026-05-01T13:30:00-04:00",
                 sprint_qualifying: "2026-05-01T17:30:00-04:00",
@@ -105,6 +110,7 @@ const SEASON = {
             location: "Montreal, Canada",
             circuit: "Circuit Gilles Villeneuve",
             timezone: "America/Toronto",
+            coords: [45.5, -73.5228],
             sessions: {
                 fp1: "2026-05-22T12:30:00-04:00",
                 sprint_qualifying: "2026-05-22T16:30:00-04:00",
@@ -124,6 +130,7 @@ const SEASON = {
             location: "Monte Carlo, Monaco",
             circuit: "Circuit de Monaco",
             timezone: "Europe/Monaco",
+            coords: [43.7347, 7.4206],
             sessions: {
                 fp1: "2026-06-05T13:30:00+02:00",
                 fp2: "2026-06-05T17:00:00+02:00",
@@ -143,6 +150,7 @@ const SEASON = {
             location: "Barcelona, Spain",
             circuit: "Circuit de Barcelona-Catalunya",
             timezone: "Europe/Madrid",
+            coords: [41.57, 2.2611],
             sessions: {
                 fp1: "2026-06-12T13:30:00+02:00",
                 fp2: "2026-06-12T17:00:00+02:00",
@@ -162,6 +170,7 @@ const SEASON = {
             location: "Spielberg, Austria",
             circuit: "Red Bull Ring",
             timezone: "Europe/Vienna",
+            coords: [47.2197, 14.7647],
             sessions: {
                 fp1: "2026-06-26T13:30:00+02:00",
                 fp2: "2026-06-26T17:00:00+02:00",
@@ -181,6 +190,7 @@ const SEASON = {
             location: "Silverstone, United Kingdom",
             circuit: "Silverstone Circuit",
             timezone: "Europe/London",
+            coords: [52.0786, -1.0169],
             sessions: {
                 fp1: "2026-07-03T12:30:00+01:00",
                 sprint_qualifying: "2026-07-03T16:30:00+01:00",
@@ -200,6 +210,7 @@ const SEASON = {
             location: "Spa-Francorchamps, Belgium",
             circuit: "Circuit de Spa-Francorchamps",
             timezone: "Europe/Brussels",
+            coords: [50.4372, 5.9714],
             sessions: {
                 fp1: "2026-07-17T13:30:00+02:00",
                 fp2: "2026-07-17T17:00:00+02:00",
@@ -219,6 +230,7 @@ const SEASON = {
             location: "Budapest, Hungary",
             circuit: "Hungaroring",
             timezone: "Europe/Budapest",
+            coords: [47.5789, 19.2486],
             sessions: {
                 fp1: "2026-07-24T13:30:00+02:00",
                 fp2: "2026-07-24T17:00:00+02:00",
@@ -238,6 +250,7 @@ const SEASON = {
             location: "Zandvoort, Netherlands",
             circuit: "Circuit Zandvoort",
             timezone: "Europe/Amsterdam",
+            coords: [52.3888, 4.5409],
             sessions: {
                 fp1: "2026-08-21T12:30:00+02:00",
                 sprint_qualifying: "2026-08-21T16:30:00+02:00",
@@ -257,6 +270,7 @@ const SEASON = {
             location: "Monza, Italy",
             circuit: "Autodromo Nazionale Monza",
             timezone: "Europe/Rome",
+            coords: [45.6156, 9.2811],
             sessions: {
                 fp1: "2026-09-04T13:30:00+02:00",
                 fp2: "2026-09-04T17:00:00+02:00",
@@ -276,6 +290,7 @@ const SEASON = {
             location: "Madrid, Spain",
             circuit: "Madring",
             timezone: "Europe/Madrid",
+            coords: [40.465, -3.617],
             sessions: {
                 fp1: "2026-09-11T13:30:00+02:00",
                 fp2: "2026-09-11T17:00:00+02:00",
@@ -295,6 +310,7 @@ const SEASON = {
             location: "Baku, Azerbaijan",
             circuit: "Baku City Circuit",
             timezone: "Asia/Baku",
+            coords: [40.3725, 49.8533],
             sessions: {
                 fp1: "2026-09-24T12:30:00+04:00",
                 fp2: "2026-09-24T16:00:00+04:00",
@@ -314,6 +330,7 @@ const SEASON = {
             location: "Sepang, Malaysia",
             circuit: "Sepang International Circuit",
             timezone: "Asia/Kuala_Lumpur",
+            coords: [2.7608, 101.7381],
             sessions: {
                 fp1: "2026-10-02T12:30:00+08:00",
                 fp2: "2026-10-02T16:00:00+08:00",
@@ -333,6 +350,7 @@ const SEASON = {
             location: "Marina Bay, Singapore",
             circuit: "Marina Bay Street Circuit",
             timezone: "Asia/Singapore",
+            coords: [1.2914, 103.864],
             sessions: {
                 fp1: "2026-10-09T16:30:00+08:00",
                 sprint_qualifying: "2026-10-09T20:30:00+08:00",
@@ -352,6 +370,7 @@ const SEASON = {
             location: "Austin, Texas",
             circuit: "Circuit of the Americas",
             timezone: "America/Chicago",
+            coords: [30.1328, -97.6411],
             sessions: {
                 fp1: "2026-10-23T12:30:00-05:00",
                 fp2: "2026-10-23T16:30:00-05:00",
@@ -371,6 +390,7 @@ const SEASON = {
             location: "Mexico City, Mexico",
             circuit: "Autódromo Hermanos Rodríguez",
             timezone: "America/Mexico_City",
+            coords: [19.4042, -99.0907],
             sessions: {
                 fp1: "2026-10-30T12:30:00-06:00",
                 fp2: "2026-10-30T16:00:00-06:00",
@@ -390,6 +410,7 @@ const SEASON = {
             location: "São Paulo, Brazil",
             circuit: "Autódromo José Carlos Pace (Interlagos)",
             timezone: "America/Sao_Paulo",
+            coords: [-23.7036, -46.6997],
             sessions: {
                 fp1: "2026-11-06T12:30:00-03:00",
                 fp2: "2026-11-06T16:00:00-03:00",
@@ -409,6 +430,7 @@ const SEASON = {
             location: "Las Vegas, Nevada",
             circuit: "Las Vegas Strip Circuit",
             timezone: "America/Los_Angeles",
+            coords: [36.1147, -115.1728],
             sessions: {
                 fp1: "2026-11-19T18:30:00-08:00",
                 fp2: "2026-11-19T22:00:00-08:00",
@@ -428,6 +450,7 @@ const SEASON = {
             location: "Lusail, Qatar",
             circuit: "Lusail International Circuit",
             timezone: "Asia/Qatar",
+            coords: [25.49, 51.4542],
             sessions: {
                 fp1: "2026-11-27T16:30:00+03:00",
                 fp2: "2026-11-27T20:00:00+03:00",
@@ -447,6 +470,7 @@ const SEASON = {
             location: "Abu Dhabi, UAE",
             circuit: "Yas Marina Circuit",
             timezone: "Asia/Dubai",
+            coords: [24.4672, 54.6031],
             sessions: {
                 fp1: "2026-12-04T13:30:00+04:00",
                 fp2: "2026-12-04T17:00:00+04:00",

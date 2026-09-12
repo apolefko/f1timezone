@@ -1,0 +1,51 @@
+# Pulls race podiums and championship standings from the Jolpica F1 API
+# (free, no key) into results-data.json and, only when something changed,
+# regenerates the site and commits straight to main — so completed race
+# pages, the races index and /standings.html stay current with zero
+# manual work. Runs daily, plus every 3 hours on race days (Sat/Sun).
+name: Update results & standings
+
+on:
+  schedule:
+    - cron: "23 5 * * *"        # daily, 05:23 UTC
+    - cron: "5 */3 * * 6,0"     # every 3 hours on Saturdays and Sundays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: results
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch results from the F1 API
+        id: fetch
+        run: |
+          set +e
+          node tools/fetch-results.js
+          code=$?
+          set -e
+          if [ "$code" -eq 1 ]; then echo "::error::fetch failed"; exit 1; fi
+          echo "changed=$([ "$code" -eq 3 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate, validate and commit
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          node tools/generate-site.js
+          node tools/validate.js
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          summary="$(node -e 'const r=require("./results-data.json");const n=Object.keys(r.races).length;console.log(`after round ${r.afterRound}: ${n} race result${n===1?"":"s"}, leader ${r.driverStandings[0]?r.driverStandings[0].driver:"n/a"}`)')"
+          git commit -m "Update results & standings ($summary)" -m "Automated by .github/workflows/results.yml from the Jolpica F1 API."
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -1,0 +1,44 @@
+# Runs on every pull request and push to main:
+#   1. regenerates the site and checks the data (offsets vs IANA zones,
+#      ordering, content completeness, internal links)
+#   2. fails if the committed generated files are stale — i.e. someone
+#      edited race-data.js without running node tools/generate-site.js
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate site
+        run: node tools/generate-site.js
+
+      - name: Validate data & links
+        run: node tools/validate.js
+
+      - name: Generated output is up to date
+        # Sitemap <lastmod> and .ics DTSTAMP lines carry the build date, so
+        # they're ignored; anything else differing means a stale commit.
+        run: |
+          if ! git diff --exit-code -I '<lastmod>' -I '^DTSTAMP:' --stat; then
+            echo "::error::Generated files are stale. Run: node tools/generate-site.js — then commit the result."
+            exit 1
+          fi
+          untracked="$(git ls-files --others --exclude-standard)"
+          if [ -n "$untracked" ]; then
+            echo "::error::Generator produced files that are not committed:"
+            echo "$untracked"
+            exit 1
+          fi

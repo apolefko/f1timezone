@@ -206,10 +206,11 @@
             <div class="race-info" id="countdown-session">&nbsp;</div>
             <div class="calendar-buttons">
                 <a class="product-link" href="/calendar/canada-2026.ics" download>&#128197; Add This Race to Calendar</a>
-                <a class="product-link" href="/calendar/f1-2026-season.ics" download>Add Full 2026 Season</a>
+                <a class="product-link" href="webcal://f1timezone.com/calendar/f1-2026-season.ics">Subscribe to Full 2026 Season</a>
             </div>
-            <p class="calendar-note">Free .ics download &mdash; sessions appear in your local time in Google, Apple &amp; Outlook calendars.</p>
+            <p class="calendar-note">Free &mdash; sessions appear in your local time in Google, Apple &amp; Outlook calendars. Subscribe instead of downloading and schedule changes update in your calendar automatically &mdash; or <a href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Ff1timezone.com%2Fcalendar%2Ff1-2026-season.ics" rel="noopener" target="_blank">add it to Google Calendar</a>.</p>
         </article>
+
 
         <section class="schedule">
             <h2>Session Times (US Time Zones)</h2>
@@ -263,6 +264,12 @@
                     </tbody>
                 </table>
             </div>
+        </section>
+
+        <section class="schedule" id="weather" hidden>
+            <h2>Race Weekend Forecast</h2>
+            <div class="facts-grid" id="weather-grid"></div>
+            <p class="calendar-note">Forecast at each session's start time in Montreal, from <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo</a>. Appears once the weekend is within forecast range.</p>
         </section>
 
         <section class="schedule race-guide">
@@ -326,7 +333,7 @@
 
         <footer role="contentinfo">
             <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
-            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/drivers.html">Drivers</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/drivers.html">Drivers</a> &middot; <a href="/standings.html">Standings</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
         </footer>
     </div>
 
@@ -358,6 +365,42 @@
             setTimeout(tick, 1000);
         }
         tick();
+
+        // Session-start weather from Open-Meteo (free, no key) once the
+        // weekend is within the 16-day forecast window; silent otherwise.
+        const tz = "America/Toronto";
+        const [lat, lon] = [45.5,-73.5228];
+        const now = Date.now();
+        const firstMs = new Date(sessions[0][1]).getTime();
+        const lastMs = new Date(sessions[sessions.length - 1][1]).getTime();
+        if (now > lastMs + 3 * 3600000 || firstMs - now > 15 * 86400000) return;
+        const day = ms => new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(ms));
+        const hourKey = ms => {
+            const p = new Intl.DateTimeFormat("en-CA", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit" }).formatToParts(new Date(ms));
+            const g = t => p.find(x => x.type === t).value;
+            return g("year") + "-" + g("month") + "-" + g("day") + "T" + g("hour") + ":00";
+        };
+        const icon = c => c === 0 ? "\u2600\uFE0F Clear" : c <= 2 ? "\uD83C\uDF24\uFE0F Partly cloudy" : c === 3 ? "\u2601\uFE0F Overcast"
+            : c <= 48 ? "\uD83C\uDF2B\uFE0F Fog" : c <= 57 ? "\uD83C\uDF26\uFE0F Drizzle" : c <= 67 ? "\uD83C\uDF27\uFE0F Rain"
+            : c <= 77 ? "\u2744\uFE0F Snow" : c <= 82 ? "\uD83C\uDF26\uFE0F Showers" : c <= 86 ? "\u2744\uFE0F Snow showers" : "\u26C8\uFE0F Thunderstorm";
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon +
+            "&hourly=temperature_2m,precipitation_probability,weather_code&temperature_unit=fahrenheit" +
+            "&timezone=" + encodeURIComponent(tz) + "&start_date=" + day(firstMs) + "&end_date=" + day(lastMs);
+        fetch(url).then(r => r.ok ? r.json() : null).then(data => {
+            if (!data || !data.hourly || !data.hourly.time) return;
+            const h = data.hourly;
+            const cards = sessions.map(([name, time]) => {
+                const i = h.time.indexOf(hourKey(new Date(time).getTime()));
+                if (i === -1) return "";
+                const rain = h.precipitation_probability[i];
+                return '<div class="fact"><div class="fact-label">' + name + '</div>' +
+                    '<div class="fact-value">' + Math.round(h.temperature_2m[i]) + '\u00B0F</div>' +
+                    '<div class="fact-sub">' + icon(h.weather_code[i]) + (rain != null ? ' \u00B7 ' + rain + '% rain' : '') + '</div></div>';
+            }).join("");
+            if (!cards) return;
+            document.getElementById("weather-grid").innerHTML = cards;
+            document.getElementById("weather").hidden = false;
+        }).catch(() => {});
     })();
     </script>
 </body>

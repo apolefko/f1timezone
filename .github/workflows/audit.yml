@@ -1,0 +1,107 @@
+# Daily check of the site's data against the real-world F1 calendar and
+# entry list (Jolpica F1 API — free, no key). When something drifts:
+#   * session-time changes are written into race-data.js, the site is
+#     regenerated and validated, and a pull request is opened/updated on
+#     the branch auto/schedule-sync — merge it and you're done
+#   * anything that needs a human (new/cancelled race, sprint format
+#     change, a driver substitution) goes into a single tracking issue,
+#     which is kept current and closed automatically once the data agrees
+name: Live data audit
+
+on:
+  schedule:
+    - cron: "17 6 * * *"      # daily, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: audit
+  cancel-in-progress: false
+
+env:
+  ISSUE_TITLE: "F1 data drift detected (automated audit)"
+  PR_BRANCH: auto/schedule-sync
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Compare site data with the F1 API
+        id: audit
+        run: |
+          set +e
+          node tools/audit-live-data.js --apply
+          code=$?
+          set -e
+          if [ "$code" -eq 1 ]; then echo "::error::audit script failed"; exit 1; fi
+          echo "drift=$([ "$code" -eq 2 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- race-data.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Regenerate & validate with the proposed times
+        if: steps.audit.outputs.changed == 'true'
+        run: |
+          node tools/generate-site.js
+          node tools/validate.js
+
+      - name: Open or update the schedule-sync pull request
+        if: steps.audit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$PR_BRANCH"
+          git add -A
+          git commit -m "Sync session times with the official F1 schedule" -m "Automated by .github/workflows/audit.yml from the Jolpica F1 API."
+          git push --force origin "$PR_BRANCH"
+          body="$(cat audit-report.md)"
+          if gh pr list --head "$PR_BRANCH" --state open --json number --jq '.[0].number' | grep -q .; then
+            gh pr edit "$PR_BRANCH" --body "$body"
+          else
+            gh pr create --base main --head "$PR_BRANCH" \
+              --title "Sync session times with the official F1 schedule" \
+              --body "$body"
+          fi
+
+      - name: Keep the drift issue current
+        if: steps.audit.outputs.drift == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git checkout -q -- . 2>/dev/null || true
+          hash="$(sha256sum audit-report.md | cut -c1-16)"
+          body="$(cat audit-report.md)"$'\n\n'"---"$'\n'"_This issue is maintained by the daily audit workflow. It updates when the findings change and closes itself once the site and the F1 API agree. Session-time changes arrive as a pull request on \`$PR_BRANCH\`; everything else listed above needs a hand edit._"$'\n'"<!-- audit-hash:$hash -->"
+          number="$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" --json number,title --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -n1)"
+          if [ -z "$number" ]; then
+            gh issue create --title "$ISSUE_TITLE" --body "$body"
+          elif gh issue view "$number" --json body --jq .body | grep -q "audit-hash:$hash"; then
+            echo "Issue #$number already reflects these findings."
+          else
+            gh issue edit "$number" --body "$body"
+            gh issue comment "$number" --body "Findings changed on $(date -u +%Y-%m-%d) — issue body updated."
+          fi
+
+      - name: Close the drift issue when everything agrees
+        if: steps.audit.outputs.drift == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number="$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" --json number,title --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -n1)"
+          if [ -n "$number" ]; then
+            gh issue close "$number" --comment "The site now matches the F1 API — closing automatically."
+          fi
