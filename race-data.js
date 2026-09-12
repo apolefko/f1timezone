@@ -92,8 +92,8 @@ const SEASON = {
             timezone: "America/New_York",
             coords: [25.9581, -80.2389],
             sessions: {
-                fp1: "2026-05-01T13:30:00-04:00",
-                sprint_qualifying: "2026-05-01T17:30:00-04:00",
+                fp1: "2026-05-01T12:00:00-04:00",
+                sprint_qualifying: "2026-05-01T16:30:00-04:00",
                 sprint: "2026-05-02T12:00:00-04:00",
                 qualifying: "2026-05-02T16:00:00-04:00",
                 race: "2026-05-03T16:00:00-04:00"
@@ -272,8 +272,8 @@ const SEASON = {
             timezone: "Europe/Rome",
             coords: [45.6156, 9.2811],
             sessions: {
-                fp1: "2026-09-04T13:30:00+02:00",
-                fp2: "2026-09-04T17:00:00+02:00",
+                fp1: "2026-09-04T12:30:00+02:00",
+                fp2: "2026-09-04T16:00:00+02:00",
                 fp3: "2026-09-05T12:30:00+02:00",
                 qualifying: "2026-09-05T16:00:00+02:00",
                 race: "2026-09-06T15:00:00+02:00"
@@ -373,7 +373,7 @@ const SEASON = {
             coords: [30.1328, -97.6411],
             sessions: {
                 fp1: "2026-10-23T12:30:00-05:00",
-                fp2: "2026-10-23T16:30:00-05:00",
+                fp2: "2026-10-23T16:00:00-05:00",
                 fp3: "2026-10-24T12:30:00-05:00",
                 qualifying: "2026-10-24T16:00:00-05:00",
                 race: "2026-10-25T15:00:00-05:00"
@@ -432,15 +432,15 @@ const SEASON = {
             timezone: "America/Los_Angeles",
             coords: [36.1147, -115.1728],
             sessions: {
-                fp1: "2026-11-19T18:30:00-08:00",
-                fp2: "2026-11-19T22:00:00-08:00",
-                fp3: "2026-11-20T18:30:00-08:00",
-                qualifying: "2026-11-20T22:00:00-08:00",
+                fp1: "2026-11-19T16:30:00-08:00",
+                fp2: "2026-11-19T20:00:00-08:00",
+                fp3: "2026-11-20T16:30:00-08:00",
+                qualifying: "2026-11-20T20:00:00-08:00",
                 race: "2026-11-21T20:00:00-08:00"
             },
             facts: { length: "6.201 km", laps: 50, corners: 17, firstGp: 2023 },
             intro: "F1 races down the Las Vegas Strip at night, past the Sphere and the casinos, on one of the fastest street layouts ever built — the cars hit over 210 mph on the boulevard. The November desert cold makes tire warm-up a genuine problem, which keeps the field closer than the layout suggests. It's the only Saturday-night points race on the calendar and the closest thing F1 has to a home prime-time event for US TV.",
-            viewingNotes: "Mark it: the RACE IS ON SATURDAY NIGHT, 8 PM Pacific / 11 PM Eastern — prime time on the West Coast, a late one back East. Qualifying runs after midnight Pacific on Friday night. It's the one weekend of the year where US fans get the 'European fan experience' in reverse, and East Coast viewers may want coffee."
+            viewingNotes: "Mark it: the RACE IS ON SATURDAY NIGHT, 8 PM Pacific / 11 PM Eastern — prime time on the West Coast, a late one back East. Qualifying is Friday at 8 PM Pacific / 11 PM Eastern — the same slot as the race, one night earlier. It's the one weekend of the year where US fans get the 'European fan experience' in reverse, and East Coast viewers may want coffee."
         },
         {
             slug: "qatar-2026",

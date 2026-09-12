@@ -48,7 +48,6 @@ for (const race of SEASON.races) {
 const ROOT = path.join(__dirname, "..");
 const SITE = SEASON.siteUrl;
 const YEAR = SEASON.year;
-const TODAY = new Date().toISOString().slice(0, 10);
 
 const US_ZONES = [
     ["Eastern", "America/New_York"],
@@ -1052,9 +1051,10 @@ function sitemap() {
         { loc: `${SITE}/privacy.html`, priority: "0.2", changefreq: "yearly" },
         { loc: `${SITE}/terms.html`, priority: "0.2", changefreq: "yearly" }
     ];
+    // No <lastmod>: a build-date stamp isn't a real modification date (search
+    // engines ignore unreliable ones) and it made every regeneration dirty.
     const entries = urls.map(u => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${TODAY}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`).join("\n");
@@ -1094,7 +1094,7 @@ function foldLine(line) {
     return out.join("\r\n");
 }
 
-function icsEvent(race, sessionKey, time, dtstamp) {
+function icsEvent(race, sessionKey, time) {
     const start = new Date(time);
     const end = new Date(start.getTime() + (SESSION_DURATIONS[sessionKey] || 60) * 60000);
     const summary = `F1: ${race.gp} — ${SESSION_LABELS[sessionKey]}`;
@@ -1102,7 +1102,10 @@ function icsEvent(race, sessionKey, time, dtstamp) {
     return [
         "BEGIN:VEVENT",
         `UID:${race.slug}-${sessionKey}@f1timezone.com`,
-        `DTSTAMP:${dtstamp}`,
+        // Derived from the event itself rather than "now" so the generator
+        // is deterministic: automated commits only touch files whose data
+        // actually changed. Subscribed clients update on UID + changed DTSTART.
+        `DTSTAMP:${icsStamp(start)}`,
         `DTSTART:${icsStamp(start)}`,
         `DTEND:${icsStamp(end)}`,
         `SUMMARY:${escIcs(summary)}`,
@@ -1119,7 +1122,6 @@ function icsEvent(race, sessionKey, time, dtstamp) {
 }
 
 function icsCalendar(name, races) {
-    const dtstamp = icsStamp(new Date());
     const lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -1135,7 +1137,7 @@ function icsCalendar(name, races) {
     ];
     for (const race of races) {
         for (const [key, time] of Object.entries(race.sessions)) {
-            lines.push(...icsEvent(race, key, time, dtstamp));
+            lines.push(...icsEvent(race, key, time));
         }
     }
     lines.push("END:VCALENDAR");

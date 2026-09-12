@@ -30,10 +30,10 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -59,6 +59,7 @@ jobs:
           node tools/validate.js
 
       - name: Open or update the schedule-sync pull request
+        id: pr
         if: steps.audit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -72,20 +73,27 @@ jobs:
           body="$(cat audit-report.md)"
           if gh pr list --head "$PR_BRANCH" --state open --json number --jq '.[0].number' | grep -q .; then
             gh pr edit "$PR_BRANCH" --body "$body"
-          else
-            gh pr create --base main --head "$PR_BRANCH" \
+          elif ! gh pr create --base main --head "$PR_BRANCH" \
               --title "Sync session times with the official F1 schedule" \
-              --body "$body"
+              --body "$body"; then
+            # Repo setting "Allow GitHub Actions to create and approve pull
+            # requests" is off: the branch is pushed, so link it from the issue.
+            echo "::warning::Could not open the PR automatically. Enable Settings → Actions → General → 'Allow GitHub Actions to create and approve pull requests', or open it by hand from the link in the drift issue."
+            echo "pr_failed=true" >> "$GITHUB_OUTPUT"
           fi
+          git checkout -q main
 
       - name: Keep the drift issue current
         if: steps.audit.outputs.drift == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git checkout -q -- . 2>/dev/null || true
           hash="$(sha256sum audit-report.md | cut -c1-16)"
-          body="$(cat audit-report.md)"$'\n\n'"---"$'\n'"_This issue is maintained by the daily audit workflow. It updates when the findings change and closes itself once the site and the F1 API agree. Session-time changes arrive as a pull request on \`$PR_BRANCH\`; everything else listed above needs a hand edit._"$'\n'"<!-- audit-hash:$hash -->"
+          pr_note="Session-time changes arrive as a pull request on \`$PR_BRANCH\`; everything else listed above needs a hand edit."
+          if [ "${{ steps.pr.outputs.pr_failed }}" = "true" ]; then
+            pr_note="The proposed session times are pushed to \`$PR_BRANCH\` but this workflow isn't allowed to open pull requests — [open the PR from that branch](https://github.com/${{ github.repository }}/compare/main...$PR_BRANCH?expand=1), or enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** so it happens automatically. Everything else listed above needs a hand edit."
+          fi
+          body="$(cat audit-report.md)"$'\n\n'"---"$'\n'"_This issue is maintained by the daily audit workflow. It updates when the findings change and closes itself once the site and the F1 API agree. $pr_note _"$'\n'"<!-- audit-hash:$hash -->"
           number="$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" --json number,title --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -n1)"
           if [ -z "$number" ]; then
             gh issue create --title "$ISSUE_TITLE" --body "$body"

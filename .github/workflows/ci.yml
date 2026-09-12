@@ -17,8 +17,8 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -29,10 +29,9 @@ jobs:
         run: node tools/validate.js
 
       - name: Generated output is up to date
-        # Sitemap <lastmod> and .ics DTSTAMP lines carry the build date, so
-        # they're ignored; anything else differing means a stale commit.
+        # The generator is deterministic, so any diff means a stale commit.
         run: |
-          if ! git diff --exit-code -I '<lastmod>' -I '^DTSTAMP:' --stat; then
+          if ! git diff --exit-code --stat; then
             echo "::error::Generated files are stale. Run: node tools/generate-site.js — then commit the result."
             exit 1
           fi
