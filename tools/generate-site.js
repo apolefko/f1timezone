@@ -26,6 +26,7 @@ const path = require("path");
 const { SEASON, SESSION_LABELS, SESSION_DURATIONS } = require("../race-data.js");
 const { RACE_CONTENT } = require("../race-content.js");
 const { GUIDES } = require("../guides-content.js");
+const { TEAMS, DRIVERS_UPDATED } = require("../drivers-data.js");
 
 // Every race must have extended editorial content — a thin page is
 // worse than a build failure.
@@ -113,7 +114,7 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 
 const FOOTER = `        <footer role="contentinfo">
             <p>F1 Timezone is not affiliated with Formula 1. F1, Formula One, and related marks are trademarks of Formula One Licensing B.V.</p>
-            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+            <p><a href="/">Home</a> &middot; <a href="/races/">All Races</a> &middot; <a href="/drivers.html">Drivers</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html" rel="privacy-policy">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
         </footer>`;
 
 /* ---------------- race page ---------------- */
@@ -395,7 +396,7 @@ function indexPage() {
     const finale = SEASON.races[SEASON.races.length - 1];
     const sprintNames = sprints.map(r => `<a href="/races/${r.slug}.html">${esc(r.gp)}</a>`)
         .join(", ").replace(/, ([^,]*)$/, ", and $1");
-    const intro = `            <p>The ${YEAR} Formula 1 World Championship runs ${SEASON.races.length} rounds, opening with the <a href="/races/${opener.slug}.html">${esc(opener.gp)}</a> in ${esc(opener.location.split(",")[0])} on ${fmt(opener.sessions.race, opener.timezone, { month: "long", day: "numeric" })} and closing with the <a href="/races/${finale.slug}.html">${esc(finale.gp)}</a> at ${esc(finale.circuit)} on ${fmt(finale.sessions.race, finale.timezone, { month: "long", day: "numeric" })}. It's the first season of the sport's new technical regulations — smaller, lighter cars with active aerodynamics — and the calendar brings a brand-new race in Madrid alongside the classics.</p>
+    const intro = `            <p>The ${YEAR} Formula 1 World Championship runs ${SEASON.races.length} rounds, opening with the <a href="/races/${opener.slug}.html">${esc(opener.gp)}</a> in ${esc(opener.location.split(",")[0])} on ${fmt(opener.sessions.race, opener.timezone, { month: "long", day: "numeric" })} and closing with the <a href="/races/${finale.slug}.html">${esc(finale.gp)}</a> at ${esc(finale.circuit)} on ${fmt(finale.sessions.race, finale.timezone, { month: "long", day: "numeric" })}. It's the first season of the sport's new technical regulations — smaller, lighter cars with active aerodynamics — and the calendar brings a brand-new race in Madrid alongside the classics. One late change to know about: the Bahrain Grand Prix, cancelled from its April date, was reinstated for October 2–4 at Sepang in Malaysia — F1's first race there since 2017.</p>
             <p>${sprints.length} weekends run the sprint format with points on offer across all three days: ${sprintNames}. Two races don't run on a Sunday at all — Baku and Las Vegas both race on Saturday — so double-check the dates below. If you're new to how a Grand Prix weekend is structured, our <a href="/guides/f1-race-weekend-format.html">race weekend format guide</a> walks through every session.</p>
             <p>Every race below links to a full session schedule converted to Eastern, Central, Mountain, and Pacific time, with a live countdown and a free .ics calendar download. For the ${YEAR} US streaming landscape, see <a href="/guides/how-to-watch-f1-in-the-us.html">how to watch F1 in the US</a>.</p>`;
 
@@ -698,6 +699,129 @@ ${FOOTER}
 `;
 }
 
+/* ---------------- drivers page ---------------- */
+
+function driversPage() {
+    const url = `${SITE}/drivers.html`;
+    const raceDrivers = TEAMS.flatMap(t => t.drivers);
+    const standIns = TEAMS.filter(t => t.standIn);
+    const title = `F1 ${YEAR} Drivers: Every Current Driver & Team | F1 Timezone`;
+    const description = `The full ${YEAR} Formula 1 grid — all ${TEAMS.length} teams and every current driver with car numbers, including stand-ins racing right now. Updated ${fmt(DRIVERS_UPDATED + "T12:00:00Z", "UTC", { month: "long", day: "numeric", year: "numeric" })}.`;
+
+    const driverBadges = d => `${d.champion ? ' <span class="sprint-badge">Champion</span>' : ""}${d.rookie ? ' <span class="sprint-badge">Rookie</span>' : ""}`;
+
+    const teamCards = TEAMS.map(team => {
+        const rows = team.drivers.map(d => `                    <div class="session">
+                        <div class="session-name">#${d.number} &middot; ${esc(d.country)}</div>
+                        <div class="session-time">${esc(d.name)}${driverBadges(d)}</div>
+                        ${d.status ? `<div class="calendar-note">${esc(d.status)}</div>` : ""}
+                    </div>`).join("\n");
+        const sub = team.standIn ? `\n                <div class="session">
+                        <div class="session-name">#${team.standIn.number} &middot; ${esc(team.standIn.country)}</div>
+                        <div class="session-time">${esc(team.standIn.name)} <span class="sprint-badge">Racing Now</span></div>
+                        <div class="calendar-note">${esc(team.standIn.note)}</div>
+                    </div>` : "";
+        return `            <div class="race-card">
+                <div class="race-header">
+                    <div class="race-name">${esc(team.name)}</div>
+                    <div class="race-date">${esc(team.engine)}</div>
+                </div>
+                <div class="session-times">
+${rows}${sub}
+                </div>
+            </div>`;
+    }).join("\n");
+
+    const itemListLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": `F1 ${YEAR} Drivers`,
+        "itemListElement": raceDrivers.map((d, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": { "@type": "Person", "name": d.name, "jobTitle": "Formula 1 Driver" }
+        }))
+    }, null, 2);
+
+    const breadcrumbLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}` },
+            { "@type": "ListItem", "position": 2, "name": `F1 ${YEAR} Drivers`, "item": url }
+        ]
+    }, null, 2);
+
+    const standInIntro = standIns.map(t =>
+        `<strong>${esc(t.standIn.name)}</strong> is currently racing for ${esc(t.name)}. ${esc(t.standIn.note)}`
+    ).join(" ");
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>${esc(title)}</title>
+    <meta name="title" content="${esc(title)}">
+    <meta name="description" content="${esc(description)}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="${url}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="F1 Timezone">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="F1 ${YEAR} Drivers — The Full Current Grid">
+    <meta property="og:description" content="${esc(description)}">
+    <meta property="og:locale" content="en_US">
+
+    ${ADSENSE_SNIPPET}
+
+${GA_SNIPPET}
+
+    <script type="application/ld+json">
+${itemListLd}
+    </script>
+    <script type="application/ld+json">
+${breadcrumbLd}
+    </script>
+
+    ${FONTS}
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">F1 Timezone</a> <span aria-hidden="true">&rsaquo;</span>
+                <span>${YEAR} Drivers</span>
+            </nav>
+            <div class="deco-ornament" aria-hidden="true"></div>
+            <h1>F1 ${YEAR} Drivers</h1>
+            <p class="tagline">${TEAMS.length} Teams&nbsp;&middot;&nbsp;The Current Grid&nbsp;&middot;&nbsp;Updated ${fmt(DRIVERS_UPDATED + "T12:00:00Z", "UTC", { month: "long", day: "numeric", year: "numeric" })}</p>
+            <div class="deco-rule" aria-hidden="true"></div>
+        </header>
+
+        <section class="schedule race-guide">
+            <h2>Who's Racing Right Now</h2>
+            <p>The ${YEAR} grid is the biggest in modern Formula 1: ${TEAMS.length} teams and ${raceDrivers.length} full-season seats, with Cadillac joining as the first all-new team in a decade and Sauber completing its transformation into the Audi works outfit. Lando Norris carries the #1 of the reigning World Champion; Max Verstappen has returned to his #3.</p>
+            <p>${standInIntro}</p>
+            <p>Teams are listed alphabetically. For when you can watch them all next, see the <a href="/races/">full ${YEAR} race calendar</a> in US time zones.</p>
+        </section>
+
+        <section class="schedule">
+            <h2>Teams &amp; Drivers</h2>
+${teamCards}
+        </section>
+
+${FOOTER}
+    </div>
+</body>
+</html>
+`;
+}
+
 /* ---------------- sitemap + robots ---------------- */
 
 function sitemap() {
@@ -707,6 +831,7 @@ function sitemap() {
         ...SEASON.races.map(r => ({
             loc: `${SITE}/races/${r.slug}.html`, priority: "0.8", changefreq: "weekly"
         })),
+        { loc: `${SITE}/drivers.html`, priority: "0.7", changefreq: "weekly" },
         { loc: `${SITE}/guides/`, priority: "0.7", changefreq: "monthly" },
         ...GUIDES.map(g => ({
             loc: `${SITE}/guides/${g.slug}.html`, priority: "0.6", changefreq: "monthly"
@@ -822,10 +947,11 @@ GUIDES.forEach(guide => {
 injectBetweenMarkers(path.join(ROOT, "index.html"), BEGIN_MARK, END_MARK, homeRaceCards());
 
 fs.writeFileSync(path.join(ROOT, "races", "index.html"), indexPage());
+fs.writeFileSync(path.join(ROOT, "drivers.html"), driversPage());
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), guidesIndexPage());
 fs.writeFileSync(path.join(ROOT, "calendar", `f1-${YEAR}-season.ics`), icsCalendar(`F1 ${YEAR} Season`, SEASON.races));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap());
 fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
 fs.writeFileSync(path.join(ROOT, "ads.txt"), ADS_TXT);
 
-console.log(`Generated ${SEASON.races.length} race pages, ${GUIDES.length} guide pages, races/index.html, guides/index.html, the homepage schedule, sitemap.xml, robots.txt, ads.txt and ${SEASON.races.length + 1} calendar files.`);
+console.log(`Generated ${SEASON.races.length} race pages, ${GUIDES.length} guide pages, races/index.html, guides/index.html, drivers.html, the homepage schedule, sitemap.xml, robots.txt, ads.txt and ${SEASON.races.length + 1} calendar files.`);

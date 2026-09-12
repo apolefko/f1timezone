@@ -1,0 +1,94 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Timezone//f1timezone.com//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F1 2026: Bahrain Grand Prix
+X-WR-CALDESC:Session times from f1timezone.com — shown in your local ti
+ me zone
+BEGIN:VEVENT
+UID:bahrain-2026-fp1@f1timezone.com
+DTSTAMP:20260912T183905Z
+DTSTART:20261002T043000Z
+DTEND:20261002T053000Z
+SUMMARY:F1: Bahrain Grand Prix — Practice 1
+LOCATION:Sepang International Circuit\, Sepang\, Malaysia
+DESCRIPTION:Bahrain Grand Prix 2026 Practice 1 at Sepang International Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/bahrain-20
+ 26.html
+URL:https://f1timezone.com/races/bahrain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Bahrain Grand Prix — Practice 1 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bahrain-2026-fp2@f1timezone.com
+DTSTAMP:20260912T183905Z
+DTSTART:20261002T080000Z
+DTEND:20261002T090000Z
+SUMMARY:F1: Bahrain Grand Prix — Practice 2
+LOCATION:Sepang International Circuit\, Sepang\, Malaysia
+DESCRIPTION:Bahrain Grand Prix 2026 Practice 2 at Sepang International Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/bahrain-20
+ 26.html
+URL:https://f1timezone.com/races/bahrain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Bahrain Grand Prix — Practice 2 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bahrain-2026-fp3@f1timezone.com
+DTSTAMP:20260912T183905Z
+DTSTART:20261003T043000Z
+DTEND:20261003T053000Z
+SUMMARY:F1: Bahrain Grand Prix — Practice 3
+LOCATION:Sepang International Circuit\, Sepang\, Malaysia
+DESCRIPTION:Bahrain Grand Prix 2026 Practice 3 at Sepang International Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/bahrain-20
+ 26.html
+URL:https://f1timezone.com/races/bahrain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Bahrain Grand Prix — Practice 3 starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bahrain-2026-qualifying@f1timezone.com
+DTSTAMP:20260912T183905Z
+DTSTART:20261003T080000Z
+DTEND:20261003T090000Z
+SUMMARY:F1: Bahrain Grand Prix — Qualifying
+LOCATION:Sepang International Circuit\, Sepang\, Malaysia
+DESCRIPTION:Bahrain Grand Prix 2026 Qualifying at Sepang International Ci
+ rcuit. Full schedule & US times: https://f1timezone.com/races/bahrain-20
+ 26.html
+URL:https://f1timezone.com/races/bahrain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Bahrain Grand Prix — Qualifying starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bahrain-2026-race@f1timezone.com
+DTSTAMP:20260912T183905Z
+DTSTART:20261004T070000Z
+DTEND:20261004T090000Z
+SUMMARY:F1: Bahrain Grand Prix — Race
+LOCATION:Sepang International Circuit\, Sepang\, Malaysia
+DESCRIPTION:Bahrain Grand Prix 2026 Race at Sepang International Circuit.
+  Full schedule & US times: https://f1timezone.com/races/bahrain-2026.htm
+ l
+URL:https://f1timezone.com/races/bahrain-2026.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:F1: Bahrain Grand Prix — Race starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
