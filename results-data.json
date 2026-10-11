@@ -530,6 +530,39 @@
           "status": "Finished"
         }
       ]
+    },
+    "singapore-2026": {
+      "round": 17,
+      "apiRound": 17,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "1:42:00.785",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "number": "16",
+          "team": "Ferrari",
+          "time": "+7.335",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+24.573",
+          "status": "Finished"
+        }
+      ]
     }
   },
   "driverStandings": [
@@ -539,7 +572,7 @@
       "code": "ANT",
       "number": "12",
       "team": "Mercedes",
-      "points": 325,
+      "points": 340,
       "wins": 8
     },
     {
@@ -548,7 +581,7 @@
       "code": "RUS",
       "number": "63",
       "team": "Mercedes",
-      "points": 236,
+      "points": 238,
       "wins": 3
     },
     {
@@ -557,25 +590,25 @@
       "code": "HAM",
       "number": "44",
       "team": "Ferrari",
-      "points": 221,
+      "points": 229,
       "wins": 1
     },
     {
       "position": 4,
-      "driver": "Charles Leclerc",
-      "code": "LEC",
-      "number": "16",
-      "team": "Ferrari",
-      "points": 197,
-      "wins": 1
-    },
-    {
-      "position": 5,
       "driver": "Max Verstappen",
       "code": "VER",
       "number": "3",
       "team": "Red Bull",
-      "points": 196,
+      "points": 221,
+      "wins": 2
+    },
+    {
+      "position": 5,
+      "driver": "Charles Leclerc",
+      "code": "LEC",
+      "number": "16",
+      "team": "Ferrari",
+      "points": 215,
       "wins": 1
     },
     {
@@ -584,7 +617,7 @@
       "code": "NOR",
       "number": "1",
       "team": "McLaren",
-      "points": 189,
+      "points": 201,
       "wins": 2
     },
     {
@@ -593,7 +626,7 @@
       "code": "PIA",
       "number": "81",
       "team": "McLaren",
-      "points": 128,
+      "points": 138,
       "wins": 0
     },
     {
@@ -602,7 +635,7 @@
       "code": "HAD",
       "number": "6",
       "team": "Red Bull",
-      "points": 96,
+      "points": 97,
       "wins": 0
     },
     {
@@ -611,7 +644,7 @@
       "code": "LAW",
       "number": "30",
       "team": "RB F1 Team / Red Bull",
-      "points": 69,
+      "points": 75,
       "wins": 0
     },
     {
@@ -652,20 +685,20 @@
     },
     {
       "position": 14,
+      "driver": "Nico Hülkenberg",
+      "code": "HUL",
+      "number": "27",
+      "team": "Audi",
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "position": 15,
       "driver": "Gabriel Bortoleto",
       "code": "BOR",
       "number": "5",
       "team": "Audi",
       "points": 10,
-      "wins": 0
-    },
-    {
-      "position": 15,
-      "driver": "Nico Hülkenberg",
-      "code": "HUL",
-      "number": "27",
-      "team": "Audi",
-      "points": 9,
       "wins": 0
     },
     {
@@ -745,31 +778,31 @@
     {
       "position": 1,
       "team": "Mercedes",
-      "points": 561,
+      "points": 578,
       "wins": 11
     },
     {
       "position": 2,
       "team": "Ferrari",
-      "points": 418,
+      "points": 444,
       "wins": 2
     },
     {
       "position": 3,
       "team": "McLaren",
-      "points": 317,
+      "points": 339,
       "wins": 2
     },
     {
       "position": 4,
       "team": "Red Bull",
-      "points": 306,
-      "wins": 1
+      "points": 332,
+      "wins": 2
     },
     {
       "position": 5,
       "team": "RB F1 Team",
-      "points": 94,
+      "points": 100,
       "wins": 0
     },
     {
@@ -787,7 +820,7 @@
     {
       "position": 8,
       "team": "Audi",
-      "points": 19,
+      "points": 23,
       "wins": 0
     },
     {
