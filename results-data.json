@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-11-01",
   "season": 2026,
-  "afterRound": 18,
+  "afterRound": 19,
   "races": {
     "australia-2026": {
       "round": 1,
@@ -803,6 +803,15 @@
       "code": "PER",
       "number": "11",
       "team": "Cadillac F1 Team",
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "position": 24,
+      "driver": "Ryo Hirakawa",
+      "code": null,
+      "number": null,
+      "team": "Haas F1 Team",
       "points": 0,
       "wins": 0
     }
