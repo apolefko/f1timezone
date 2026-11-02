@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "season": 2026,
   "afterRound": 19,
   "races": {
@@ -596,6 +596,39 @@
           "status": "Finished"
         }
       ]
+    },
+    "mexico-2026": {
+      "round": 19,
+      "apiRound": 19,
+      "podium": [
+        {
+          "position": 1,
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "number": "3",
+          "team": "Red Bull",
+          "time": "2:20:28.772",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "number": "44",
+          "team": "Ferrari",
+          "time": "+0.799",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "number": "12",
+          "team": "Mercedes",
+          "time": "+4.006",
+          "status": "Finished"
+        }
+      ]
     }
   },
   "driverStandings": [
@@ -605,16 +638,16 @@
       "code": "ANT",
       "number": "12",
       "team": "Mercedes",
-      "points": 365,
+      "points": 380,
       "wins": 9
     },
     {
       "position": 2,
-      "driver": "George Russell",
-      "code": "RUS",
-      "number": "63",
-      "team": "Mercedes",
-      "points": 242,
+      "driver": "Max Verstappen",
+      "code": "VER",
+      "number": "3",
+      "team": "Red Bull",
+      "points": 261,
       "wins": 3
     },
     {
@@ -623,17 +656,17 @@
       "code": "HAM",
       "number": "44",
       "team": "Ferrari",
-      "points": 241,
+      "points": 259,
       "wins": 1
     },
     {
       "position": 4,
-      "driver": "Max Verstappen",
-      "code": "VER",
-      "number": "3",
-      "team": "Red Bull",
-      "points": 236,
-      "wins": 2
+      "driver": "George Russell",
+      "code": "RUS",
+      "number": "63",
+      "team": "Mercedes",
+      "points": 250,
+      "wins": 3
     },
     {
       "position": 5,
@@ -641,7 +674,7 @@
       "code": "LEC",
       "number": "16",
       "team": "Ferrari",
-      "points": 233,
+      "points": 245,
       "wins": 1
     },
     {
@@ -650,7 +683,7 @@
       "code": "NOR",
       "number": "1",
       "team": "McLaren",
-      "points": 211,
+      "points": 221,
       "wins": 2
     },
     {
@@ -659,7 +692,7 @@
       "code": "PIA",
       "number": "81",
       "team": "McLaren",
-      "points": 144,
+      "points": 150,
       "wins": 0
     },
     {
@@ -677,7 +710,7 @@
       "code": "LAW",
       "number": "30",
       "team": "RB F1 Team / Red Bull",
-      "points": 77,
+      "points": 79,
       "wins": 0
     },
     {
@@ -686,7 +719,7 @@
       "code": "GAS",
       "number": "10",
       "team": "Alpine F1 Team",
-      "points": 42,
+      "points": 43,
       "wins": 0
     },
     {
@@ -704,7 +737,7 @@
       "code": "COL",
       "number": "43",
       "team": "Alpine F1 Team",
-      "points": 27,
+      "points": 31,
       "wins": 0
     },
     {
@@ -799,19 +832,19 @@
     },
     {
       "position": 23,
-      "driver": "Sergio Pérez",
-      "code": "PER",
-      "number": "11",
-      "team": "Cadillac F1 Team",
+      "driver": "Ryo Hirakawa",
+      "code": "HIR",
+      "number": "50",
+      "team": "Haas F1 Team",
       "points": 0,
       "wins": 0
     },
     {
       "position": 24,
-      "driver": "Ryo Hirakawa",
-      "code": "HIR",
-      "number": "50",
-      "team": "Haas F1 Team",
+      "driver": "Sergio Pérez",
+      "code": "PER",
+      "number": "11",
+      "team": "Cadillac F1 Team",
       "points": 0,
       "wins": 0
     }
@@ -820,37 +853,37 @@
     {
       "position": 1,
       "team": "Mercedes",
-      "points": 607,
+      "points": 630,
       "wins": 12
     },
     {
       "position": 2,
       "team": "Ferrari",
-      "points": 474,
+      "points": 504,
       "wins": 2
     },
     {
       "position": 3,
       "team": "Red Bull",
-      "points": 355,
-      "wins": 2
+      "points": 380,
+      "wins": 3
     },
     {
       "position": 4,
       "team": "McLaren",
-      "points": 355,
+      "points": 371,
       "wins": 2
     },
     {
       "position": 5,
       "team": "RB F1 Team",
-      "points": 102,
+      "points": 104,
       "wins": 0
     },
     {
       "position": 6,
       "team": "Alpine F1 Team",
-      "points": 69,
+      "points": 74,
       "wins": 0
     },
     {
