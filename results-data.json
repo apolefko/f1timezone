@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "season": 2026,
   "afterRound": 19,
   "races": {
@@ -692,7 +692,7 @@
       "code": "PIA",
       "number": "81",
       "team": "McLaren",
-      "points": 150,
+      "points": 144,
       "wins": 0
     },
     {
@@ -701,7 +701,7 @@
       "code": "HAD",
       "number": "6",
       "team": "Red Bull",
-      "points": 105,
+      "points": 107,
       "wins": 0
     },
     {
@@ -710,7 +710,7 @@
       "code": "LAW",
       "number": "30",
       "team": "RB F1 Team / Red Bull",
-      "points": 79,
+      "points": 83,
       "wins": 0
     },
     {
@@ -719,7 +719,7 @@
       "code": "GAS",
       "number": "10",
       "team": "Alpine F1 Team",
-      "points": 43,
+      "points": 42,
       "wins": 0
     },
     {
@@ -737,7 +737,7 @@
       "code": "COL",
       "number": "43",
       "team": "Alpine F1 Team",
-      "points": 31,
+      "points": 27,
       "wins": 0
     },
     {
@@ -751,20 +751,20 @@
     },
     {
       "position": 14,
+      "driver": "Gabriel Bortoleto",
+      "code": "BOR",
+      "number": "5",
+      "team": "Audi",
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "position": 15,
       "driver": "Nico Hülkenberg",
       "code": "HUL",
       "number": "27",
       "team": "Audi",
       "points": 13,
-      "wins": 0
-    },
-    {
-      "position": 15,
-      "driver": "Gabriel Bortoleto",
-      "code": "BOR",
-      "number": "5",
-      "team": "Audi",
-      "points": 10,
       "wins": 0
     },
     {
@@ -814,6 +814,15 @@
     },
     {
       "position": 21,
+      "driver": "Ryo Hirakawa",
+      "code": "HIR",
+      "number": "50",
+      "team": "Haas F1 Team",
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "position": 22,
       "driver": "Lance Stroll",
       "code": "STR",
       "number": "18",
@@ -822,20 +831,11 @@
       "wins": 0
     },
     {
-      "position": 22,
+      "position": 23,
       "driver": "Valtteri Bottas",
       "code": "BOT",
       "number": "77",
       "team": "Cadillac F1 Team",
-      "points": 0,
-      "wins": 0
-    },
-    {
-      "position": 23,
-      "driver": "Ryo Hirakawa",
-      "code": "HIR",
-      "number": "50",
-      "team": "Haas F1 Team",
       "points": 0,
       "wins": 0
     },
@@ -865,37 +865,37 @@
     {
       "position": 3,
       "team": "Red Bull",
-      "points": 380,
+      "points": 382,
       "wins": 3
     },
     {
       "position": 4,
       "team": "McLaren",
-      "points": 371,
+      "points": 365,
       "wins": 2
     },
     {
       "position": 5,
       "team": "RB F1 Team",
-      "points": 104,
+      "points": 108,
       "wins": 0
     },
     {
       "position": 6,
       "team": "Alpine F1 Team",
-      "points": 74,
+      "points": 69,
       "wins": 0
     },
     {
       "position": 7,
       "team": "Haas F1 Team",
-      "points": 30,
+      "points": 31,
       "wins": 0
     },
     {
       "position": 8,
       "team": "Audi",
-      "points": 23,
+      "points": 27,
       "wins": 0
     },
     {
