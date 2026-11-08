@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-08",
   "season": 2026,
-  "afterRound": 19,
+  "afterRound": 20,
   "races": {
     "australia-2026": {
       "round": 1,
@@ -845,6 +845,15 @@
       "code": "PER",
       "number": "11",
       "team": "Cadillac F1 Team",
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "position": 25,
+      "driver": "Rafael Camara",
+      "code": null,
+      "number": null,
+      "team": "Haas F1 Team",
       "points": 0,
       "wins": 0
     }
