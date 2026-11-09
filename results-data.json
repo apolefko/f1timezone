@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "season": 2026,
   "afterRound": 20,
   "races": {
@@ -707,7 +707,7 @@
       "code": "LEC",
       "number": "16",
       "team": "Ferrari",
-      "points": 251,
+      "points": 249,
       "wins": 1
     },
     {
@@ -743,7 +743,7 @@
       "code": "LAW",
       "number": "30",
       "team": "RB F1 Team / Red Bull",
-      "points": 87,
+      "points": 89,
       "wins": 0
     },
     {
@@ -901,7 +901,7 @@
     {
       "position": 2,
       "team": "Ferrari",
-      "points": 512,
+      "points": 510,
       "wins": 2
     },
     {
@@ -919,7 +919,7 @@
     {
       "position": 5,
       "team": "RB F1 Team",
-      "points": 112,
+      "points": 114,
       "wins": 0
     },
     {
