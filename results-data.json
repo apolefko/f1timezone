@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "season": 2026,
   "afterRound": 20,
   "races": {
@@ -884,8 +884,8 @@
     {
       "position": 25,
       "driver": "Rafael Camara",
-      "code": null,
-      "number": null,
+      "code": "CAM",
+      "number": "51",
       "team": "Haas F1 Team",
       "points": 0,
       "wins": 0
